@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "role": "owner",
+      "username": "owner1",
+      "password": "123",
+      "fullName": "Anna Papadopoulou",
+      "email": "anna@test.com"
+    },
+    {
+      "id": "2",
+      "role": "vet",
+      "username": "vet1",
+      "password": "123",
+      "fullName": "Dr. Nikos Vetsos",
+      "specialty": "Surgeon",
+      "address": "123 Vet Street",
+      "afm": "999999999"
+    }
+  ],
+  "pets": [
+    {
+      "id": "p1",
+      "ownerId": "1",
+      "name": "Bruno",
+      "type": "Dog",
+      "microchip": "1234567890",
+      "status": "submitted",
+      "birthDate": "2020-01-01"
+    }
+  ],
+  "appointments": [],
+  "lostPets": []
+}
