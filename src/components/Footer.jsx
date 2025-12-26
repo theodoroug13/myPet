@@ -10,7 +10,7 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4} justifyContent="space-between">
           
-          {/* Αριστερή Στήλη: Social Media */}
+       
           <Grid item xs={12} sm={6}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
               Συνδέσου μαζί μας
@@ -24,7 +24,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          {/* Δεξιά Στήλη: Πληροφορίες */}
+      
           <Grid item xs={12} sm={6} sx={{ textAlign: { xs: 'left', sm: 'right' } }}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
               Στοιχεία επικοινωνίας:

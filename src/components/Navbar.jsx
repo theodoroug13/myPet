@@ -25,7 +25,6 @@ function Navbar() {
 
   
   const navItems = [
-    { label: 'Αρχική', path: '/' },
     { label: 'Ποιοί Είμαστε', path: '/about' },
     { label: 'FAQ', path: '/faq' },
   ];
@@ -67,6 +66,7 @@ function Navbar() {
     <AppBar position="static" color="transparent" elevation={0} sx={{backgroundColor: "white", color:"black"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          <Box onClick={()=> navigate(' /')} sx={{ display:{xs: 'none', md: 'flex'},alignItems: 'center',mr:2, cursor: 'pointer' }}>
           <PetsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -85,6 +85,7 @@ function Navbar() {
           >
             myPet
           </Typography>
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
