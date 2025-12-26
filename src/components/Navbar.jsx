@@ -63,7 +63,9 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" color="transparent" elevation={0} sx={{backgroundColor: "white", color:"black"}}>
+    <AppBar position="sticky" color="transparent" elevation={0} sx={{backgroundColor: "white", color:"black", borderBottom: "1px solid #eee",
+    top: 0,       
+    zIndex: 1100}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box onClick={()=> navigate(' /')} sx={{ display:{xs: 'none', md: 'flex'},alignItems: 'center',mr:2, cursor: 'pointer' }}>
