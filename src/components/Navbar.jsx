@@ -61,6 +61,9 @@ function Navbar() {
     logout();
     navigate('/');
   };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   return (
     <AppBar position="sticky" color="transparent" elevation={0} sx={{backgroundColor: "white", color:"black", borderBottom: "1px solid #eee",

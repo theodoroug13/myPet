@@ -3,10 +3,31 @@ import { useNavigate } from 'react-router-dom';
 import MedicalServicesOutlinedIcon from '@mui/icons-material/MedicalServicesOutlined';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-const heroImage = './pictures/home-hero.jpg';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import { useState, useEffect, useRef } from 'react';
+
+const heroImage = '../pictures/home-hero.jpg';
 
 const Home = () => {
   const navigate = useNavigate();
+  const [recentLostPets, setRecentLostPets] = useState([]);
+  const lostPetsRef = useRef(null);
+  useEffect(() => {
+    const fetchLostPets = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/lostPets');
+        const data = await response.json();
+        setRecentLostPets(data.slice(0, 4));
+      } catch (error) {
+        console.error('Error fetching lost pets:', error);
+      }
+    };
+    fetchLostPets();
+  }, []);
+  const scrollToLostPets = () => {
+    lostPetsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const features = [
     {
       icon: <PetsOutlinedIcon sx={{ fontSize: 40, color: '#1976d2' }} />,
@@ -18,7 +39,7 @@ const Home = () => {
       icon: <MedicalServicesOutlinedIcon sx={{ fontSize: 40, color: '#2e7d32' }} />,
       title: "Για Κτηνιάτρους",
       description: "Οργάνωσε το ιατρείο σου. Δες τα ραντεβού της ημέρας και απέκτησε πρόσβαση στον ιατρικό φάκελο των ασθενών σου.",
-      action: () => navigate('/login') 
+      action: () => navigate('/login')
     },
     {
       icon: <SearchOutlinedIcon sx={{ fontSize: 40, color: '#ed6c02' }} />,
@@ -56,7 +77,7 @@ const Home = () => {
                 <Button variant="contained" size="large" sx={{ bgcolor: 'black', color: 'white', '&:hover': { bgcolor: '#470020ff' } }} onClick={() => navigate('/login')}>
                   Είμαι Κτηνίατρος
                 </Button>
-                <Button variant="contained" size="large" sx={{ bgcolor: 'black', borderColor: 'white', '&:hover': { bgcolor: '#470020ff' } }} onClick={() => navigate('/lost-pets')}>
+                <Button variant="contained" size="large" sx={{ bgcolor: 'black', borderColor: 'white', '&:hover': { bgcolor: '#470020ff' } }} onClick={scrollToLostPets}>
                   Βρήκα χαμένο ζώο
                 </Button>
               </Box>
@@ -81,9 +102,9 @@ const Home = () => {
                   textAlign: 'center',
                   padding: 2,
                   boxShadow: 3,
-                  transition: 'transform 0.2s', 
+                  transition: 'transform 0.2s',
                   '&:hover': {
-                    transform: 'translateY(-5px)', 
+                    transform: 'translateY(-5px)',
                     cursor: 'pointer'
                   }
                 }}
@@ -105,6 +126,58 @@ const Home = () => {
           ))}
         </Grid>
       </Container>
+
+
+      <Box ref={lostPetsRef} sx={{ bgcolor: '#f9f9f9', py: 8 }}>
+        <Container maxWidth="lg">
+          <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', mb: 4 }}>
+            Χαμένα κατοικίδια (πιο πρόσφατες δηλώσεις):
+          </Typography>
+
+          <Grid container spacing={3}>
+            {recentLostPets.map((pet) => (
+              <Grid item xs={12} md={6} key={pet.id}>
+                {/* Horizontal Card */}
+                <Card sx={{ display: 'flex', height: '100%', boxShadow: 2, '&:hover': { boxShadow: 4 } }}>
+                  {/* Αριστερά: Εικόνα (Γκρι κουτί αν δεν υπάρχει φώτο) */}
+                  <Box sx={{ width: 140, bgcolor: '#e0e0e0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    {pet.photo ? (
+                      <CardMedia component="img" sx={{ width: 140, height: '100%', objectFit: 'cover' }} image={pet.photo} alt={pet.name} />
+                    ) : (
+                      <PetsOutlinedIcon sx={{ color: '#9e9e9e', fontSize: 40, opacity: 0.5 }} />
+                    )}
+                  </Box>
+
+                  {/* Δεξιά: Πληροφορίες */}
+                  <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, p: 2 }}>
+                    <CardContent sx={{ flex: '1 0 auto', p: 0, pb: 1 }}>
+                      <Typography component="div" variant="h6" fontWeight="bold">
+                        “{pet.name}”
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary" component="div">
+                        {pet.type}, περιοχή: {pet.location}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary" component="div">
+                        ιδιοκτήτης: {pet.ownerName}
+                      </Typography>
+                    </CardContent>
+                    {/* Κάτω μέρος: Εικονίδιο */}
+                    <Box sx={{ display: 'flex', alignItems: 'center', pl: 0, pb: 0 }}>
+                      <VisibilityIcon sx={{ color: 'black' }} />
+                    </Box>
+                  </Box>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+            <Button variant="outlined" onClick={() => navigate('/lost-pets')}>
+              Δες όλα τα χαμένα ζώα
+            </Button>
+          </Box>
+        </Container>
+      </Box>
+
     </Box>
   );
 };
