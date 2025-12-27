@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import LostPets from './pages/LostPets';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           
-          
+          <Route path="/lost-pets" element={<LostPets />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Box>
