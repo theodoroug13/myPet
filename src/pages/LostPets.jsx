@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
 import { 
   Box, Container, Typography, Grid, Card, CardContent, CardMedia, 
-  TextField, InputAdornment, Button, MenuItem, Select, FormControl, InputLabel 
+   Button, MenuItem, Select, FormControl, InputLabel 
 } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PetsIcon from '@mui/icons-material/Pets';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
 import ClearIcon from '@mui/icons-material/Clear';
-import IconButton from '@mui/material/IconButton';
+
 
 const LostPets = () => {
     const [pets, setPets] = useState([]);
