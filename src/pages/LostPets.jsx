@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { 
   Box, Container, Typography, Grid, Card, CardContent, CardMedia, 
-   Button, MenuItem, Select, FormControl, InputLabel 
+  Button, MenuItem, Select, FormControl, InputLabel,
+  Dialog, DialogContent, DialogTitle, IconButton, Divider 
 } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PetsIcon from '@mui/icons-material/Pets';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
 import ClearIcon from '@mui/icons-material/Clear';
-
+import CloseIcon from '@mui/icons-material/Close';
 
 const LostPets = () => {
     const [pets, setPets] = useState([]);
@@ -16,6 +17,8 @@ const LostPets = () => {
   
     const [selectedType, setSelectedType] = useState('all'); 
     const [selectedLocation, setSelectedLocation] = useState('all');
+    const [openDialog, setOpenDialog] = useState(false);
+    const [selectedPet, setSelectedPet] = useState(null);
 
     useEffect(() => {
         fetch('http://localhost:8000/lostPets')
@@ -23,22 +26,35 @@ const LostPets = () => {
         .then(data => setPets(data));
         }, []);
     
-    const petTypes = ['all', ...new Set(pets.map(pet => pet.type))];
-    const lostLocations=['all', ...new Set(pets.map(pet => pet.location))];
+  const petTypes = ['all', ...new Set(pets.map(pet => pet.type).filter(Boolean))];
+    const lostLocations = ['all', ...new Set(pets.map(pet => pet.location).filter(Boolean))];
+
     const filteredPets = pets.filter(pet => {
-    
         const matchesType = selectedType === 'all' || pet.type === selectedType;
         const matchesLocation = selectedLocation === 'all' || pet.location === selectedLocation;
         return matchesType && matchesLocation;
     });
+
     const clearFilters = () => {
         setSelectedType('all');
         setSelectedLocation('all');
     };
+
+    // --- HANDLERS ΓΙΑ ΤΟ MODAL ---
+    const handleOpenDetails = (pet) => {
+        setSelectedPet(pet);
+        setOpenDialog(true);
+    };
+
+    const handleCloseDetails = () => {
+        setOpenDialog(false);
+        setSelectedPet(null);
+    };
+
     return (
     <Box sx={{ minHeight: '100vh', bgcolor: '#f5f5f5', pb: 8 }}>
       
-     
+      {/* --- HEADER --- */}
       <Box sx={{ bgcolor: 'white', py: 6, borderBottom: '1px solid #ddd' }}>
         <Container maxWidth="lg">
           <Typography variant="h4" fontWeight="bold" gutterBottom>
@@ -48,19 +64,8 @@ const LostPets = () => {
             Βοήθησε να βρεθούν τα ζωάκια που αγνοούνται.
           </Typography>
 
-     
-          <Box sx={{ 
-            display: 'flex', 
-            gap: 2, 
-            bgcolor: 'white', 
-            p: 2, 
-            borderRadius: 2, 
-            boxShadow: 2,
-            flexWrap: 'wrap',
-            alignItems: 'center'
-          }}>
-            
-            
+          {/* FILTERS */}
+          <Box sx={{ display: 'flex', gap: 2, bgcolor: 'white', p: 2, borderRadius: 2, boxShadow: 2, flexWrap: 'wrap', alignItems: 'center' }}>
             <FormControl sx={{ minWidth: 200, flex: 1 }} size="small">
               <InputLabel id="type-select-label">Είδος Ζώου</InputLabel>
               <Select
@@ -76,7 +81,6 @@ const LostPets = () => {
               </Select>
             </FormControl>
 
-            
             <FormControl sx={{ minWidth: 200, flex: 1 }} size="small">
               <InputLabel id="location-select-label">Περιοχή</InputLabel>
               <Select
@@ -92,23 +96,16 @@ const LostPets = () => {
               </Select>
             </FormControl>
 
-           
             {(selectedType !== 'all' || selectedLocation !== 'all') && (
-                <Button 
-                    variant="text" 
-                    color="error" 
-                    startIcon={<ClearIcon />} 
-                    onClick={clearFilters}
-                >
+                <Button variant="text" color="error" startIcon={<ClearIcon />} onClick={clearFilters}>
                     Καθαρισμός
                 </Button>
             )}
-
           </Box>
         </Container>
       </Box>
 
-      
+      {/* --- LIST --- */}
       <Container maxWidth="lg" sx={{ mt: 4 }}>
         <Grid container spacing={3}>
           {filteredPets.map((pet) => (
@@ -124,30 +121,26 @@ const LostPets = () => {
 
                   <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, p: 2 }}>
                     <CardContent sx={{ flex: '1 0 auto', p: 0, pb: 1 }}>
-                      <Typography component="div" variant="h6" fontWeight="bold">
-                        “{pet.name}”
-                      </Typography>
-                      
-                     
+                      <Typography component="div" variant="h6" fontWeight="bold">“{pet.name}”</Typography>
                       {pet.location && (
                         <Box sx={{ display: 'flex', alignItems: 'center', mt: 1, mb: 0.5 }}>
                             <LocationOnIcon sx={{ fontSize: 18, color: 'text.secondary', mr: 0.5 }} />
-                            <Typography variant="body2" color="text.secondary">
-                            {pet.location}
-                            </Typography>
+                            <Typography variant="body2" color="text.secondary">{pet.location}</Typography>
                         </Box>
                       )}
-                      
                       <Box sx={{ display: 'flex', alignItems: 'center' }}>
                          <PetsIcon sx={{ fontSize: 18, color: 'text.secondary', mr: 0.5 }} />
-                         <Typography variant="body2" color="text.secondary">
-                           {pet.type}
-                         </Typography>
+                         <Typography variant="body2" color="text.secondary">{pet.type}</Typography>
                       </Box>
                     </CardContent>
                     
                     <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                      <Button size="small" startIcon={<VisibilityIcon />} sx={{ color: 'black' }}>
+                      <Button 
+                        size="small" 
+                        startIcon={<VisibilityIcon />} 
+                        sx={{ color: 'black' }}
+                        onClick={() => handleOpenDetails(pet)}
+                      >
                         Λεπτομέρειες
                       </Button>
                     </Box>
@@ -156,18 +149,124 @@ const LostPets = () => {
             </Grid>
           ))}
         </Grid>
-
-        {filteredPets.length === 0 && (
-           <Box sx={{ textAlign: 'center', mt: 8, opacity: 0.6 }}>
-             <PetsIcon sx={{ fontSize: 60, mb: 2 }} />
-             <Typography variant="h6">
-               Δεν βρέθηκαν ζωάκια με αυτά τα κριτήρια.
-             </Typography>
-             <Button sx={{ mt: 2 }} onClick={clearFilters}>Καθαρισμός Φίλτρων</Button>
-           </Box>
-        )}
       </Container>
+
+      {/* --- DETAIL MODAL --- */}
+      <Dialog 
+        open={openDialog} 
+        onClose={handleCloseDetails}
+        maxWidth="md"
+        fullWidth
+        scroll="body"
+      >
+        {selectedPet && (
+            <>
+            <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pb: 1 }}>
+                <Typography variant="h5" fontWeight="bold">Πληροφορίες δήλωσης απώλειας</Typography>
+                <IconButton onClick={handleCloseDetails}>
+                    <CloseIcon />
+                </IconButton>
+            </DialogTitle>
+            
+            <Divider /> {/* Τώρα αυτό θα δουλέψει! */}
+            
+            <DialogContent sx={{ p: 4 }}>
+                <Grid container spacing={4}>
+                    
+                    {/* ΑΡΙΣΤΕΡΗ ΣΤΗΛΗ */}
+                    <Grid item xs={12} md={6}>
+                        <Box sx={{ mb: 3 }}>
+                            <Typography variant="subtitle2" color="text.secondary">Όνομα κατοικιδίου:</Typography>
+                            <Typography variant="h6" fontWeight="500">{selectedPet.name}</Typography>
+                        </Box>
+
+                        <Box sx={{ mb: 3 }}>
+                            <Typography variant="subtitle2" color="text.secondary">Χάθηκε στις:</Typography>
+                            <Typography variant="body1" fontWeight="500">{selectedPet.lostDate || '-'}</Typography>
+                        </Box>
+
+                        <Box sx={{ mb: 3 }}>
+                            <Typography variant="subtitle2" color="text.secondary">Στην περιοχή:</Typography>
+                            <Typography variant="body1" fontWeight="500">{selectedPet.location}</Typography>
+                        </Box>
+
+                        <Box sx={{ mb: 3 }}>
+                            <Typography variant="subtitle2" color="text.secondary">Τηλέφωνο:</Typography>
+                            <Typography variant="body1" fontWeight="500">{selectedPet.phone || '-'}</Typography>
+                        </Box>
+                    </Grid>
+
+                    {/* ΔΕΞΙΑ ΣΤΗΛΗ */}
+                    <Grid item xs={12} md={6}>
+                        <Box sx={{ mb: 3 }}>
+                            <Typography variant="subtitle2" color="text.secondary">Αριθμός microchip:</Typography>
+                            <Typography variant="body1" fontWeight="500">{selectedPet.microchip || '-'}</Typography>
+                        </Box>
+
+                        <Box sx={{ mb: 3 }}>
+                            <Typography variant="subtitle2" color="text.secondary">Είδος:</Typography>
+                            <Typography variant="body1" fontWeight="500">{selectedPet.type}</Typography>
+                        </Box>
+
+                        <Box sx={{ mb: 3 }}>
+                            <Typography variant="subtitle2" color="text.secondary">Ονοματεπώνυμο Ιδιοκτήτη:</Typography>
+                            <Typography variant="body1" fontWeight="500">{selectedPet.ownerName}</Typography>
+                        </Box>
+
+                        <Box sx={{ mb: 3 }}>
+                            <Typography variant="subtitle2" color="text.secondary">Άλλες πληροφορίες:</Typography>
+                            <Typography variant="body1">{selectedPet.description || '-'}</Typography>
+                        </Box>
+                    </Grid>
+
+                    {/* ΚΑΤΩ ΜΕΡΟΣ (ΦΩΤΟΓΡΑΦΙΑ & ΚΟΥΜΠΙ) */}
+                    <Grid item xs={12} md={6}>
+                        <Typography variant="subtitle2" color="text.secondary" gutterBottom>Πρόσφατη φωτογραφία:</Typography>
+                        <Box sx={{ 
+                            width: '100%', 
+                            height: 250, 
+                            bgcolor: '#f0f0f0', 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            justifyContent: 'center',
+                            borderRadius: 2,
+                            overflow: 'hidden',
+                            border: '1px solid #eee'
+                        }}>
+                             {selectedPet.photo ? (
+                                <img src={selectedPet.photo} alt={selectedPet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                             ) : (
+                                <PetsIcon sx={{ fontSize: 80, color: '#ccc' }} />
+                             )}
+                        </Box>
+                    </Grid>
+                    
+                    <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                        <Button 
+                            variant="contained" 
+                            size="large"
+                            sx={{ 
+                                bgcolor: 'black', 
+                                color: 'white', 
+                                py: 1.5, 
+                                px: 4,
+                                fontWeight: 'bold',
+                                '&:hover': { bgcolor: '#333' } 
+                            }}
+                            onClick={() => alert("Η λειτουργία επικοινωνίας θα προστεθεί σύντομα!")}
+                        >
+                            ΒΡΗΚΑ ΑΥΤΟ ΤΟ ΚΑΤΟΙΚΙΔΙΟ
+                        </Button>
+                    </Grid>
+
+                </Grid>
+            </DialogContent>
+            </>
+        )}
+      </Dialog>
+
     </Box>
   );
 };
+
 export default LostPets;

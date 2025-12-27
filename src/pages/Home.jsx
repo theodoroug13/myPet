@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Container, Grid, Card, CardContent } from '@mui/material';
+import { Box, Typography, Button, Container, Grid, Card, CardContent, CardMedia } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import MedicalServicesOutlinedIcon from '@mui/icons-material/MedicalServicesOutlined';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
