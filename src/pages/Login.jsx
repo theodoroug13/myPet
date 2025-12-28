@@ -4,25 +4,25 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
-  // Χρησιμοποιούμε State για να κρατάμε τα inputs (Διαφάνειες: Hooks)
+  
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   
   const navigate = useNavigate();
-  const { login } = useAuth(); // Παίρνουμε τη συνάρτηση login από το αρχείο που φτιάξαμε πριν
+  const { login } = useAuth(); 
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Σταματάει το refresh της σελίδας
+    e.preventDefault(); 
     setError('');
 
-    // Καλούμε το login και περιμένουμε απάντηση
+    
     const result = await login(username, password);
 
     if (result.success) {
-      navigate('/'); // Αν όλα καλά, πήγαινε στην Αρχική
+      navigate('/owner-dashboard'); 
     } else {
-      setError(result.message); // Αν λάθος, δείξε μήνυμα
+      setError(result.message); 
     }
   };
 
@@ -33,7 +33,7 @@ const Login = () => {
           Σύνδεση
         </Typography>
         
-        {/* Εμφάνιση κόκκινου μηνύματος αν υπάρχει λάθος */}
+        
         {error && <Alert severity="error" sx={{ width: '100%', mt: 2 }}>{error}</Alert>}
 
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>

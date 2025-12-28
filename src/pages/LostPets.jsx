@@ -61,7 +61,6 @@ const LostPets = () => {
     setSelectedLocation('all');
   };
 
-  // --- HANDLERS ΓΙΑ ΤΟ MODAL ---
   const handleOpenDetails = (pet) => {
     setSelectedPet(pet);
     setOpenDialog(true);

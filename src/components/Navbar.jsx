@@ -71,7 +71,7 @@ function Navbar() {
     zIndex: 1100}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box onClick={()=> navigate(' /')} sx={{ display:{xs: 'none', md: 'flex'},alignItems: 'center',mr:2, cursor: 'pointer' }}>
+          <Box onClick={()=> navigate('/')} sx={{ display:{xs: 'none', md: 'flex'},alignItems: 'center',mr:2, cursor: 'pointer' }}>
           <PetsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
