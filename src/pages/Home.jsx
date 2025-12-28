@@ -10,10 +10,10 @@ const heroImage = '../pictures/home-hero.jpg';
 const Home = () => {
   const navigate = useNavigate();
   
-  // 1. Δημιουργούμε ένα "σημείο αναφοράς" (ref) για την ενότητα των πληροφοριών
+  
   const featuresRef = useRef(null);
 
-  // 2. Η συνάρτηση που κάνει το scroll
+  
   const scrollToFeatures = () => {
     featuresRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -94,13 +94,13 @@ const Home = () => {
           </Grid>
         </Container>
 
-        {/* --- SCROLL DOWN ARROW --- */}
+       
         <Box sx={{ 
             position: 'absolute', 
             bottom: 30, 
             left: '50%', 
             transform: 'translateX(-50%)',
-            animation: 'bounce 2s infinite', // Εφέ κίνησης πάνω-κάτω
+            animation: 'bounce 2s infinite', 
             '@keyframes bounce': {
                 '0%, 20%, 50%, 80%, 100%': { transform: 'translate(-50%, 0)' },
                 '40%': { transform: 'translate(-50%, -10px)' },
@@ -114,8 +114,7 @@ const Home = () => {
         </Box>
       </Box>
 
-      {/* --- FEATURES SECTION (Πληροφορίες) --- */}
-      {/* Συνδέουμε το ref εδώ για να ξέρει που να κατέβει */}
+      
       <Box ref={featuresRef} sx={{ py: 10, bgcolor: '#f9f9f9', minHeight: '60vh' }}>
         <Container maxWidth="lg">
           <Typography variant="h4" component="h2" align="center" gutterBottom sx={{ fontWeight: 'bold', mb: 6 }}>
