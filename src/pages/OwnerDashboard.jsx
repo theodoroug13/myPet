@@ -1,20 +1,16 @@
-import { Box, Container, Typography, Grid, Card, CardContent, CardActionArea, Divider, List, ListItem, ListItemText } from '@mui/material';
+import { Typography, Grid, Card, CardActionArea, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import OwnerMenu from '../components/OwnerMenu';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import OwnerLayout from '../components/OwnerLayout'; 
+
 
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-
-// Icons για τις κάρτες
 import PetsIcon from '@mui/icons-material/Pets';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-
 import MedicalServicesOutlinedIcon from '@mui/icons-material/MedicalServicesOutlined';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 
 const Dashboard = () => {
   const navigate = useNavigate();
-
   
   const quickActions = [
     { 
@@ -45,64 +41,52 @@ const Dashboard = () => {
       text: 'Βρήκα ένα χαμένο κατοικίδιο', 
       icon: <SearchOutlinedIcon />, 
       path: '/lost-pets', 
-      desc: 'Βρήκες ένα ζωάκι; Δες τη λίστα με τα δηλωμένα χαμένα ζώα και έλα σε επαφή με τον ιδιοκτήτη του.' 
+      desc: 'Βρήκες ένα ζωάκι; Δες τη λίστα με τα δηλωμένα χαμένα ζώα.' 
     }
   ];
 
   return (
-    <Box sx={{ display: 'flex', minHeight: '90vh', bgcolor: '#f4f6f8' }}>
-      
-      
-      <OwnerMenu />
+    <OwnerLayout> 
+        
+        <Box sx={{ mb: 6 }}>
+            <Typography variant="h4" fontWeight="bold" gutterBottom>
+                Αρχική
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+                Διαχειρίσου εύκολα την υγεία και την καθημερινότητα των αγαπημένων σου φίλων.
+            </Typography>
+        </Box>
 
-      
-      <Box component="main" sx={{ flexGrow: 1, p: 4, overflowY: 'auto' }}>
-        <Container maxWidth="lg">
-            
-            <Box sx={{ mb: 6 }}>
-                <Typography variant="h4" fontWeight="bold" gutterBottom>
-                    Αρχική
-                </Typography>
-                <Typography variant="body1" color="text.secondary">
-                    Διαχειρίσου εύκολα την υγεία και την καθημερινότητα των αγαπημένων σου φίλων.
-                </Typography>
-            </Box>
+        <Grid container spacing={4}>
+            {quickActions.map((item) => (
+                <Grid item xs={12} sm={6} md={6} lg={4} key={item.text}> 
+                    <Card sx={{ 
+                        height: '100%', 
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.05)', 
+                        borderRadius: 3,
+                        transition: '0.3s',
+                        '&:hover': { transform: 'translateY(-5px)', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }
+                    }}>
+                        <CardActionArea 
+                            onClick={() => navigate(item.path)} 
+                            sx={{ height: '100%', p: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}
+                        >
+                            <Box sx={{ p: 2, bgcolor: '#f5f5f5', borderRadius: '50%', mb: 2 }}>
+                                {item.icon}
+                            </Box>
+                            <Typography variant="h6" fontWeight="bold" gutterBottom>
+                                {item.text}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {item.desc}
+                            </Typography>
+                        </CardActionArea>
+                    </Card>
+                </Grid>
+            ))}
+        </Grid>
 
-            
-            <Grid container spacing={4}>
-                {quickActions.map((item) => (
-                    <Grid item xs={12} sm={6} md={6} lg={3} key={item.text}>
-                        <Card sx={{ 
-                            height: '100%', 
-                            boxShadow: '0 4px 12px rgba(0,0,0,0.05)', 
-                            borderRadius: 3,
-                            transition: '0.3s',
-                            '&:hover': { transform: 'translateY(-5px)', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }
-                        }}>
-                            <CardActionArea 
-                                onClick={() => navigate(item.path)} 
-                                sx={{ height: '100%', p: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}
-                            >
-                                <Box sx={{ p: 2, bgcolor: '#f5f5f5', borderRadius: '50%', mb: 2 }}>
-                                    {item.icon}
-                                </Box>
-                                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                                    {item.text}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {item.desc}
-                                </Typography>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-                ))}
-            </Grid>
-
-
-
-        </Container>
-      </Box>
-    </Box>
+    </OwnerLayout>
   );
 };
 
