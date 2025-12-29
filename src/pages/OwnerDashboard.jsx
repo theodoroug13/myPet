@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import OwnerMenu from '../components/OwnerMenu';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+
 // Icons για τις κάρτες
 import PetsIcon from '@mui/icons-material/Pets';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -38,6 +40,12 @@ const Dashboard = () => {
       icon: <EditNoteIcon />, 
       path: '/diloseis', 
       desc: 'Δες τις δηλώσεις σου, ή κάνε μια νέα δήλωση απώλειας ή εύρεσης.' 
+    },
+    { 
+      text: 'Βρήκα ένα χαμένο κατοικίδιο', 
+      icon: <SearchOutlinedIcon />, 
+      path: '/lost-pets', 
+      desc: 'Βρήκες ένα ζωάκι; Δες τη λίστα με τα δηλωμένα χαμένα ζώα και έλα σε επαφή με τον ιδιοκτήτη του.' 
     }
   ];
 
@@ -90,49 +98,7 @@ const Dashboard = () => {
                 ))}
             </Grid>
 
-            
-            <Box sx={{ mt: 10, mb: 4 }}>
-                <Divider sx={{ mb: 6 }} />
-                
-                <Grid container spacing={4} alignItems="center">
-                    <Grid item xs={12} md={6}>
-                        <Typography variant="h5" fontWeight="bold" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                            <InfoOutlinedIcon color="action" />
-                            Πώς λειτουργεί το Dashboard;
-                        </Typography>
-                        <List>
-                            <ListItem>
-                                <ListItemText 
-                                    primary="1. Καταχώρηση Ζώου" 
-                                    secondary="Ξεκίνα πατώντας 'Τα Ζώα μου' για να δημιουργήσεις την ψηφιακή ταυτότητα του κατοικιδίου σου." 
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText 
-                                    primary="2. Ιατρικός Φάκελος" 
-                                    secondary="Όλα τα δεδομένα υγείας αποθηκεύονται αυτόματα στο ιστορικό μόλις τα καταχωρήσει ο κτηνίατρος." 
-                                />
-                            </ListItem>
-                        </List>
-                    </Grid>
-                    
-                    <Grid item xs={12} md={6}>
-                        <Box sx={{ 
-                            height: 250, 
-                            bgcolor: '#eaeef2', 
-                            borderRadius: 4, 
-                            display: 'flex', 
-                            alignItems: 'center', 
-                            justifyContent: 'center',
-                            border: '2px dashed #ccc'
-                        }}>
-                            <Typography variant="button" color="text.secondary">
-                                [Γράφημα ή Εικόνα Status]
-                            </Typography>
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Box>
+
 
         </Container>
       </Box>

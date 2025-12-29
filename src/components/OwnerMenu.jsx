@@ -18,10 +18,15 @@ const BRAND_COLOUR="#3f0a2b";
 const OwnerMenu = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation(); 
+  const location = useLocation();
+
+  const handleLogout = () => {
+    logout();       
+    navigate('/');  
+  }; 
 
   const menuItems = [
-    { text: 'Αρχική', icon: <DashboardIcon />, path: '/dashboard' },
+    { text: 'Αρχική', icon: <DashboardIcon />, path: '/owner-dashboard' },
     { text: 'Τα Κατοικίδιά μου', icon: <PetsIcon />, path: '/my-pets' },
     { text: 'Ραντεβού', icon: <CalendarMonthIcon />, path: '/appointments' },
     { text: 'Ο Κτηνίατρός μου', icon: <MedicalServicesOutlinedIcon />, path: '/veterinarian' },
@@ -44,7 +49,7 @@ const OwnerMenu = () => {
         overflow: "hidden",
       }}
     >
-      {/* Header */}
+    
       <Box
         sx={{
           px: 2.5,
@@ -127,11 +132,14 @@ const OwnerMenu = () => {
                 >
                   {item.icon}
                 </ListItemIcon>
+                
                 <ListItemText
                   primary={item.text}
-                  primaryTypographyProps={{
-                    fontWeight: selected ? 900 : 700,
-                    fontSize: 14,
+                  slotProps={{
+                    primary: {
+                        fontWeight: selected ? 900 : 700,
+                        fontSize: 14,
+                    }
                   }}
                 />
               </ListItemButton>
@@ -146,7 +154,7 @@ const OwnerMenu = () => {
       <List sx={{ px: 1.2, py: 1 }}>
         <ListItem disablePadding>
           <ListItemButton
-            onClick={logout}
+            onClick={handleLogout}
             sx={{
               borderRadius: 3,
               py: 1.2,
@@ -157,9 +165,12 @@ const OwnerMenu = () => {
             <ListItemIcon sx={{ minWidth: 40, color: "error.main" }}>
               <LogoutIcon />
             </ListItemIcon>
+            
             <ListItemText
               primary="Αποσύνδεση"
-              primaryTypographyProps={{ fontWeight: 800, color: "error.main" }}
+              slotProps={{
+                primary: { fontWeight: 800, color: "error.main" }
+              }}
             />
           </ListItemButton>
         </ListItem>

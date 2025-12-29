@@ -10,7 +10,7 @@ const heroImage = '../pictures/home-hero.jpg';
 const Home = () => {
   const navigate = useNavigate();
   
-  
+
   const featuresRef = useRef(null);
 
   
@@ -34,7 +34,7 @@ const Home = () => {
     {
       icon: <SearchOutlinedIcon sx={{ fontSize: 40, color: '#ed6c02' }} />,
       title: "Χαμένα Κατοικίδια",
-      description: "Βρήκες ένα ζωάκι; Δες τη λίστα με τα δηλωμένα χαμένα ζώα ή καταχώρησε μια νέα αναφορά για να βοηθήσεις.",
+      description: "Βρήκες ένα ζωάκι; Δες τη λίστα με τα δηλωμένα χαμένα ζώα και έλα σε επαφή με τον ιδιοκτήτη του.",
       action: () => navigate('/lost-pets')
     }
   ];
