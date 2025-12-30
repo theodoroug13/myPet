@@ -16,11 +16,14 @@ const Login = () => {
     e.preventDefault(); 
     setError('');
 
-    
     const result = await login(username, password);
 
     if (result.success) {
-      navigate('/owner-dashboard'); 
+      if (result.user.role === 'vet') {
+        navigate('/vet-dashboard');
+      } else {
+        navigate('/owner-dashboard');
+      }
     } else {
       setError(result.message); 
     }
@@ -33,7 +36,6 @@ const Login = () => {
           Σύνδεση
         </Typography>
         
-        
         {error && <Alert severity="error" sx={{ width: '100%', mt: 2 }}>{error}</Alert>}
 
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
@@ -41,7 +43,7 @@ const Login = () => {
             margin="normal"
             required
             fullWidth
-            label="Όνομα Χρήστη (Δοκίμασε: owner1 ή vet1)"
+            label="Όνομα Χρήστη"
             autoFocus
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -50,7 +52,7 @@ const Login = () => {
             margin="normal"
             required
             fullWidth
-            label="Κωδικός (Δοκίμασε: 123)"
+            label="Κωδικός"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

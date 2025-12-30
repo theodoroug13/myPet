@@ -5,7 +5,6 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  // Έλεγχος αν υπάρχει αποθηκευμένος χρήστης (για να μην χάνεται το login στο refresh)
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
@@ -22,7 +21,7 @@ export const AuthProvider = ({ children }) => {
         if (data[0].password === password) {
           setUser(data[0]);
           localStorage.setItem('user', JSON.stringify(data[0]));
-          return { success: true };
+          return { success: true, user: data[0] }; 
         }
       }
       return { success: false, message: "Λάθος όνομα χρήστη ή κωδικός" };
@@ -42,6 +41,5 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
 
 export const useAuth = () => useContext(AuthContext);

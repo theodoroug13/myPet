@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import LostPets from './pages/LostPets';
 import OwnerDashboard from './pages/OwnerDashboard';
+import VetDashboard from './pages/VetDashboard';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           
           <Route path="/lost-pets" element={<LostPets />} />
           <Route path="/owner-dashboard" element={<OwnerDashboard />} />
+          <Route path="/vet-dashboard" element={<VetDashboard />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Box>
