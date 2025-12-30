@@ -239,7 +239,7 @@ const VetProfile = () => {
                 <Card sx={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)', borderRadius: 3, p: 2, height: '100%' }}>
                     <CardContent>
                         
-                        <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>Λίγα λόγια για εμένα</Typography>
+                        <Typography variant="h6" fontWeight="bold" sx={{ mb: 2 }}>Σχετικά με τον Κτηνίατρο</Typography>
                         {isEditing ? (
                             <TextField multiline rows={4} fullWidth name="bio" value={formData.bio} onChange={handleChange} placeholder="Γράψε το βιογραφικό σου..." />
                         ) : (

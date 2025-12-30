@@ -8,6 +8,7 @@ import LostPets from './pages/LostPets';
 import OwnerDashboard from './pages/OwnerDashboard';
 import VetDashboard from './pages/VetDashboard';
 import VetProfile from './pages/VetProfile';
+import VetAppointments from './pages/VetAppointments';
 
 function App() {
   return (
@@ -25,9 +26,10 @@ function App() {
           <Route path="/lost-pets" element={<LostPets />} />
           <Route path="/owner-dashboard" element={<OwnerDashboard />} />
 
-          {/* Διαδρομές Κτηνιάτρου */}
           <Route path="/vet-dashboard" element={<VetDashboard />} />
           <Route path="/vet-profile" element={<VetProfile />} />
+          <Route path="/vet-appointments" element={<VetAppointments />} />
+          
           <Route path="*" element={<Home />} />
         </Routes>
       </Box>

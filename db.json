@@ -6,7 +6,8 @@
       "username": "owner1",
       "password": "123",
       "fullName": "Anna Papadopoulou",
-      "email": "anna@test.com"
+      "email": "anna@test.com",
+      "phone": "6911111111"
     },
     {
       "id": "2",
@@ -23,6 +24,15 @@
       "education": "• Σπούδασε κτηνιατρική στο Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης.\n• Έκανε μεταπτυχιακό στην εξειδίκευση των σκύλων στο Πανεπιστήμιο του Εδιμβούργου.",
       "hours": "• Δευτέρα έως Παρασκευή, 09:00 – 17:00\n• Για ραντεβού ή περισσότερες πληροφορίες καλέστε στο 210 9876543.",
       "photo": ""
+    },
+    {
+      "id": "3",
+      "role": "owner",
+      "username": "maria",
+      "password": "123",
+      "fullName": "Μαρία Κωνσταντίνου",
+      "email": "maria@test.com",
+      "phone": "6922222222"
     }
   ],
   "pets": [
@@ -36,7 +46,212 @@
       "birthDate": "2020-01-01"
     }
   ],
-  "appointments": [],
+  "appointments": [
+    {
+      "id": "105",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "microchip": "OA99999999",
+      "details": "Εξέταση αίματος",
+      "date": "2025-12-02",
+      "time": "10:00",
+      "status": "completed",
+      "reason": "Προληπτικός έλεγχος"
+    },
+    {
+      "id": "106",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "microchip": "OA02184280",
+      "details": "Κόψιμο νυχιών",
+      "date": "2025-12-05",
+      "time": "12:30",
+      "status": "completed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "101",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "microchip": "OA07631830",
+      "details": "Εμβόλιο κατά της λύσσας",
+      "date": "2025-12-12",
+      "time": "09:00",
+      "status": "completed",
+      "reason": "Ετήσιος έλεγχος"
+    },
+    {
+      "id": "102",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "microchip": "OA02184280",
+      "details": "Εξέταση για δερματικά",
+      "date": "2025-12-12",
+      "time": "10:30",
+      "status": "completed",
+      "reason": "Φαγούρα"
+    },
+    {
+      "id": "107",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "microchip": "OA07631830",
+      "details": "Επανεξέταση",
+      "date": "2025-12-18",
+      "time": "09:30",
+      "status": "completed",
+      "reason": "Παρακολούθηση θεραπείας"
+    },
+    {
+      "id": "108",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "microchip": "OA99999999",
+      "details": "Εμβόλιο λεπτοσπείρωσης",
+      "date": "2025-12-24",
+      "time": "11:00",
+      "status": "completed",
+      "reason": "Εμβολιασμός"
+    },
+    {
+      "id": "109",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "microchip": "OA02184280",
+      "details": "Υπέρηχος κοιλίας",
+      "date": "2025-12-28",
+      "time": "16:00",
+      "status": "completed",
+      "reason": "Στομαχικές διαταραχές"
+    },
+    {
+      "id": "104",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "microchip": "OA07631830",
+      "details": "Καθαρισμός δοντιών",
+      "date": "2025-12-30",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Οδοντιατρικός έλεγχος"
+    },
+    {
+      "id": "110",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "microchip": "OA99999999",
+      "details": "Καθαρισμός αυτιών",
+      "date": "2026-01-05",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ωτίτιδα"
+    },
+    {
+      "id": "111",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "microchip": "OA07631830",
+      "details": "Γενική εξέταση",
+      "date": "2026-01-12",
+      "time": "09:00",
+      "status": "confirmed",
+      "reason": "Check-up Ιανουαρίου"
+    },
+    {
+      "id": "112",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "microchip": "OA02184280",
+      "details": "Αλλαγή τροφής",
+      "date": "2026-01-15",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Συμβουλευτική"
+    },
+    {
+      "id": "113",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "microchip": "OA99999999",
+      "details": "Εμβόλιο kennel cough",
+      "date": "2026-01-22",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Εμβολιασμός"
+    },
+    {
+      "id": "114",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "microchip": "OA07631830",
+      "details": "Έλεγχος βάρους",
+      "date": "2026-01-29",
+      "time": "15:00",
+      "status": "confirmed",
+      "reason": "Δίαιτα"
+    },
+    {
+      "id": "115",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "microchip": "OA99999999",
+      "details": "Εξέταση ματιών",
+      "date": "2026-01-03",
+      "time": "18:00",
+      "status": "pending",
+      "reason": "Δακρύζει το μάτι"
+    },
+    {
+      "id": "116",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "microchip": "OA07631830",
+      "details": "Έλεγχος αρθρώσεων",
+      "date": "2026-01-07",
+      "time": "09:00",
+      "status": "pending",
+      "reason": "Κουτσαίνει λίγο"
+    },
+    {
+      "id": "117",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "microchip": "OA02184280",
+      "details": "Αφαίρεση ραμμάτων",
+      "date": "2026-01-10",
+      "time": "11:00",
+      "status": "pending",
+      "reason": "Μετεγχειρητικός έλεγχος"
+    },
+    {
+      "id": "118",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "microchip": "OA99999999",
+      "details": "Πιστοποιητικό υγείας",
+      "date": "2026-01-18",
+      "time": "12:00",
+      "status": "pending",
+      "reason": "Ταξίδι"
+    }
+  ],
   "lostPets": [
     {
       "id": "1",
