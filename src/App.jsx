@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import LostPets from './pages/LostPets';
 import OwnerDashboard from './pages/OwnerDashboard';
 import VetDashboard from './pages/VetDashboard';
+import VetProfile from './pages/VetProfile';
 
 function App() {
   return (
@@ -23,7 +24,10 @@ function App() {
           
           <Route path="/lost-pets" element={<LostPets />} />
           <Route path="/owner-dashboard" element={<OwnerDashboard />} />
+
+          {/* Διαδρομές Κτηνιάτρου */}
           <Route path="/vet-dashboard" element={<VetDashboard />} />
+          <Route path="/vet-profile" element={<VetProfile />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Box>

@@ -43,7 +43,7 @@ const Login = () => {
             margin="normal"
             required
             fullWidth
-            label="Όνομα Χρήστη"
+            label="Όνομα Χρήστη (onwer1 ή vet1)"
             autoFocus
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -52,7 +52,7 @@ const Login = () => {
             margin="normal"
             required
             fullWidth
-            label="Κωδικός"
+            label="Κωδικός (123)"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
