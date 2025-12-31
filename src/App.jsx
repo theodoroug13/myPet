@@ -9,11 +9,8 @@ import OwnerDashboard from './pages/OwnerDashboard';
 import VetDashboard from './pages/VetDashboard';
 import VetProfile from './pages/VetProfile';
 import VetAppointments from './pages/VetAppointments';
-<<<<<<< HEAD
 import VetHours from './pages/VetHours';
 import VetReviews from './pages/VetReviews';
-=======
->>>>>>> d6f1ed042cb5dcbdd9c6ef9f44dc2b5d10ad7ac0
 
 function App() {
   return (
