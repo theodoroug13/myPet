@@ -9,7 +9,8 @@ import OwnerDashboard from './pages/OwnerDashboard';
 import VetDashboard from './pages/VetDashboard';
 import VetProfile from './pages/VetProfile';
 import VetAppointments from './pages/VetAppointments';
-
+import VetPets from './pages/VetPets';
+import VetNewPet from './pages/VetNewPet';
 function App() {
   return (
     
@@ -29,7 +30,8 @@ function App() {
           <Route path="/vet-dashboard" element={<VetDashboard />} />
           <Route path="/vet-profile" element={<VetProfile />} />
           <Route path="/vet-appointments" element={<VetAppointments />} />
-          
+          <Route path="/vet-pets" element={<VetPets />} />
+          <Route path="/new-pet" element={<VetNewPet />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Box>
