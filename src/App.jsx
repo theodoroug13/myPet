@@ -10,6 +10,7 @@ import VetDashboard from './pages/VetDashboard';
 import VetProfile from './pages/VetProfile';
 import VetAppointments from './pages/VetAppointments';
 import VetHours from './pages/VetHours';
+import VetReviews from './pages/VetReviews';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/vet-profile" element={<VetProfile />} />
           <Route path="/vet-appointments" element={<VetAppointments />} />
           <Route path="/vet-hours" element={<VetHours />} />
+          <Route path="/vet-reviews" element={<VetReviews />} />
           
           <Route path="*" element={<Home />} />
         </Routes>
