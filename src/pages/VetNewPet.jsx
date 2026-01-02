@@ -17,7 +17,6 @@ const VetNewPet = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: POST to http://localhost:3000/pets
     console.log('New pet:', formData);
     navigate(-1); // back to VetPets
   };
