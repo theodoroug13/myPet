@@ -16,25 +16,25 @@ const Dashboard = () => {
     { 
       text: 'Τα Κατοικίδιά μου', 
       icon: <PetsIcon />, 
-      path: '/my-pets', 
+      path: '/owner-pets', 
       desc: 'Δες τα στοιχεία και το βιβλιάριο υγείας των κατοικιδίων σου.' 
     },
     { 
       text: 'Ραντεβού', 
       icon: <CalendarMonthIcon />, 
-      path: '/appointments', 
+      path: '/owner-appointments', 
       desc: 'Κλείσε νέο ραντεβού ή δες τα επερχόμενα.' 
     },
     { 
       text: 'Ο Κτηνίατρός μου', 
       icon: <MedicalServicesOutlinedIcon/>, 
-      path: '/veterinarian', 
+      path: '/my-vet', 
       desc: 'Βρες τον κατάλληλο κτηνίατρο για το κατοικίδιό σου.' 
     },
     { 
       text: 'Δηλώσεις', 
       icon: <EditNoteIcon />, 
-      path: '/diloseis', 
+      path: '/my-diloseis', 
       desc: 'Δες τις δηλώσεις σου, ή κάνε μια νέα δήλωση απώλειας ή εύρεσης.' 
     },
     { 
