@@ -95,7 +95,7 @@
       "id": "p1",
       "ownerId": "1",
       "name": "Bruno",
-      "type": "Dog",
+      "type": "Σκύλος",
       "microchip": "1234567890",
       "status": "submitted",
       "birthDate": "2020-01-01",
@@ -108,7 +108,7 @@
       "id": "p2",
       "ownerId": "1",
       "name": "Λούνα",
-      "type": "Cat",
+      "type": "Γάτα",
       "microchip": "OA02184280",
       "status": "approved",
       "birthDate": "2019-05-15",
@@ -121,7 +121,7 @@
       "id": "p3",
       "ownerId": "1",
       "name": "Ρεξ",
-      "type": "Dog",
+      "type": "Σκύλος",
       "microchip": "OA07631830",
       "status": "approved",
       "birthDate": "2018-11-20",
@@ -134,7 +134,7 @@
       "id": "p4",
       "ownerId": "3",
       "name": "Μάξ",
-      "type": "Dog",
+      "type": "Σκύλος",
       "microchip": "OA99999999",
       "status": "approved",
       "birthDate": "2021-03-10",
@@ -553,7 +553,7 @@
       "vetId": "2",
       "ownerId": "1",
       "ownerAddress": "",
-      "type": "Dog",
+      "type": "Σκύλος",
       "otherType": "",
       "name": "Rocky",
       "microchip": "",
@@ -563,7 +563,7 @@
       "updatedAt": "2026-01-11T14:29:52.468Z",
       "ownerLookupKey": "",
       "notes": "",
-      "typeSelect": "Dog"
+      "typeSelect": "Σκύλος"
     }
   ]
 }
