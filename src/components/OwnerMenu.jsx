@@ -27,10 +27,10 @@ const OwnerMenu = () => {
 
   const menuItems = [
     { text: 'Αρχική', icon: <DashboardIcon />, path: '/owner-dashboard' },
-    { text: 'Τα Κατοικίδιά μου', icon: <PetsIcon />, path: '/my-pets' },
-    { text: 'Ραντεβού', icon: <CalendarMonthIcon />, path: '/appointments' },
-    { text: 'Ο Κτηνίατρός μου', icon: <MedicalServicesOutlinedIcon />, path: '/veterinarian' },
-    { text: 'Δηλώσεις', icon: <EditNoteIcon />, path: '/diloseis' },
+    { text: 'Τα Κατοικίδιά μου', icon: <PetsIcon />, path: '/owner-pets' },
+    { text: 'Ραντεβού', icon: <CalendarMonthIcon />, path: '/owner-appointments' },
+    { text: 'Ο Κτηνίατρός μου', icon: <MedicalServicesOutlinedIcon />, path: '/my-vet' },
+    { text: 'Δηλώσεις', icon: <EditNoteIcon />, path: '/my-diloseis' },
     { text: 'Ρυθμίσεις', icon: <SettingsIcon />, path: '/settings' }
   ];
 

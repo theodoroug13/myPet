@@ -30,15 +30,15 @@ function Navbar() {
   ];
 
   
-  if (user?.role === 'owner') {
-    navItems.push({ label: 'Τα Ζώα μου', path: '/my-pets' });
-    navItems.push({ label: 'Ραντεβού', path: '/appointments' });
-  }
+if (user?.role === 'owner') {
+  navItems.push({ label: 'Τα Ζώα μου', path: '/owner-pets' });
+  navItems.push({ label: 'Ραντεβού', path: '/owner-appointments' });
+}
 
-  
-  if (user?.role === 'vet') {
-    navItems.push({ label: 'Ιατρείο', path: '/dashboard' });
-  }
+if (user?.role === 'vet') {
+  navItems.push({ label: 'Ιατρείο', path: '/vet-dashboard' });
+}
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);

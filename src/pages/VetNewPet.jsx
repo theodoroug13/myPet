@@ -1,20 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import {
-  Box,
-  Typography,
-  TextField,
-  Button,
-  IconButton,
-  MenuItem,
-  CircularProgress,
-  Paper,
-  Tabs,
-  Tab,
-  Divider,
-  Alert,
-  Chip,
-  Autocomplete,
-  InputAdornment,
+import { Box,Typography,TextField,Button,IconButton,MenuItem,CircularProgress,Paper,Tabs,Tab,Divider,Alert,Chip,Autocomplete,InputAdornment,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -35,9 +20,7 @@ export default function VetNewPet() {
   const navigate = useNavigate();
   const { user } = useAuth();
 
-  // ----------------------------
-  // API data
-  // ----------------------------
+
   const [loading, setLoading] = useState(true);
   const [links, setLinks] = useState([]); // vetOwnerLinks for this vet
   const [registeredOwners, setRegisteredOwners] = useState([]); // owners for links only
@@ -45,10 +28,7 @@ export default function VetNewPet() {
   const [lostPetsAll, setLostPetsAll] = useState([]);
   const [drafts, setDrafts] = useState([]);
 
-  // ----------------------------
-  // Owner UI state
-  // ----------------------------
-  // tab 0: registered owners, tab 1: register new owner to this vet
+
   const [ownerTab, setOwnerTab] = useState(0);
 
   // Registered owner selection (via autocomplete)
@@ -65,9 +45,7 @@ export default function VetNewPet() {
   const [newOwnerAddress, setNewOwnerAddress] = useState("");
   const [newOwnerNotes, setNewOwnerNotes] = useState("");
 
-  // ----------------------------
-  // Pet form state
-  // ----------------------------
+
   const [form, setForm] = useState({
     typeSelect: "",
     otherType: "",
@@ -88,9 +66,7 @@ export default function VetNewPet() {
   // Inline errors
   const [errors, setErrors] = useState({});
 
-  // ----------------------------
-  // Derived
-  // ----------------------------
+
   const registeredOwnerIdSet = useMemo(() => {
     const s = new Set();
     (links || []).forEach((l) => s.add(String(l.ownerId)));
@@ -116,18 +92,16 @@ export default function VetNewPet() {
 
   const lastDraft = useMemo(() => (drafts?.length ? drafts[0] : null), [drafts]);
 
-  // Ensure typeSelect has a sensible default once options load
+ 
   useEffect(() => {
     setForm((prev) => ({
       ...prev,
       typeSelect: prev.typeSelect || (typeOptionsFromDb[0] || "Dog"),
     }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  
   }, [typeOptionsFromDb.length]);
 
-  // ----------------------------
-  // Fetch
-  // ----------------------------
+
   const fetchAll = async () => {
     if (!user) return;
     setLoading(true);
@@ -151,7 +125,6 @@ export default function VetNewPet() {
       setLostPetsAll(Array.isArray(lost) ? lost : []);
       setDrafts(Array.isArray(draftsData) ? draftsData : []);
 
-      // Fetch ONLY owners that are linked to this vet (no global list)
       if (safeLinks.length > 0) {
         const idsParams = safeLinks
           .map((l) => `id=${encodeURIComponent(String(l.ownerId))}`)
@@ -172,12 +145,10 @@ export default function VetNewPet() {
     if (!user) return;
     if (user.role !== "vet") return;
     fetchAll();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [user?.id]);
 
-  // ----------------------------
-  // Helpers
-  // ----------------------------
+ 
   const setField = (name, value) => {
     setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
@@ -476,9 +447,7 @@ export default function VetNewPet() {
     setSaving(false);
   };
 
-  // ----------------------------
-  // Guards
-  // ----------------------------
+
   if (!user) {
     return (
       <VetLayout>
