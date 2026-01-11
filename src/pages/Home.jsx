@@ -57,7 +57,7 @@ const Home = () => {
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={8}>
               <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold', mb: 2, color: '#ffffff' }}>
-                Όλα όσα χρειάζεσαι για το κατοικίδιο σου, σε ένα μέρος!
+                Όλα όσα χρειάζεσαι για το κατοικίδιό σου, σε ένα μέρος!
               </Typography>
               <Typography variant="h6" sx={{ mb: 4, color: '#f9f9f9', maxWidth: '600px' }}>
                 Οργάνωσε την υγεία των αγαπημένων σου ζώων σε λίγα μόνο κλικ!

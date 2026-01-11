@@ -4,7 +4,6 @@ import {
     Chip, Divider, Alert,
 } from "@mui/material";
 import { useNavigate, useSearchParams } from "react-router-dom";
-
 import OwnerLayout from "../components/OwnerLayout";
 import { useAuth } from "../context/AuthContext";
 
@@ -57,6 +56,8 @@ export default function OwnerNewAppointment() {
     const navigate = useNavigate();
     const { user } = useAuth();
     const [searchParams] = useSearchParams();
+    const initialPetId = searchParams.get("petId") || "";
+    const initialVetId = searchParams.get("vetId") || "";
 
     const todayISO = useMemo(() => toISODate(new Date()), []);
 
@@ -65,8 +66,9 @@ export default function OwnerNewAppointment() {
     const [vets, setVets] = useState([]);
     const [appointments, setAppointments] = useState([]);
 
-    const [petId, setPetId] = useState("");
-    const [vetId, setVetId] = useState(searchParams.get("vetId") || "");
+    const [petId, setPetId] = useState(initialPetId);
+    const [vetId, setVetId] = useState(initialVetId);
+
     const [date, setDate] = useState(todayISO);
     const [time, setTime] = useState("");
 
@@ -98,17 +100,14 @@ export default function OwnerNewAppointment() {
         return vets.filter((v) => set.has(String(v.id)));
     }, [vets, preferredVetIds]);
     useEffect(() => {
-        // Αν ήρθαμε με vetId από query, κράτα το.
-        const fromQuery = searchParams.get("vetId");
-        if (fromQuery) return;
-
-        // Αν υπάρχει preferred vet, κάνε auto-select τον πρώτο
+        if (initialVetId) return; // ήρθαμε με vetId, μην κάνεις auto-select
         if (preferredVets.length > 0) {
             const first = String(preferredVets[0].id);
             if (String(vetId) !== first) setVetId(first);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [preferredVets]);
+    }, [preferredVets, initialVetId]);
+
 
 
     const selectedVet = useMemo(
@@ -172,6 +171,10 @@ export default function OwnerNewAppointment() {
                 : [];
 
             setPets(myPets);
+            if (initialPetId && myPets.some((p) => p.id === initialPetId)) {
+                setPetId(initialPetId);
+            }
+
             setVets(vetUsers);
             setAppointments(Array.isArray(appsData) ? appsData : []);
 
