@@ -565,5 +565,28 @@
       "notes": "",
       "typeSelect": "Σκύλος"
     }
-  ]
+  ],
+  "vaccinations": [
+  {
+    "id": "vx1",
+    "microchip": "OA02184280",
+    "petId": "p2",
+    "vetId": "2",
+    "vaccine": "Λύσσα",
+    "date": "2025-12-12",
+    "nextDue": "2026-12-12",
+    "notes": "Ετήσιο"
+  },
+  {
+    "id": "vx2",
+    "microchip": "OA02184280",
+    "petId": "p2",
+    "vetId": "2",
+    "vaccine": "Τριπλό γάτας",
+    "date": "2025-05-10",
+    "nextDue": "2026-05-10",
+    "notes": ""
+  }
+]
+
 }
