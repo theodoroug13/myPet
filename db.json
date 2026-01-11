@@ -98,8 +98,44 @@
       "type": "Dog",
       "microchip": "1234567890",
       "status": "submitted",
-      "birthDate": "2020-01-01"
+      "birthDate": "2020-01-01",
+      "registeredVetId": "2",
+      "linkedVetIds": ["2"]
+    },
+    {
+      "id": "p2",
+      "ownerId": "1",
+      "name": "Λούνα",
+      "type": "Cat",
+      "microchip": "OA02184280",
+      "status": "approved",
+      "birthDate": "2019-05-15",
+      "registeredVetId": "2",
+      "linkedVetIds": ["2"]
+    },
+    {
+      "id": "p3",
+      "ownerId": "1",
+      "name": "Ρεξ",
+      "type": "Dog",
+      "microchip": "OA07631830",
+      "status": "approved",
+      "birthDate": "2018-11-20",
+      "registeredVetId": "2",
+      "linkedVetIds": ["2"]
+    },
+    {
+      "id": "p4",
+      "ownerId": "3",
+      "name": "Μάξ",
+      "type": "Dog",
+      "microchip": "OA99999999",
+      "status": "approved",
+      "birthDate": "2021-03-10",
+      "registeredVetId": "2",
+      "linkedVetIds": ["2"]
     }
+
   ],
   "appointments": [
     {
@@ -267,7 +303,7 @@
       "details": "Έλεγχος αρθρώσεων",
       "date": "2026-01-07",
       "time": "09:00",
-      "status": "pending",
+      "status": "confirmed",
       "reason": "Κουτσαίνει λίγο"
     },
     {
@@ -291,7 +327,7 @@
       "details": "Γενική εξέταση",
       "date": "2026-01-12",
       "time": "09:00",
-      "status": "confirmed",
+      "status": "cancelled",
       "reason": "Check-up Ιανουαρίου"
     },
     {
@@ -342,7 +378,7 @@
       "status": "confirmed",
       "reason": "Δίαιτα"
     }
-],
+  ],
   "reviews": [
     {
       "id": "1",
@@ -371,7 +407,7 @@
       "date": "2026-01-02",
       "reply": ""
     }
-],
+  ],
   "lostPets": [
     {
       "id": "1",
