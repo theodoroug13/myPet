@@ -320,7 +320,7 @@ export default function MyDiloseis() {
     if (!decl?.id) return;
     if (decl.status !== "draft") return;
 
-    const ok = window.confirm("Θες σίγουρα να διαγράψεις αυτό το πρόχειρο;");
+    const ok = window.confirm("Θες σίγουρα να διαγράψεις αυτή τη δήλωση;");
     if (!ok) return;
 
     setSaving(true);
