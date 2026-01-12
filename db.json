@@ -98,7 +98,7 @@
       "specialty": "Γάτες",
       "address": "Κτηνιατρική Κλινική Ζώων, Οδός Μικράς Ασίας 12, Γουδή, Αθήνα",
       "phone": "+30 2310123456",
-      "email":"eleni@test.com ",
+      "email": "eleni@test.com ",
       "afm": "888888888",
       "bio": "Η Ελένη είναι αφοσιωμένη κτηνίατρο με εξειδίκευση στις γάτες. Προσφέρει φροντίδα υψηλής ποιότητας, από προληπτική υγεία μέχρι εξειδικευμένες θεραπείες για τις αγαπημένες μας γάτες.",
       "education": "• Σπούδασε κτηνιατρική στο Πανεπιστήμιο Θεσσαλίας.\n• Εξειδικεύτηκε στη φροντίδα γατών στο Πανεπιστήμιο του Μπρίστολ.",
@@ -124,7 +124,7 @@
           "breaks": []
         },
         "2026-01-08": {
-          "isOpen": true,   
+          "isOpen": true,
           "start": "10:00",
           "end": "18:00",
           "breaks": []
@@ -132,7 +132,6 @@
       }
     }
   ],
-  
   "pets": [
     {
       "id": "p1",
@@ -401,7 +400,7 @@
       "details": "Πιστοποιητικό υγείας",
       "date": "2026-01-18",
       "time": "12:00",
-      "status": "pending",
+      "status": "confirmed",
       "reason": "Ταξίδι"
     },
     {
@@ -427,6 +426,18 @@
       "time": "15:00",
       "status": "confirmed",
       "reason": "Δίαιτα"
+    },
+    {
+      "id": "dd65",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "microchip": "1234567890",
+      "details": "test",
+      "reason": "test123",
+      "date": "2026-01-09",
+      "time": "16:30",
+      "status": "pending"
     }
   ],
   "reviews": [
@@ -458,128 +469,7 @@
       "reply": ""
     }
   ],
-  "lostPets": [
-    {
-      "id": "1",
-      "name": "Μήτσος",
-      "type": "Ιγκουάνα",
-      "location": "Κυψέλη",
-      "ownerName": "Λάζαρος Καραγεωργόπουλος",
-      "photo": "pictures/iguana.jpg",
-      "microchip": "900123456789",
-      "lostDate": "10/11/2025",
-      "phone": "6987015677",
-      "description": "Το χρώμα του είναι πράσινο και είναι κοντά στα 30 εκατοστά."
-    },
-    {
-      "id": "2",
-      "name": "Μπρούνο",
-      "type": "Σκύλος",
-      "location": "Άνω Πατήσια",
-      "ownerName": "Θεοπούλα Τζίνη",
-      "photo": "pictures/bruno.jpg ",
-      "microchip": "941000012345",
-      "lostDate": "12/11/2025",
-      "phone": "6944000000",
-      "description": "Φοράει κόκκινο λουράκι."
-    },
-    {
-      "id": "3",
-      "name": "Φλάφφι",
-      "type": "Γάτα",
-      "location": "Ζωγράφου",
-      "ownerName": "Ανδρέας Νιαζός",
-      "photo": "",
-      "microchip": "981098765432",
-      "lostDate": "01/11/2025",
-      "phone": "6933000000",
-      "description": "Είναι πολύ φιλική."
-    },
-    {
-      "id": "4",
-      "name": "Σούκι",
-      "type": "Γάτα",
-      "location": "Κηφισιά",
-      "ownerName": "Τούλα Θωμά",
-      "photo": "",
-      "microchip": "977112233445",
-      "lostDate": "15/11/2025",
-      "phone": "6900000000",
-      "description": "Έχει μια βούλα στη μύτη."
-    },
-    {
-      "id": "5",
-      "name": "Ρεξ",
-      "type": "Σκύλος",
-      "location": "Πειραιάς",
-      "ownerName": "Γιώργος Μανωλάκης",
-      "photo": "",
-      "microchip": "912345678901",
-      "lostDate": "20/11/2025",
-      "phone": "6955000000",
-      "description": "Είναι μεγάλος και χρυσαφί χρώμα."
-    },
-    {
-      "id": "6",
-      "name": "Τζίντζερ",
-      "type": "Παπαγάλος",
-      "location": "Νέα Σμύρνη",
-      "ownerName": "Ελένη Καραγιάννη",
-      "photo": "",
-      "microchip": "934567890123",
-      "lostDate": "22/11/2025",
-      "phone": "6976000000",
-      "description": "Έχει κόκκινα σημάδια στην πλάτη."
-    },
-    {
-      "id": "7",
-      "name": "Τίγρης",
-      "type": "Σκύλος",
-      "location": "Γλυφάδα",
-      "ownerName": "Κώστας Παπαδόπουλος",
-      "photo": "",
-      "microchip": "965432109876",
-      "lostDate": "25/11/2025",
-      "phone": "6988000000",
-      "description": "Έχει λουράκι με ταμπελάκι."
-    },
-    {
-      "id": "8",
-      "name": "Μίνα",
-      "type": "Γάτα",
-      "location": "Βύρωνας",
-      "ownerName": "Σοφία Λαμπροπούλου",
-      "photo": "",
-      "microchip": "978654321098",
-      "lostDate": "28/11/2025",
-      "phone": "6999000000",
-      "description": "είναι άσπρη με μαύρες βούλες."
-    },
-    {
-      "id": "9",
-      "name": "Ρόκι",
-      "type": "Σκύλος",
-      "location": "Καλλιθέα",
-      "ownerName": "Μαρία Σταθοπούλου",
-      "photo": "",
-      "microchip": "901234567890",
-      "lostDate": "30/11/2025",
-      "phone": "6911000000",
-      "description": "Έχει ένα μαύρο σημάδι στο αυτί."
-    },
-    {
-      "id": "10",
-      "name": "Λίλυ",
-      "type": "Γάτα",
-      "location": "Αιγάλεω",
-      "ownerName": "Ευαγγελία Κωνσταντίνου",
-      "photo": "",
-      "microchip": "923456789012",
-      "lostDate": "02/12/2025",
-      "phone": "6922000000",
-      "description": "Είναι πολύ παιχνιδιάρα."
-    }
-  ],
+  "lostPets": [],
   "vetOwnerLinks": [
     {
       "id": "vol1",
@@ -610,26 +500,64 @@
     }
   ],
   "vaccinations": [
-  {
-    "id": "vx1",
-    "microchip": "OA02184280",
-    "petId": "p2",
-    "vetId": "2",
-    "vaccine": "Λύσσα",
-    "date": "2025-12-12",
-    "nextDue": "2026-12-12",
-    "notes": "Ετήσιο"
-  },
-  {
-    "id": "vx2",
-    "microchip": "OA02184280",
-    "petId": "p2",
-    "vetId": "2",
-    "vaccine": "Τριπλό γάτας",
-    "date": "2025-05-10",
-    "nextDue": "2026-05-10",
-    "notes": ""
-  }
-]
-
+    {
+      "id": "vx1",
+      "microchip": "OA02184280",
+      "petId": "p2",
+      "vetId": "2",
+      "vaccine": "Λύσσα",
+      "date": "2025-12-12",
+      "nextDue": "2026-12-12",
+      "notes": "Ετήσιο"
+    },
+    {
+      "id": "vx2",
+      "microchip": "OA02184280",
+      "petId": "p2",
+      "vetId": "2",
+      "vaccine": "Τριπλό γάτας",
+      "date": "2025-05-10",
+      "nextDue": "2026-05-10",
+      "notes": ""
+    }
+  ],
+  "declarations": [
+    {
+      "id": "a93a",
+      "ownerId": "1",
+      "petId": "p1",
+      "petName": "Bruno",
+      "microchip": "1234567890",
+      "type": "lost",
+      "status": "submitted",
+      "date": "2026-01-12T10:36:03.020Z",
+      "contactPhone": "6748930297",
+      "notes": "",
+      "lastSeenDate": "2026-01-11",
+      "lastSeenLocation": "Παγκράτι",
+      "foundDate": "",
+      "foundLocation": "",
+      "newOwnerName": "",
+      "newOwnerPhone": "",
+      "newOwnerEmail": ""
+    }
+  ],
+  "foundReports": [
+    {
+      "id": "fr_1768216182986",
+      "lostPetId": "2",
+      "microchip": "941000012345",
+      "petName": "Μπρούνο",
+      "petType": "Σκύλος",
+      "ownerName": "Θεοπούλα Τζίνη",
+      "ownerPhone": "6944000000",
+      "foundDate": "2026-01-12",
+      "foundLocation": "Πατήσια",
+      "finderName": "",
+      "finderPhone": "6900000000",
+      "comments": "",
+      "status": "new",
+      "createdAt": "2026-01-12T11:09:42.986Z"
+    }
+  ]
 }

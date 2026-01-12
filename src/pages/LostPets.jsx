@@ -107,26 +107,98 @@ const handleLocationSearch = async (event, value) => {
         setPhoneError(val.length !== 10 && val.length > 0);
     };
 
-    
-    const handleSubmitFound = () => {
-        if (foundForm.phone.length !== 10) {
-            setPhoneError(true);
-            alert("Παρακαλώ εισάγετε ένα έγκυρο 10ψήφιο τηλέφωνο.");
-            return;
-        }
-        if (!foundForm.date || !foundForm.location) {
-            alert("Παρακαλώ συμπληρώστε ημερομηνία και τοποθεσία.");
-            return;
-        }
 
-        const formattedDate = dayjs(foundForm.date).format('DD/MM/YYYY');
-        console.log("Found Report Submitted:", { ...foundForm, date: formattedDate });
+  const handleSubmitFound = async () => {
+    if (foundForm.phone.length !== 10) {
+      setPhoneError(true);
+      alert("Παρακαλώ εισάγετε ένα έγκυρο 10ψήφιο τηλέφωνο.");
+      return;
+    }
+    if (!foundForm.date || !foundForm.location) {
+      alert("Παρακαλώ συμπληρώστε ημερομηνία και τοποθεσία.");
+      return;
+    }
 
-        setOpenFoundDialog(false);
-        setShowSuccess(true);
-        setFoundForm({ date: null, location: '', phone: '', name: '', comments: '' });
-        setPhoneError(false);
+    const payload = {
+      id: `fr_${Date.now()}`,
+      lostId: String(selectedPet.id),        
+      microchip: selectedPet.microchip || "",
+      petName: selectedPet.petName || "",
+      petType: selectedPet.type || "",
+      ownerName: selectedPet.ownerName || "",
+      ownerPhone: selectedPet.ownerPhone || "",
+
+      foundDate: dayjs(foundForm.date).format("YYYY-MM-DD"),
+      foundLocation: foundForm.location,
+      finderName: foundForm.name,
+      finderPhone: foundForm.phone,
+      comments: foundForm.comments || "",
+
+      status: "new",
+      createdAt: new Date().toISOString(),
     };
+
+    const res = await fetch("http://localhost:8000/foundReports", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error("Failed to create found report");
+
+    try {
+      const [lostRes, declRes, usersRes] = await Promise.all([
+        fetch("http://localhost:8000/lostPets"),
+        fetch("http://localhost:8000/declarations"),
+        fetch("http://localhost:8000/users"),
+      ]);
+
+      const lostData = await lostRes.json();
+      const declData = await declRes.json();
+      const usersData = await usersRes.json();
+
+      const usersById = {};
+      (Array.isArray(usersData) ? usersData : []).forEach((u) => {
+        usersById[String(u.id)] = u;
+      });
+
+      const lostFromDecl = (Array.isArray(declData) ? declData : [])
+        .filter((d) => d.type === "lost")
+        .filter((d) => d.status === "submitted" || d.status === "approved")   // ΜΗΝ δείχνεις draft/rejected/resolved
+        .map((d) => ({
+          id: String(d.id),
+          source: "declaration",
+          petName: d.petName || "—",
+          microchip: d.microchip || "",
+          type: d.petType || "—",
+          ownerName:
+            d.ownerName ||
+            usersById[String(d.ownerId)]?.fullName ||
+            usersById[String(d.ownerId)]?.username ||
+            "—",
+          ownerPhone: d.contactPhone || "—",
+          lostDate: d.lastSeenDate || "",
+          lostLocation: d.lastSeenLocation || "",
+        }));
+
+      const merged = [
+        ...(Array.isArray(lostData) ? lostData.map((x) => ({ ...x, source: "seed" })) : []),
+        ...lostFromDecl,
+      ];
+
+      setLostPets(merged);
+
+      if (!res.ok) throw new Error("POST foundReports failed");
+
+      setOpenFoundDialog(false);
+      setShowSuccess(true);
+      setFoundForm({ date: null, location: "", phone: "", name: "", comments: "" });
+      setPhoneError(false);
+    } catch (e) {
+      console.error(e);
+      alert("Αποτυχία αποθήκευσης δήλωσης εύρεσης. Δοκίμασε ξανά.");
+    }
+  };
+
 
   return (
     <Box sx={{ minHeight: '100vh', bgcolor: '#f5f5f5', pb: 8 }}>
