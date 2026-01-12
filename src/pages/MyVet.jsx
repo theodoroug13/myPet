@@ -29,7 +29,7 @@ import { useNavigate } from "react-router-dom";
 
 import OwnerLayout from "../components/OwnerLayout";
 import EmptyState from "../components/EmptyState";
-import { useAuth } from "../context/AuthContext";
+import { useAuth, useSearchParams } from "../context/AuthContext";
 
 const vetLabel = (v) =>
   `${v?.fullName || "-"}${v?.specialty ? ` — ${v.specialty}` : ""}`;
@@ -39,7 +39,13 @@ function uniq(arr) {
 }
 
 export default function MyVet() {
+  
   const navigate = useNavigate();
+  const [sp] = useSearchParams();
+
+  const returnTo = sp.get("returnTo") || "";
+  const petIdFromQuery = sp.get("petId") || "";
+
   const { user } = useAuth();
 
   const [loading, setLoading] = useState(true);
@@ -76,7 +82,7 @@ export default function MyVet() {
     setFavIds(next);
     try {
       localStorage.setItem(favKey, JSON.stringify(next));
-    } catch {}
+    } catch { }
   };
 
   const toggleFav = (vetId) => {
@@ -198,12 +204,16 @@ export default function MyVet() {
     setDlgPetId("");
   };
 
-  const goNewAppointment = (petId, vetId) => {
-    if (!petId || !vetId) return;
-    navigate(
-      `/owner-appointments/new?petId=${encodeURIComponent(petId)}&vetId=${encodeURIComponent(vetId)}`
-    );
-  };
+const goToAppointment = (vetId, petId) => {
+  const target = returnTo || "/owner-appointments/new";
+  const url = new URL(target, window.location.origin);
+
+  url.searchParams.set("vetId", String(vetId));
+  if (petId) url.searchParams.set("petId", String(petId));
+
+  navigate(url.pathname + url.search);
+};
+
 
   const patchPet = async (petId, patch) => {
     setSaving(true);
@@ -414,14 +424,10 @@ export default function MyVet() {
                       </CardContent>
 
                       <CardActions sx={{ justifyContent: "flex-end", px: 2, pb: 2, gap: 1, flexWrap: "wrap" }}>
-                        <Button
-                          size="small"
-                          startIcon={<EventAvailableIcon />}
-                          variant="contained"
-                          onClick={() => openBook(v)}
-                        >
-                          Κλείσε ραντεβού
+                        <Button onClick={() => goToAppointment(v.id, petIdFromQuery /* ή selectedPetId */)}>
+                          ΚΛΕΙΣΕ ΡΑΝΤΕΒΟΥ
                         </Button>
+
 
 
                       </CardActions>
@@ -432,7 +438,7 @@ export default function MyVet() {
             )}
           </Paper>
 
-          
+
           <Dialog open={bookDlg.open} onClose={closeDialogs} maxWidth="xs" fullWidth>
             <DialogTitle>Γρήγορο ραντεβού</DialogTitle>
             <DialogContent dividers>
@@ -458,16 +464,20 @@ export default function MyVet() {
             </DialogContent>
             <DialogActions>
               <Button onClick={closeDialogs}>Άκυρο</Button>
+
               <Button
                 variant="contained"
                 onClick={() => {
                   if (!dlgPetId || !bookDlg.vet) return;
                   closeDialogs();
-                  goNewAppointment(dlgPetId, bookDlg.vet.id);
+                  navigate(
+                    `/owner-appointments/new?petId=${encodeURIComponent(dlgPetId)}&vetId=${encodeURIComponent(bookDlg.vet.id)}`
+                  );
                 }}
               >
                 Συνέχεια
               </Button>
+
             </DialogActions>
           </Dialog>
 

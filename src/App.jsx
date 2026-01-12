@@ -17,6 +17,9 @@ import OwnerPets from './pages/OwnerPets';
 import MyDiloseis from './pages/MyDiloseis';
 import MyVet from './pages/MyVet';
 import OwnerPetDetails from './pages/OwnerPetDetails';
+import VetReviews from './pages/VetReviews'
+import VetHours from './pages/VetHours'
+
 function App() {
   return (
     
@@ -46,6 +49,8 @@ function App() {
           <Route path="/vet-dashboard" element={<VetDashboard />} />
           <Route path="/vet-profile" element={<VetProfile />} />
           <Route path="/vet-appointments" element={<VetAppointments />} />
+          <Route path="/vet-hours" element={<VetHours />} />
+          <Route path="/vet-reviews" element={<VetReviews />} />
           <Route path="/vet-pets" element={<VetPets />} />
           <Route path="/new-pet" element={<VetNewPet />} />
           

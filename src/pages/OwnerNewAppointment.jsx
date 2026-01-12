@@ -3,7 +3,7 @@ import {
     Box, Typography, Paper, IconButton, Button, TextField, MenuItem, CircularProgress,
     Chip, Divider, Alert,
 } from "@mui/material";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams, useLocation } from "react-router-dom";
 import OwnerLayout from "../components/OwnerLayout";
 import { useAuth } from "../context/AuthContext";
 
@@ -55,12 +55,14 @@ function generateSlots({ start, end, breaks = [], step = 30 }) {
 export default function OwnerNewAppointment() {
     const navigate = useNavigate();
     const { user } = useAuth();
+    const location = useLocation();
+
     const [searchParams] = useSearchParams();
     const initialPetId = searchParams.get("petId") || "";
     const initialVetId = searchParams.get("vetId") || "";
 
     const todayISO = useMemo(() => toISODate(new Date()), []);
-
+    
     const [loading, setLoading] = useState(true);
     const [pets, setPets] = useState([]);
     const [vets, setVets] = useState([]);
@@ -99,14 +101,23 @@ export default function OwnerNewAppointment() {
         const set = new Set(preferredVetIds);
         return vets.filter((v) => set.has(String(v.id)));
     }, [vets, preferredVetIds]);
+    const otherVets = useMemo(() => {
+        const pref = new Set(preferredVetIds.map(String));
+        return vets.filter((v) => !pref.has(String(v.id)));
+    }, [vets, preferredVetIds]);
+
     useEffect(() => {
-        if (initialVetId) return; // ήρθαμε με vetId, μην κάνεις auto-select
+        if (initialVetId) return; // αν ήρθες από query, δεν πειράζουμε
+
         if (preferredVets.length > 0) {
             const first = String(preferredVets[0].id);
-            if (String(vetId) !== first) setVetId(first);
+
+            const currentIsPreferred = preferredVets.some((v) => String(v.id) === String(vetId));
+            if (!vetId || !currentIsPreferred) setVetId(first);
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        
     }, [preferredVets, initialVetId]);
+
 
 
 
@@ -145,12 +156,13 @@ export default function OwnerNewAppointment() {
     // Reset selected time if it becomes unavailable
     useEffect(() => {
         if (time && !availableSlots.includes(time)) setTime("");
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        
     }, [availableSlots]);
 
     const fetchData = async () => {
         if (!user) return;
         setLoading(true);
+
         try {
             const [petsRes, usersRes, appsRes] = await Promise.all([
                 fetch("http://localhost:8000/pets"),
@@ -163,7 +175,7 @@ export default function OwnerNewAppointment() {
             const appsData = await appsRes.json();
 
             const myPets = Array.isArray(petsData)
-                ? petsData.filter((p) => p.ownerId == user.id)
+                ? petsData.filter((p) => String(p.ownerId) === String(user.id))
                 : [];
 
             const vetUsers = Array.isArray(usersData)
@@ -171,27 +183,31 @@ export default function OwnerNewAppointment() {
                 : [];
 
             setPets(myPets);
-            if (initialPetId && myPets.some((p) => p.id === initialPetId)) {
-                setPetId(initialPetId);
-            }
-
             setVets(vetUsers);
             setAppointments(Array.isArray(appsData) ? appsData : []);
 
-            // Auto select first pet if none selected
-            if (!petId && myPets.length > 0) setPetId(myPets[0].id);
+            if (initialPetId && myPets.some((p) => String(p.id) === String(initialPetId))) {
+                setPetId(String(initialPetId));
+            } else if (!petId && myPets.length > 0) {
+                setPetId(String(myPets[0].id));
+            }
 
-            // Auto select first vet if none selected (and no vetId from query)
-            if (!vetId && vetUsers.length > 0) setVetId(vetUsers[0].id);
+            if (initialVetId && vetUsers.some((v) => String(v.id) === String(initialVetId))) {
+                setVetId(String(initialVetId));
+            } else if (!vetId && vetUsers.length > 0) {
+                setVetId(String(vetUsers[0].id));
+            }
         } catch (e) {
             console.error(e);
         }
+
         setLoading(false);
     };
 
+
     useEffect(() => {
         if (user) fetchData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        
     }, [user]);
 
     const canSubmit =
@@ -296,22 +312,51 @@ export default function OwnerNewAppointment() {
                                 ))}
                             </TextField>
 
-                            <Button variant="outlined" onClick={() => navigate("/owner-dashboard")}>
-                                Διάλεξε νέο κτηνίατρο
-                            </Button>
+                                <Button
+                                    variant="outlined"
+                                    onClick={() =>
+                                        navigate(
+                                            `/my-vet?petId=${encodeURIComponent(petId || "")}&returnTo=${encodeURIComponent(
+                                                location.pathname + location.search
+                                            )}`
+                                        )
+                                    }
+                                >
+                                    Διάλεξε νέο κτηνίατρο
+                                </Button>
 
-                            <TextField select label="Κτηνίατρος" value={vetId} onChange={(e) => setVetId(e.target.value)} fullWidth>
-                                {preferredVets.length > 0 && (
-                                    <MenuItem disabled value="">
-                                        — Κτηνίατροι που είναι δηλωμένο το κατοικίδιο: —
-                                    </MenuItem>
-                                )}
-                                {preferredVets.map((v) => (
-                                    <MenuItem key={`pref-${v.id}`} value={v.id}>
-                                        {v.fullName} {v.specialty ? `— ${v.specialty}` : ""}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
+
+
+                                <TextField
+                                    select
+                                    label="Κτηνίατρος"
+                                    value={vetId}
+                                    onChange={(e) => setVetId(String(e.target.value))}
+                                    fullWidth
+                                >
+                                    {preferredVets.length > 0 && (
+                                        <MenuItem disabled value="__pref__">
+                                            — Κτηνίατροι που είναι δηλωμένο το κατοικίδιο —
+                                        </MenuItem>
+                                    )}
+                                    {preferredVets.map((v) => (
+                                        <MenuItem key={`pref-${v.id}`} value={String(v.id)}>
+                                            {v.fullName} {v.specialty ? `— ${v.specialty}` : ""}
+                                        </MenuItem>
+                                    ))}
+
+                                    {otherVets.length > 0 && (
+                                        <MenuItem disabled value="__all__">
+                                            — Όλοι οι κτηνίατροι —
+                                        </MenuItem>
+                                    )}
+                                    {otherVets.map((v) => (
+                                        <MenuItem key={`all-${v.id}`} value={String(v.id)}>
+                                            {v.fullName} {v.specialty ? `— ${v.specialty}` : ""}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+
 
 
                             <TextField
