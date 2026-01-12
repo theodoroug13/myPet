@@ -26,7 +26,7 @@ const VetPets = () => {
 
   // προσωρινά (μέχρι να τα υλοποιήσεις)
   const handleDrafts = () => navigate("/vet/drafts");
-  const handleUpdatePet = () => alert("Coming soon: Ενημέρωση υφιστάμενου");
+  const handleUpdatePet = () => navigate("/vet/update-pets");
 
   return (
     <VetLayout>

@@ -20,6 +20,7 @@ import OwnerPetDetails from './pages/OwnerPetDetails';
 import VetReviews from './pages/VetReviews'
 import VetHours from './pages/VetHours'
 import VetDrafts from './pages/VetDrafts';
+import VetUpdatePetList from './pages/VetUpdatePetList';
 function App() {
   return (
     
@@ -54,7 +55,7 @@ function App() {
           <Route path="/vet-pets" element={<VetPets />} />
           <Route path="/vet/new-pet" element={<VetNewPet />} />
           <Route path="/vet/drafts" element={<VetDrafts />} />
-          
+          <Route path="/vet/update-pets" element={<VetUpdatePetList />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </Box>
