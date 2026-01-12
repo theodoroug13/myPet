@@ -19,6 +19,13 @@ const mkId = (prefix) => `${prefix}${Date.now()}`;
 export default function VetNewPet() {
   const navigate = useNavigate();
   const { user } = useAuth();
+  useEffect(() => {
+  const id = localStorage.getItem('targetDraftId');
+  if (id) {
+    setTargetDraftId(id);
+    localStorage.removeItem('targetDraftId');
+  }
+}, []);
 
 
   const [loading, setLoading] = useState(true);
@@ -91,7 +98,7 @@ export default function VetNewPet() {
   }, [form.typeSelect, form.otherType]);
 
   const lastDraft = useMemo(() => (drafts?.length ? drafts[0] : null), [drafts]);
-
+  const [targetDraftId, setTargetDraftId] = useState("");
  
   useEffect(() => {
     setForm((prev) => ({
@@ -140,6 +147,14 @@ export default function VetNewPet() {
     }
     setLoading(false);
   };
+
+useEffect(() => {
+  if (targetDraftId && drafts.length > 0) {
+    const targetDraft = drafts.find(d => d.id === targetDraftId);
+    if (targetDraft) loadDraft(targetDraft);
+    setTargetDraftId("");  // Clear after load
+  }
+}, [drafts, targetDraftId]);
 
   useEffect(() => {
     if (!user) return;

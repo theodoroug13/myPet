@@ -19,7 +19,7 @@ import MyVet from './pages/MyVet';
 import OwnerPetDetails from './pages/OwnerPetDetails';
 import VetReviews from './pages/VetReviews'
 import VetHours from './pages/VetHours'
-
+import VetDrafts from './pages/VetDrafts';
 function App() {
   return (
     
@@ -52,7 +52,8 @@ function App() {
           <Route path="/vet-hours" element={<VetHours />} />
           <Route path="/vet-reviews" element={<VetReviews />} />
           <Route path="/vet-pets" element={<VetPets />} />
-          <Route path="/new-pet" element={<VetNewPet />} />
+          <Route path="/vet/new-pet" element={<VetNewPet />} />
+          <Route path="/vet/drafts" element={<VetDrafts />} />
           
           <Route path="*" element={<Home />} />
         </Routes>

@@ -22,10 +22,10 @@ const actionButtonSx = {
 const VetPets = () => {
   const navigate = useNavigate();
 
-  const handleNewPet = () => navigate("/new-pet");
+  const handleNewPet = () => navigate("/vet/new-pet");
 
   // προσωρινά (μέχρι να τα υλοποιήσεις)
-  const handleDrafts = () => alert("Coming soon: Πρόχειρες καταχωρήσεις");
+  const handleDrafts = () => navigate("/vet/drafts");
   const handleUpdatePet = () => alert("Coming soon: Ενημέρωση υφιστάμενου");
 
   return (
