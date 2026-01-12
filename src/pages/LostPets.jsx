@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { 
-  Box, Container, Typography, Grid, Card, CardContent, CardMedia, 
+import {
+  Box, Container, Typography, Grid, Card, CardContent, CardMedia,
   Button, MenuItem, Select, FormControl, InputLabel,
   Dialog, DialogContent, DialogTitle, IconButton, Divider, TextField, Snackbar, Alert,
   Autocomplete, CircularProgress
@@ -9,7 +9,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
-import 'dayjs/locale/el'; 
+import 'dayjs/locale/el';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PetsIcon from '@mui/icons-material/Pets';
@@ -42,10 +42,64 @@ const LostPets = () => {
   });
 
   useEffect(() => {
-    fetch('http://localhost:8000/lostPets')
-      .then(res => res.json())
-      .then(data => setPets(data));
+    (async () => {
+      try {
+        const [lostRes, declRes, petsRes, usersRes] = await Promise.all([
+          fetch("http://localhost:8000/lostPets"),
+          fetch("http://localhost:8000/declarations"),
+          fetch("http://localhost:8000/pets"),
+          fetch("http://localhost:8000/users"),
+        ]);
+
+        const [lostPets, declarations, allPets, users] = await Promise.all([
+          lostRes.json(),
+          declRes.json(),
+          petsRes.json(),
+          usersRes.json(),
+        ]);
+
+        const petsById = {};
+        (Array.isArray(allPets) ? allPets : []).forEach((p) => (petsById[String(p.id)] = p));
+
+        const usersById = {};
+        (Array.isArray(users) ? users : []).forEach((u) => (usersById[String(u.id)] = u));
+
+        const lostDecls = (Array.isArray(declarations) ? declarations : [])
+          .filter((d) => d.type === "lost")
+          .filter((d) => d.status === "submitted" || d.status === "approved")
+          .map((d) => {
+            const p = petsById[String(d.petId)] || {};
+            const u = usersById[String(d.ownerId)] || {};
+
+            return {
+              id: `decl_${d.id}`,
+              source: "declaration",
+              declarationId: String(d.id),
+
+              name: d.petName || p.name || "—",
+              type: p.type || "—",
+              microchip: d.microchip || p.microchip || "",
+
+              location: d.lastSeenLocation || "",
+              lostDate: d.lastSeenDate || "",
+
+              ownerName: u.fullName || u.username || "—",
+              phone: d.contactPhone || "",
+
+              // προαιρετικά για να γεμίζει το dialog σου
+              description: d.notes || "",
+              photo: p.photo || "",
+            };
+          });
+
+
+        setPets([...(Array.isArray(lostPets) ? lostPets : []), ...lostDecls]);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
   }, []);
+
 
   const petTypes = ['all', ...new Set(pets.map(pet => pet.type).filter(Boolean))];
   const lostLocations = ['all', ...new Set(pets.map(pet => pet.location).filter(Boolean))];
@@ -80,33 +134,32 @@ const LostPets = () => {
     setOpenFoundDialog(false);
   };
 
-const handleLocationSearch = async (event, value) => {
-        setFoundForm({ ...foundForm, location: value });
-        
-        
-        if (!value || value.length <2) return;
+  const handleLocationSearch = async (event, value) => {
+    setFoundForm({ ...foundForm, location: value });
 
-        setLoadingLocation(true);
-        try {
-            // Χρήση OpenStreetMap API (Nominatim) επειδή είναι δωρεάν
-            const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${value}&countrycodes=gr&addressdetails=1&limit=5`);
-            const data = await response.json();
-            setLocationOptions(data.map((place) => place.display_name)); 
-        } catch (error) {
-            console.error("Error fetching locations:", error);
-        } finally {
-            setLoadingLocation(false);
-        }
-    };
 
-    
-    const handlePhoneChange = (e) => {
-        const val = e.target.value;
-        if (!/^\d*$/.test(val)) return; 
-        setFoundForm({ ...foundForm, phone: val });
-        setPhoneError(val.length !== 10 && val.length > 0);
-    };
+    if (!value || value.length < 2) return;
 
+    setLoadingLocation(true);
+    try {
+      // Χρήση OpenStreetMap API (Nominatim) επειδή είναι δωρεάν
+      const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${value}&countrycodes=gr&addressdetails=1&limit=5`);
+      const data = await response.json();
+      setLocationOptions(data.map((place) => place.display_name));
+    } catch (error) {
+      console.error("Error fetching locations:", error);
+    } finally {
+      setLoadingLocation(false);
+    }
+  };
+
+
+  const handlePhoneChange = (e) => {
+    const val = e.target.value;
+    if (!/^\d*$/.test(val)) return;
+    setFoundForm({ ...foundForm, phone: val });
+    setPhoneError(val.length !== 10 && val.length > 0);
+  };
 
   const handleSubmitFound = async () => {
     if (foundForm.phone.length !== 10) {
@@ -118,19 +171,31 @@ const handleLocationSearch = async (event, value) => {
       alert("Παρακαλώ συμπληρώστε ημερομηνία και τοποθεσία.");
       return;
     }
+    if (!selectedPet) return;
+
+    const lostRefType = selectedPet.source === "declaration" ? "declaration" : "seed";
+    const lostRefId =
+      selectedPet.source === "declaration"
+        ? String(selectedPet.declarationId)
+        : String(selectedPet.id);
 
     const payload = {
       id: `fr_${Date.now()}`,
-      lostId: String(selectedPet.id),        
+
+      // link προς τη “δήλωση απώλειας”
+      lostRefType,
+      lostRefId,
+
+      // useful fields για inbox του owner
       microchip: selectedPet.microchip || "",
-      petName: selectedPet.petName || "",
+      petName: selectedPet.name || "",
       petType: selectedPet.type || "",
       ownerName: selectedPet.ownerName || "",
-      ownerPhone: selectedPet.ownerPhone || "",
+      ownerPhone: selectedPet.phone || "",
 
       foundDate: dayjs(foundForm.date).format("YYYY-MM-DD"),
       foundLocation: foundForm.location,
-      finderName: foundForm.name,
+      finderName: foundForm.name || "",
       finderPhone: foundForm.phone,
       comments: foundForm.comments || "",
 
@@ -138,56 +203,13 @@ const handleLocationSearch = async (event, value) => {
       createdAt: new Date().toISOString(),
     };
 
-    const res = await fetch("http://localhost:8000/foundReports", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    if (!res.ok) throw new Error("Failed to create found report");
-
     try {
-      const [lostRes, declRes, usersRes] = await Promise.all([
-        fetch("http://localhost:8000/lostPets"),
-        fetch("http://localhost:8000/declarations"),
-        fetch("http://localhost:8000/users"),
-      ]);
-
-      const lostData = await lostRes.json();
-      const declData = await declRes.json();
-      const usersData = await usersRes.json();
-
-      const usersById = {};
-      (Array.isArray(usersData) ? usersData : []).forEach((u) => {
-        usersById[String(u.id)] = u;
+      const res = await fetch("http://localhost:8000/foundReports", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
-
-      const lostFromDecl = (Array.isArray(declData) ? declData : [])
-        .filter((d) => d.type === "lost")
-        .filter((d) => d.status === "submitted" || d.status === "approved")   // ΜΗΝ δείχνεις draft/rejected/resolved
-        .map((d) => ({
-          id: String(d.id),
-          source: "declaration",
-          petName: d.petName || "—",
-          microchip: d.microchip || "",
-          type: d.petType || "—",
-          ownerName:
-            d.ownerName ||
-            usersById[String(d.ownerId)]?.fullName ||
-            usersById[String(d.ownerId)]?.username ||
-            "—",
-          ownerPhone: d.contactPhone || "—",
-          lostDate: d.lastSeenDate || "",
-          lostLocation: d.lastSeenLocation || "",
-        }));
-
-      const merged = [
-        ...(Array.isArray(lostData) ? lostData.map((x) => ({ ...x, source: "seed" })) : []),
-        ...lostFromDecl,
-      ];
-
-      setLostPets(merged);
-
-      if (!res.ok) throw new Error("POST foundReports failed");
+      if (!res.ok) throw new Error("Failed to create found report");
 
       setOpenFoundDialog(false);
       setShowSuccess(true);
@@ -195,15 +217,16 @@ const handleLocationSearch = async (event, value) => {
       setPhoneError(false);
     } catch (e) {
       console.error(e);
-      alert("Αποτυχία αποθήκευσης δήλωσης εύρεσης. Δοκίμασε ξανά.");
+      alert("Αποτυχία αποθήκευσης αναφοράς εύρεσης. Δοκίμασε ξανά.");
     }
   };
 
 
+
   return (
     <Box sx={{ minHeight: '100vh', bgcolor: '#f5f5f5', pb: 8 }}>
-      
-   
+
+
       <Box sx={{ bgcolor: 'white', py: 6, borderBottom: '1px solid #ddd' }}>
         <Container maxWidth="lg">
           <Typography variant="h4" fontWeight="bold" gutterBottom>
@@ -245,50 +268,50 @@ const handleLocationSearch = async (event, value) => {
             </FormControl>
 
             {(selectedType !== 'all' || selectedLocation !== 'all') && (
-                <Button variant="text" color="error" startIcon={<ClearIcon />} onClick={clearFilters}>
-                    Καθαρισμός
-                </Button>
+              <Button variant="text" color="error" startIcon={<ClearIcon />} onClick={clearFilters}>
+                Καθαρισμός
+              </Button>
             )}
           </Box>
         </Container>
       </Box>
 
-      
+
       <Container maxWidth="lg" sx={{ mt: 4 }}>
         <Grid container spacing={3}>
           {filteredPets.map((pet) => (
             <Grid item xs={12} md={6} key={pet.id}>
-               <Card sx={{ display: 'flex', height: '100%', boxShadow: 2, '&:hover': { boxShadow: 4 }, transition: '0.3s' }}>
-                  <Box sx={{ width: 140, bgcolor: '#e0e0e0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    {pet.photo ? (
-                      <CardMedia component="img" sx={{ width: 140, height: '100%', objectFit: 'cover' }} image={pet.photo} alt={pet.name} />
-                    ) : (
-                      <PetsOutlinedIcon sx={{ color: '#9e9e9e', fontSize: 40, opacity: 0.5 }} />
-                    )}
-                  </Box>
+              <Card sx={{ display: 'flex', height: '100%', boxShadow: 2, '&:hover': { boxShadow: 4 }, transition: '0.3s' }}>
+                <Box sx={{ width: 140, bgcolor: '#e0e0e0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  {pet.photo ? (
+                    <CardMedia component="img" sx={{ width: 140, height: '100%', objectFit: 'cover' }} image={pet.photo} alt={pet.name} />
+                  ) : (
+                    <PetsOutlinedIcon sx={{ color: '#9e9e9e', fontSize: 40, opacity: 0.5 }} />
+                  )}
+                </Box>
 
-                  <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, p: 2 }}>
-                    <CardContent sx={{ flex: '1 0 auto', p: 0, pb: 1 }}>
-                      <Typography component="div" variant="h6" fontWeight="bold">“{pet.name}”</Typography>
-                      {pet.location && (
-                        <Box sx={{ display: 'flex', alignItems: 'center', mt: 1, mb: 0.5 }}>
-                            <LocationOnIcon sx={{ fontSize: 18, color: 'text.secondary', mr: 0.5 }} />
-                            <Typography variant="body2" color="text.secondary">{pet.location}</Typography>
-                        </Box>
-                      )}
-                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                         <PetsIcon sx={{ fontSize: 18, color: 'text.secondary', mr: 0.5 }} />
-                         <Typography variant="body2" color="text.secondary">{pet.type}</Typography>
+                <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, p: 2 }}>
+                  <CardContent sx={{ flex: '1 0 auto', p: 0, pb: 1 }}>
+                    <Typography component="div" variant="h6" fontWeight="bold">“{pet.name}”</Typography>
+                    {pet.location && (
+                      <Box sx={{ display: 'flex', alignItems: 'center', mt: 1, mb: 0.5 }}>
+                        <LocationOnIcon sx={{ fontSize: 18, color: 'text.secondary', mr: 0.5 }} />
+                        <Typography variant="body2" color="text.secondary">{pet.location}</Typography>
                       </Box>
-                    </CardContent>
-                    
-                    <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                      <Button size="small" startIcon={<VisibilityIcon />} sx={{ color: 'black' }} onClick={() => handleOpenDetails(pet)}>
-                        Λεπτομέρειες
-                      </Button>
+                    )}
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <PetsIcon sx={{ fontSize: 18, color: 'text.secondary', mr: 0.5 }} />
+                      <Typography variant="body2" color="text.secondary">{pet.type}</Typography>
                     </Box>
+                  </CardContent>
+
+                  <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <Button size="small" startIcon={<VisibilityIcon />} sx={{ color: 'black' }} onClick={() => handleOpenDetails(pet)}>
+                      Λεπτομέρειες
+                    </Button>
                   </Box>
-                </Card>
+                </Box>
+              </Card>
             </Grid>
           ))}
         </Grid>
@@ -296,118 +319,118 @@ const handleLocationSearch = async (event, value) => {
 
       <Dialog open={openDialog} onClose={handleCloseDetails} maxWidth="md" fullWidth scroll="body">
         {selectedPet && (
-            <>
+          <>
             <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pb: 1 }}>
-                <Typography variant="h6" fontWeight="bold">Πληροφορίες δήλωσης απώλειας</Typography>
-                <IconButton onClick={handleCloseDetails}><CloseIcon /></IconButton>
+              <Typography variant="h6" fontWeight="bold">Πληροφορίες δήλωσης απώλειας</Typography>
+              <IconButton onClick={handleCloseDetails}><CloseIcon /></IconButton>
             </DialogTitle>
             <Divider />
             <DialogContent sx={{ p: 4 }}>
-                <Grid container spacing={4}>
-                    <Grid item xs={12} md={6}>
-                        <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Όνομα κατοικιδίου:</Typography><Typography variant="h6" fontWeight="500">{selectedPet.name}</Typography></Box>
-                        <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Χάθηκε στις:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.lostDate || '-'}</Typography></Box>
-                        <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Στην περιοχή:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.location}</Typography></Box>
-                        <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Τηλέφωνο:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.phone || '-'}</Typography></Box>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Αριθμός microchip:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.microchip || '-'}</Typography></Box>
-                        <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Είδος:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.type}</Typography></Box>
-                        <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Ονοματεπώνυμο Ιδιοκτήτη:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.ownerName}</Typography></Box>
-                        <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Άλλες πληροφορίες:</Typography><Typography variant="body1">{selectedPet.description || '-'}</Typography></Box>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <Typography variant="subtitle2" color="text.secondary" gutterBottom>Πρόσφατη φωτογραφία:</Typography>
-                        <Box sx={{ width: '100%', height: 250, bgcolor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 2, overflow: 'hidden', border: '1px solid #eee' }}>
-                             {selectedPet.photo ? (
-                                <img src={selectedPet.photo} alt={selectedPet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                             ) : (
-                                <PetsIcon sx={{ fontSize: 80, color: '#ccc' }} />
-                             )}
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end' }}>
-                        <Button variant="contained" size="small" sx={{ bgcolor: 'black', color: 'white', py: 1.5, px: 4, fontWeight: 'bold', '&:hover': { bgcolor: '#333' } }} onClick={handleOpenFoundForm}>
-                            ΒΡΗΚΑ ΑΥΤΟ ΤΟ ΚΑΤΟΙΚΙΔΙΟ
-                        </Button>
-                    </Grid>
+              <Grid container spacing={4}>
+                <Grid item xs={12} md={6}>
+                  <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Όνομα κατοικιδίου:</Typography><Typography variant="h6" fontWeight="500">{selectedPet.name}</Typography></Box>
+                  <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Χάθηκε στις:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.lostDate || '-'}</Typography></Box>
+                  <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Στην περιοχή:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.location}</Typography></Box>
+                  <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Τηλέφωνο:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.phone || '-'}</Typography></Box>
                 </Grid>
+                <Grid item xs={12} md={6}>
+                  <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Αριθμός microchip:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.microchip || '-'}</Typography></Box>
+                  <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Είδος:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.type}</Typography></Box>
+                  <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Ονοματεπώνυμο Ιδιοκτήτη:</Typography><Typography variant="body1" fontWeight="500">{selectedPet.ownerName}</Typography></Box>
+                  <Box sx={{ mb: 3 }}><Typography variant="subtitle2" color="text.secondary">Άλλες πληροφορίες:</Typography><Typography variant="body1">{selectedPet.description || '-'}</Typography></Box>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Typography variant="subtitle2" color="text.secondary" gutterBottom>Πρόσφατη φωτογραφία:</Typography>
+                  <Box sx={{ width: '100%', height: 250, bgcolor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 2, overflow: 'hidden', border: '1px solid #eee' }}>
+                    {selectedPet.photo ? (
+                      <img src={selectedPet.photo} alt={selectedPet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    ) : (
+                      <PetsIcon sx={{ fontSize: 80, color: '#ccc' }} />
+                    )}
+                  </Box>
+                </Grid>
+                <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                  <Button variant="contained" size="small" sx={{ bgcolor: 'black', color: 'white', py: 1.5, px: 4, fontWeight: 'bold', '&:hover': { bgcolor: '#333' } }} onClick={handleOpenFoundForm}>
+                    ΒΡΗΚΑ ΑΥΤΟ ΤΟ ΚΑΤΟΙΚΙΔΙΟ
+                  </Button>
+                </Grid>
+              </Grid>
             </DialogContent>
-            </>
+          </>
         )}
       </Dialog>
 
-      
+
       <Dialog open={openFoundDialog} onClose={handleCloseFoundForm} maxWidth="md" fullWidth scroll="body">
         <DialogTitle sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pt: 4 }}>
-            <Typography variant="h5" fontWeight="bold">Δήλωση Εύρεσης</Typography>
+          <Typography variant="h5" fontWeight="bold">Δήλωση Εύρεσης</Typography>
         </DialogTitle>
-        
+
         <DialogContent sx={{ p: 4 }}>
-            <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="el">
+          <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="el">
             <Grid container spacing={4}>
-                <Grid item xs={12} md={6}>
-                    
-                   
-                    <Typography variant="subtitle2" gutterBottom>Ημερομηνία</Typography>
-                    <DatePicker
-                        value={foundForm.date}
-                        onChange={(newValue) => setFoundForm({ ...foundForm, date: newValue })}
-                        slotProps={{ textField: { fullWidth: true, size: 'small', sx: { mb: 2 } } }}
+              <Grid item xs={12} md={6}>
+
+
+                <Typography variant="subtitle2" gutterBottom>Ημερομηνία</Typography>
+                <DatePicker
+                  value={foundForm.date}
+                  onChange={(newValue) => setFoundForm({ ...foundForm, date: newValue })}
+                  slotProps={{ textField: { fullWidth: true, size: 'small', sx: { mb: 2 } } }}
+                />
+
+
+                <Typography variant="subtitle2" gutterBottom>Τόπος που βρέθηκε</Typography>
+                <Autocomplete
+                  freeSolo
+                  options={locationOptions}
+                  loading={loadingLocation}
+                  onInputChange={handleLocationSearch}
+                  renderInput={(params) => (
+                    <TextField
+                      {...params} size="small" variant="outlined" sx={{ mb: 2 }} placeholder="Γράψε τοποθεσία..."
+                      InputProps={{
+                        ...params.InputProps,
+                        endAdornment: (<>{loadingLocation ? <CircularProgress color="inherit" size={20} /> : null}{params.InputProps.endAdornment}</>),
+                      }}
                     />
+                  )}
+                />
 
-                   
-                    <Typography variant="subtitle2" gutterBottom>Τόπος που βρέθηκε</Typography>
-                    <Autocomplete
-                        freeSolo
-                        options={locationOptions}
-                        loading={loadingLocation}
-                        onInputChange={handleLocationSearch}
-                        renderInput={(params) => (
-                            <TextField 
-                                {...params} size="small" variant="outlined" sx={{ mb: 2 }} placeholder="Γράψε τοποθεσία..." 
-                                InputProps={{
-                                    ...params.InputProps,
-                                    endAdornment: (<>{loadingLocation ? <CircularProgress color="inherit" size={20} /> : null}{params.InputProps.endAdornment}</>),
-                                }}
-                            />
-                        )}
-                    />
 
-                   
-                    <Typography variant="subtitle2" gutterBottom>Τηλέφωνο επικοινωνίας</Typography>
-                    <TextField 
-                        fullWidth size="small" variant="outlined" sx={{ mb: 2 }} placeholder="π.χ. 6900000000"
-                        value={foundForm.phone} onChange={handlePhoneChange} error={phoneError}
-                        helperText={phoneError ? "Το τηλέφωνο πρέπει να έχει 10 ψηφία" : ""}
-                        inputProps={{ maxLength: 10 }}
-                    />
+                <Typography variant="subtitle2" gutterBottom>Τηλέφωνο επικοινωνίας</Typography>
+                <TextField
+                  fullWidth size="small" variant="outlined" sx={{ mb: 2 }} placeholder="π.χ. 6900000000"
+                  value={foundForm.phone} onChange={handlePhoneChange} error={phoneError}
+                  helperText={phoneError ? "Το τηλέφωνο πρέπει να έχει 10 ψηφία" : ""}
+                  inputProps={{ maxLength: 10 }}
+                />
 
-                    <Typography variant="subtitle2" gutterBottom>Ονοματεπώνυμο</Typography>
-                    <TextField 
-                        fullWidth size="small" variant="outlined" multiline rows={2} placeholder="Γρηγόρης Παπασταύρου"
-                        value={foundForm.name} onChange={(e) => setFoundForm({...foundForm, name: e.target.value})}
-                    />
-                </Grid>
+                <Typography variant="subtitle2" gutterBottom>Ονοματεπώνυμο</Typography>
+                <TextField
+                  fullWidth size="small" variant="outlined" multiline rows={2} placeholder="Γρηγόρης Παπασταύρου"
+                  value={foundForm.name} onChange={(e) => setFoundForm({ ...foundForm, name: e.target.value })}
+                />
+              </Grid>
 
-                <Grid item xs={12} md={6}>
-                     <Typography variant="subtitle2" gutterBottom>Φωτογραφία για ταυτοποίηση</Typography>
-                     <Box sx={{ border: '1px solid #ccc', borderRadius: 2, height: 250, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: '#fafafa' }}>
-                        <PhotoCameraBackIcon sx={{ fontSize: 80, color: '#333' }} />
-                     </Box>
-                </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography variant="subtitle2" gutterBottom>Φωτογραφία για ταυτοποίηση</Typography>
+                <Box sx={{ border: '1px solid #ccc', borderRadius: 2, height: 250, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: '#fafafa' }}>
+                  <PhotoCameraBackIcon sx={{ fontSize: 80, color: '#333' }} />
+                </Box>
+              </Grid>
 
-                <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-                     <Button 
-                        variant="contained" size="large"
-                        sx={{ bgcolor: 'black', color: 'white', py: 1.5, px: 6, fontWeight: 'bold', '&:hover': { bgcolor: '#333' } }}
-                        onClick={handleSubmitFound}
-                    >
-                        Βρήκα αυτό το κατοικίδιο
-                    </Button>
-                </Grid>
+              <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+                <Button
+                  variant="contained" size="large"
+                  sx={{ bgcolor: 'black', color: 'white', py: 1.5, px: 6, fontWeight: 'bold', '&:hover': { bgcolor: '#333' } }}
+                  onClick={handleSubmitFound}
+                >
+                  Βρήκα αυτό το κατοικίδιο
+                </Button>
+              </Grid>
             </Grid>
-            </LocalizationProvider>
+          </LocalizationProvider>
         </DialogContent>
       </Dialog>
 
