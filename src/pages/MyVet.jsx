@@ -1,30 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  Box,
-  Typography,
-  Paper,
-  CircularProgress,
-  Alert,
-  Grid,
-  Card,
-  CardContent,
-  CardActions,
-  Button,
-  Chip,
-  Stack,
-  TextField,
-  IconButton,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  MenuItem,
-  Divider,
+  Box, Typography, Paper, CircularProgress, Alert, Grid, Card, CardContent, CardActions, Button, Chip, Stack, TextField, IconButton, Dialog, DialogTitle, DialogContent, DialogActions, MenuItem, Divider,
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import LinkIcon from "@mui/icons-material/Link";
+import { Rating } from "@mui/material";
 
 
 import OwnerLayout from "../components/OwnerLayout";
@@ -40,7 +22,7 @@ function uniq(arr) {
 }
 
 export default function MyVet() {
-  
+
   const navigate = useNavigate();
   const [sp] = useSearchParams();
 
@@ -52,6 +34,10 @@ export default function MyVet() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [reviews, setReviews] = useState([]);
+  const [reviewDlg, setReviewDlg] = useState({ open: false, vet: null, rating: 0, comment: "", existingId: null });
+  const [savingReview, setSavingReview] = useState(false);
+
 
   const [pets, setPets] = useState([]);
   const [vets, setVets] = useState([]);
@@ -98,13 +84,17 @@ export default function MyVet() {
     setLoading(true);
     setError("");
     try {
-      const [petsRes, usersRes] = await Promise.all([
+      const [petsRes, usersRes, reviewsRes] = await Promise.all([
         fetch("http://localhost:8000/pets"),
         fetch("http://localhost:8000/users"),
+        fetch("http://localhost:8000/reviews"),
       ]);
 
       const petsData = await petsRes.json();
       const usersData = await usersRes.json();
+      const reviewsData = await reviewsRes.json();
+
+      setReviews(Array.isArray(reviewsData) ? reviewsData : []);
 
       const myPets = Array.isArray(petsData)
         ? petsData.filter((p) => String(p.ownerId) === String(user.id))
@@ -121,6 +111,7 @@ export default function MyVet() {
     }
     setLoading(false);
   };
+
 
   useEffect(() => {
     if (user) fetchData();
@@ -188,6 +179,104 @@ export default function MyVet() {
       return (a.fullName || "").localeCompare(b.fullName || "");
     });
   }, [searchResults, favIds]);
+  const reviewStatsByVetId = useMemo(() => {
+    const map = {}; // vetId -> { avg, count }
+    (reviews || []).forEach((r) => {
+      const vid = String(r.vetId);
+      if (!map[vid]) map[vid] = { sum: 0, count: 0 };
+      map[vid].sum += Number(r.rating || 0);
+      map[vid].count += 1;
+    });
+    Object.keys(map).forEach((k) => {
+      map[k].avg = map[k].count ? Number((map[k].sum / map[k].count).toFixed(1)) : 0;
+    });
+    return map;
+  }, [reviews]);
+
+  const openReview = (vet) => {
+    const existing = (reviews || []).find(
+      (r) => String(r.vetId) === String(vet.id) && String(r.ownerId) === String(user.id)
+    );
+
+    setReviewDlg({
+      open: true,
+      vet,
+      rating: existing ? Number(existing.rating || 0) : 0,
+      comment: existing ? (existing.comment || "") : "",
+      existingId: existing ? existing.id : null,
+    });
+  };
+
+  const closeReview = () => setReviewDlg({ open: false, vet: null, rating: 0, comment: "", existingId: null });
+
+  const patchVetAggregates = async (vetId, nextReviews) => {
+    // Υπολογισμός avg/count για τον συγκεκριμένο vet
+    const rel = (nextReviews || []).filter((r) => String(r.vetId) === String(vetId));
+    const count = rel.length;
+    const avg = count ? Number((rel.reduce((s, r) => s + Number(r.rating || 0), 0) / count).toFixed(1)) : 0;
+
+    // PATCH στον vet user (json-server θα το προσθέσει σαν fields αν δεν υπάρχουν)
+    await fetch(`http://localhost:8000/users/${encodeURIComponent(vetId)}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ratingAvg: avg, ratingCount: count }),
+    });
+  };
+
+  const submitReview = async () => {
+    const vet = reviewDlg.vet;
+    if (!vet) return;
+
+    const rating = Number(reviewDlg.rating || 0);
+    const comment = (reviewDlg.comment || "").trim();
+
+    if (rating < 1 || rating > 5) return alert("Βάλε βαθμολογία 1–5.");
+    if (comment.length < 5) return alert("Γράψε ένα μικρό σχόλιο (τουλάχιστον 5 χαρακτήρες).");
+
+    setSavingReview(true);
+    try {
+      const payload = {
+        vetId: String(vet.id),
+        ownerId: String(user.id),
+        rating,
+        comment,
+        date: new Date().toISOString().slice(0, 10),
+      };
+
+      let nextReviews = reviews;
+
+      if (reviewDlg.existingId) {
+        const res = await fetch(`http://localhost:8000/reviews/${encodeURIComponent(reviewDlg.existingId)}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error("PATCH review failed");
+        const updated = await res.json();
+        nextReviews = (reviews || []).map((r) => (String(r.id) === String(updated.id) ? { ...r, ...updated } : r));
+      } else {
+        const res = await fetch("http://localhost:8000/reviews", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...payload, reply: "" }),
+        });
+        if (!res.ok) throw new Error("POST review failed");
+        const created = await res.json();
+        nextReviews = [created, ...(reviews || [])];
+      }
+
+      setReviews(nextReviews);
+
+      // Update aggregates στον vet
+      await patchVetAggregates(vet.id, nextReviews);
+
+      closeReview();
+    } catch (e) {
+      console.error(e);
+      alert("Απέτυχε η αποθήκευση αξιολόγησης.");
+    }
+    setSavingReview(false);
+  };
 
   const openBook = (vet) => {
     setDlgPetId(pets[0]?.id ? String(pets[0].id) : "");
@@ -205,15 +294,16 @@ export default function MyVet() {
     setDlgPetId("");
   };
 
-const goToAppointment = (vetId, petId) => {
-  const target = returnTo || "/owner-appointments/new";
-  const url = new URL(target, window.location.origin);
+  const goToAppointment = (vetId, petId) => {
+    const target = returnTo || "/owner-appointments/new";
+    const url = new URL(target, window.location.origin);
 
-  url.searchParams.set("vetId", String(vetId));
-  if (petId) url.searchParams.set("petId", String(petId));
+    url.searchParams.set("vetId", String(vetId));
+    if (petId) url.searchParams.set("petId", String(petId));
 
-  navigate(url.pathname + url.search);
-};
+    navigate(url.pathname + url.search);
+  };
+
 
 
   const patchPet = async (petId, patch) => {
@@ -244,6 +334,7 @@ const goToAppointment = (vetId, petId) => {
     await patchPet(pet.id, { linkedVetIds: nextLinked });
     closeDialogs();
   };
+
 
   if (!user) {
     return (
@@ -399,42 +490,56 @@ const goToAppointment = (vetId, petId) => {
               <Alert severity="info">Δεν βρέθηκαν κτηνίατροι με αυτά τα φίλτρα.</Alert>
             ) : (
               <Grid container spacing={2}>
-                {sortedSearchResults.map((v) => (
-                  <Grid item xs={12} md={6} lg={4} key={`dir-${v.id}`}>
-                    <Card variant="outlined" sx={{ height: "100%" }}>
-                      <CardContent>
-                        <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 1 }}>
-                          <Box>
-                            <Typography fontWeight={900}>{v.fullName}</Typography>
+                {sortedSearchResults.map((v) => {
+                  const stat = reviewStatsByVetId[String(v.id)];
+                  const avg = stat?.avg ?? 0;
+                  const count = stat?.count ?? 0;
+
+                  return (
+                    <Grid item xs={12} md={6} lg={4} key={`dir-${v.id}`}>
+                      <Card variant="outlined" sx={{ height: "100%" }}>
+                        <CardContent>
+                          <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 1 }}>
+                            <Box>
+                              <Typography fontWeight={900}>{v.fullName}</Typography>
+                              <Typography variant="body2" color="text.secondary">
+                                {v.specialty || "—"} {v.address ? `• ${v.address}` : ""}
+                              </Typography>
+                            </Box>
+                            <IconButton onClick={() => toggleFav(v.id)} aria-label="favorite">
+                              {favIds.includes(String(v.id)) ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                            </IconButton>
+                          </Box>
+
+                          <Box sx={{ mt: 1, display: "flex", gap: 1, flexWrap: "wrap" }}>
+                            {myVetIds.includes(String(v.id)) ? (
+                              <Chip size="small" color="success" label="Στα δικά μου" />
+                            ) : (
+                              <Chip size="small" variant="outlined" label="Νέος" />
+                            )}
+                          </Box>
+
+                          <Box sx={{ mt: 1.5, display: "flex", alignItems: "center", gap: 1 }}>
+                            <Rating value={avg} precision={0.1} readOnly size="small" />
                             <Typography variant="body2" color="text.secondary">
-                              {v.specialty || "—"} {v.address ? `• ${v.address}` : ""}
+                              {count ? `${avg} (${count})` : "Χωρίς αξιολογήσεις"}
                             </Typography>
                           </Box>
-                          <IconButton onClick={() => toggleFav(v.id)} aria-label="favorite">
-                            {favIds.includes(String(v.id)) ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-                          </IconButton>
-                        </Box>
+                        </CardContent>
 
-                        <Box sx={{ mt: 1, display: "flex", gap: 1, flexWrap: "wrap" }}>
-                          {myVetIds.includes(String(v.id)) ? (
-                            <Chip size="small" color="success" label="Στα δικά μου" />
-                          ) : (
-                            <Chip size="small" variant="outlined" label="Νέος" />
-                          )}
-                        </Box>
-                      </CardContent>
+                        <CardActions sx={{ justifyContent: "flex-end", px: 2, pb: 2, gap: 1, flexWrap: "wrap" }}>
+                          <Button onClick={() => goToAppointment(v.id, petIdFromQuery)}>
+                            ΚΛΕΙΣΕ ΡΑΝΤΕΒΟΥ
+                          </Button>
+                          <Button size="small" variant="outlined" onClick={() => openReview(v)}>
+                            Αξιολόγηση
+                          </Button>
+                        </CardActions>
+                      </Card>
+                    </Grid>
+                  );
+                })}
 
-                      <CardActions sx={{ justifyContent: "flex-end", px: 2, pb: 2, gap: 1, flexWrap: "wrap" }}>
-                        <Button onClick={() => goToAppointment(v.id, petIdFromQuery /* ή selectedPetId */)}>
-                          ΚΛΕΙΣΕ ΡΑΝΤΕΒΟΥ
-                        </Button>
-
-
-
-                      </CardActions>
-                    </Card>
-                  </Grid>
-                ))}
               </Grid>
             )}
           </Paper>
@@ -515,6 +620,41 @@ const goToAppointment = (vetId, petId) => {
           </Dialog>
         </>
       )}
+      <Dialog open={reviewDlg.open} onClose={closeReview} fullWidth maxWidth="sm">
+        <DialogTitle>Αξιολόγηση κτηνιάτρου</DialogTitle>
+        <DialogContent dividers>
+          <Stack spacing={2}>
+            <Typography fontWeight={900}>{reviewDlg.vet?.fullName || "—"}</Typography>
+
+            <Box>
+              <Typography variant="subtitle2" sx={{ mb: 0.5 }}>
+                Βαθμολογία
+              </Typography>
+              <Rating
+                value={Number(reviewDlg.rating || 0)}
+                onChange={(_, v) => setReviewDlg((p) => ({ ...p, rating: v || 0 }))}
+              />
+            </Box>
+
+            <TextField
+              label="Σχόλιο"
+              value={reviewDlg.comment}
+              onChange={(e) => setReviewDlg((p) => ({ ...p, comment: e.target.value }))}
+              fullWidth
+              multiline
+              minRows={3}
+              helperText="Γράψε λίγα λόγια για την εμπειρία σου."
+            />
+          </Stack>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={closeReview}>Άκυρο</Button>
+          <Button variant="contained" disabled={savingReview} onClick={submitReview}>
+            {reviewDlg.existingId ? "Ενημέρωση" : "Υποβολή"}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
     </OwnerLayout>
   );
 }
