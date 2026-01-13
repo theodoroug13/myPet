@@ -168,6 +168,9 @@ const VetConfirmed = ({ onBack }) => {
                         <TableRow sx={{ bgcolor: '#f5f5f5' }}>
                             <TableCell><b>Ιδιοκτήτης</b></TableCell>
                             <TableCell><b>Microchip</b></TableCell>
+                            {/* --- Προσθήκη στήλης Λόγος --- */}
+                            <TableCell><b>Λόγος</b></TableCell>
+                            {/* ----------------------------- */}
                             <TableCell><b>Λεπτομέρειες</b></TableCell>
                             <TableCell><b>Ώρα</b></TableCell>
                             <TableCell><b>Κατάσταση</b></TableCell>
@@ -180,6 +183,11 @@ const VetConfirmed = ({ onBack }) => {
                                 <TableRow key={app.id}>
                                     <TableCell>Ιδιοκτήτης (ID: {app.ownerId})</TableCell>
                                     <TableCell>{app.microchip}</TableCell>
+                                    
+                                    {/* --- Εμφάνιση Reason --- */}
+                                    <TableCell>{app.reason}</TableCell> 
+                                    {/* ----------------------- */}
+
                                     <TableCell>{app.details}</TableCell>
                                     <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{app.time}</TableCell>
                                     
@@ -202,7 +210,7 @@ const VetConfirmed = ({ onBack }) => {
                             ))
                         ) : (
                             <TableRow>
-                                <TableCell colSpan={6} align="center">Κανένα ραντεβού για αυτή τη μέρα.</TableCell>
+                                <TableCell colSpan={7} align="center">Κανένα ραντεβού για αυτή τη μέρα.</TableCell>
                             </TableRow>
                         )}
                     </TableBody>
