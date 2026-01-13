@@ -26,7 +26,7 @@ const OwnerMenu = () => {
   }; 
 
   const menuItems = [
-    { text: 'Αρχική', icon: <DashboardIcon />, path: '/owner-dashboard' },
+    { text: 'Κέντρο Ιδιοκτήτη', icon: <DashboardIcon />, path: '/owner-dashboard' },
     { text: 'Τα Κατοικίδιά μου', icon: <PetsIcon />, path: '/owner-pets' },
     { text: 'Ραντεβού', icon: <CalendarMonthIcon />, path: '/owner-appointments' },
     { text: 'Ο Κτηνίατρός μου', icon: <MedicalServicesOutlinedIcon />, path: '/my-vet' },

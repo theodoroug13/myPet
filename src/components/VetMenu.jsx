@@ -27,7 +27,7 @@ const VetMenu = () => {
   }; 
 
   const menuItems = [
-    { text: 'Αρχική', icon: <DashboardIcon />, path: '/vet-dashboard' },
+    { text: 'Ιατρείο', icon: <DashboardIcon />, path: '/vet-dashboard' },
     { text: 'Το Προφίλ Μου', icon: <PersonIcon />, path: '/vet-profile' },
     { text: 'Τα Ραντεβού Μου', icon: <CalendarMonthIcon />, path: '/vet-appointments' },
     { text: 'Ώρες Εργασίας', icon: <AccessTimeIcon />, path: '/vet-hours' },

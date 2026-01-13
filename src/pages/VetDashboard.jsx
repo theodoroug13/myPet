@@ -49,7 +49,7 @@ const VetDashboard = () => {
         
         <Box sx={{ mb: 6 }}>
             <Typography variant="h4" fontWeight="bold" gutterBottom>
-                Κέντρο Κτηνιάτρου
+                Ιατρείο
             </Typography>
             <Typography variant="body1" color="text.secondary">
                 Διαχειρίσου το ιατρείο, τα ραντεβού και τους ασθενείς σου εύκολα.

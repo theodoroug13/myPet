@@ -50,7 +50,7 @@ const Dashboard = () => {
         
         <Box sx={{ mb: 6 }}>
             <Typography variant="h4" fontWeight="bold" gutterBottom>
-                Αρχική
+                Κέντρο Ιδιοκτήτη
             </Typography>
             <Typography variant="body1" color="text.secondary">
                 Διαχειρίσου εύκολα την υγεία και την καθημερινότητα των αγαπημένων σου φίλων.

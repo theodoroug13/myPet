@@ -49,7 +49,7 @@ const Login = () => {
     navigate(nextParam || fallback, { replace: true });
   };
 
-  // ✅ αν είναι ήδη logged-in, μην τον αφήνεις στη login page
+  //  αν είναι ήδη logged-in, μην τον αφήνεις στη login page
   useEffect(() => {
     if (user) redirectAfterLogin(user);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -74,7 +74,7 @@ const Login = () => {
         return;
       }
 
-      const result = await login(id, password); // ✅ email ή username
+      const result = await login(id, password); //  email ή username
       if (result?.success) {
         redirectAfterLogin(result.user);
       } else {
@@ -95,7 +95,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      // ✅ basic required
+      //  basic required
       if (!suFullName.trim()) {
         setError("Βάλε ονοματεπώνυμο.");
         setLoading(false);
@@ -114,7 +114,7 @@ const Login = () => {
         return;
       }
 
-      // ✅ email required + valid
+      //  email required + valid
       const email = normEmail(suEmail);
       if (!email) {
         setError("Βάλε email.");
@@ -127,7 +127,7 @@ const Login = () => {
         return;
       }
 
-      // ✅ phone required + normalize
+      //  phone required + normalize
       const phone = normPhone(suPhone);
       if (!phone) {
         setError("Βάλε κινητό.");
@@ -140,7 +140,7 @@ const Login = () => {
         return;
       }
 
-      // ✅ vet-only required
+      //  vet-only required
       if (suRole === "vet") {
         if (!suSpecialty.trim()) {
           setError("Βάλε ειδικότητα.");
@@ -159,7 +159,7 @@ const Login = () => {
         }
       }
 
-      // ✅ uniqueness checks (json-server δεν έχει unique)
+      //  uniqueness checks (json-server δεν έχει unique)
       const allRes = await fetch("http://localhost:8000/users");
       const allUsers = await allRes.json();
 
@@ -188,7 +188,7 @@ const Login = () => {
         return;
       }
 
-      // ✅ payload
+      //  payload
       const payload = {
         username: suUsername.trim(),
         password: suPassword,
