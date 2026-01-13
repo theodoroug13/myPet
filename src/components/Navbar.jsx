@@ -64,6 +64,21 @@ if (user?.role === 'vet') {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+  const goOwner = () => {
+    // αν δεν έχεις role-aware login, άστο απλά /login
+    if (!user) return navigate("/login?as=owner");
+    return navigate("/login");
+  };
+
+  const goVet = () => {
+    if (!user) return navigate("/login?as=vet");
+    return navigate("/login");
+  };
+
+  const goFound = () => {
+    navigate("/lost-pets");
+  };
+
 
   return (
     <AppBar position="sticky" color="transparent" elevation={0} sx={{backgroundColor: "white", color:"black", borderBottom: "1px solid #eee",
@@ -153,18 +168,47 @@ if (user?.role === 'vet') {
             {navItems.map((item) => (
               <Button
                 key={item.label}
-                onClick={()=> handleCloseNavMenu(item.path)}
+                onClick={() => handleCloseNavMenu(item.path)}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {item.label}
               </Button>
             ))}
+
+          </Box>
+          <Box sx={{ display: "flex", gap: 2, alignItems: "center", ml: 2 }}>
+            <Button
+              variant="contained"
+              size="small"
+              sx={{ bgcolor: "black", color: "white", px: 2, py: 1,borderRadius:2, "&:hover": { bgcolor: "#636363ff" } }}
+              onClick={goOwner}
+            >
+              Είμαι Ιδιοκτήτης
+            </Button>
+
+            <Button
+              variant="contained"
+              size="small"
+              sx={{ bgcolor: "black", color: "white", px: 2, py: 1, borderRadius:2,"&:hover": { bgcolor: "#636363ff" } }}
+              onClick={goVet}
+            >
+              Είμαι Κτηνίατρος
+            </Button>
+
+            <Button
+              variant="contained"
+              size="small"
+              sx={{ bgcolor: "#3f0a2bff", color: "white", px: 2, py: 1,borderRadius:2, "&:hover": { bgcolor: "#636363ff" } }}
+              onClick={goFound}
+            >
+              Βρήκα χαμένο ζώο
+            </Button>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            {user ?(<><Tooltip title="Ρυθμίσεις">
-                  <IconButton onClick={()=> handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar sx={{ bgcolor: 'primary.main' }}>
+          <Box sx={{display: "flex", gap: 2, alignItems: "center", ml: 2 }}>
+            {user ?(<><Tooltip title="Λογαριασμός">
+                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                    <Avatar sx={{ bgcolor: "#3f0a2bff" }}>
                       {user.username.charAt(0).toUpperCase()}
                     </Avatar>
                   </IconButton>
@@ -182,7 +226,7 @@ if (user?.role === 'vet') {
                   <MenuItem onClick={handleCloseUserMenu}>
                     <Typography textAlign="center">Προφίλ ({user.username})</Typography>
                   </MenuItem>
-                  <MenuItem onClick={handleLogout}>
+                  <MenuItem onClick={handleLogout}> 
                     <Typography textAlign="center" color="error">Αποσύνδεση</Typography>
                   </MenuItem>
                 </Menu>
