@@ -21,6 +21,7 @@ import VetReviews from './pages/VetReviews'
 import VetHours from './pages/VetHours'
 import VetDrafts from './pages/VetDrafts';
 import VetUpdatePetList from './pages/VetUpdatePetList';
+import FaqPage from './pages/FaqPage';
 function App() {
   return (
     
@@ -33,6 +34,7 @@ function App() {
           
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/faq" element={<FaqPage />} />
           
           <Route path="/lost-pets" element={<LostPets />} />
           <Route path="/owner-dashboard" element={<OwnerDashboard />} />
