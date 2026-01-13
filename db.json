@@ -134,6 +134,20 @@
       },
       "ratingAvg": 5,
       "ratingCount": 1
+    },
+    {
+      "id": "2576",
+      "username": "vet3",
+      "password": "567",
+      "role": "vet",
+      "fullName": "Κρίστης Γεωργίου",
+      "email": "opop@gmail.com",
+      "phone": "1234567891",
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "specialty": "Πουλιά",
+      "address": "μπλαμπλα 12",
+      "afm": "2525252"
     }
   ],
   "pets": [
@@ -575,6 +589,27 @@
       "newOwnerPhone": "",
       "newOwnerEmail": "",
       "resolvedAt": "2026-01-12T17:00:19.784Z"
+    },
+    {
+      "id": "142e",
+      "petType": "Σκύλος",
+      "ownerId": "1",
+      "petId": "p1",
+      "petName": "Bruno",
+      "microchip": "1234567890",
+      "type": "lost",
+      "status": "resolved",
+      "date": "2026-01-13T10:13:21.034Z",
+      "contactPhone": "1234567891",
+      "notes": "fjiefjef",
+      "lastSeenDate": "2026-01-13",
+      "lastSeenLocation": "fjefeiejfi",
+      "foundDate": "",
+      "foundLocation": "",
+      "newOwnerName": "",
+      "newOwnerPhone": "",
+      "newOwnerEmail": "",
+      "resolvedAt": "2026-01-13T10:14:01.543Z"
     }
   ],
   "foundReports": [
@@ -610,6 +645,23 @@
       "comments": "",
       "status": "new",
       "createdAt": "2026-01-12T16:59:31.037Z"
+    },
+    {
+      "id": "fr_1768299222666",
+      "lostRefType": "declaration",
+      "lostRefId": "142e",
+      "microchip": "1234567890",
+      "petName": "Bruno",
+      "petType": "Σκύλος",
+      "ownerName": "Αννα Παπαδοπούλου",
+      "ownerPhone": "1234567891",
+      "foundDate": "2026-01-13",
+      "foundLocation": "efe",
+      "finderName": "jidjwidw",
+      "finderPhone": "1234567891",
+      "comments": "",
+      "status": "new",
+      "createdAt": "2026-01-13T10:13:42.666Z"
     }
   ]
 }

@@ -78,6 +78,22 @@ if (user?.role === 'vet') {
   const goFound = () => {
     navigate("/lost-pets");
   };
+  const goSmart = (nextPath, roleHint) => {
+    // αν είναι logged-in, πήγαινε κατευθείαν εκεί (ή σε dashboard ανά ρόλο)
+    if (user) {
+      // αν πατάει "ΕΙΜΑΙ ΚΤΗΝΙΑΤΡΟΣ" αλλά είναι owner, προτίμησε το δικό του dashboard
+      if (roleHint === "owner") return navigate("/owner-dashboard");
+      if (roleHint === "vet") return navigate("/vet-dashboard");
+      return navigate(nextPath);
+    }
+
+    // αν ΔΕΝ είναι logged-in, πήγαινε login με next (και προαιρετικά role hint)
+    const qs = new URLSearchParams();
+    qs.set("next", nextPath);
+    if (roleHint) qs.set("as", roleHint);
+
+    navigate(`/login?${qs.toString()}`);
+  };
 
 
   return (
@@ -181,7 +197,7 @@ if (user?.role === 'vet') {
               variant="contained"
               size="small"
               sx={{ bgcolor: "black", color: "white", px: 2, py: 1,borderRadius:2, "&:hover": { bgcolor: "#636363ff" } }}
-              onClick={goOwner}
+              onClick={() =>  goSmart("/owner-dashboard", "owner")}
             >
               Είμαι Ιδιοκτήτης
             </Button>
@@ -190,7 +206,7 @@ if (user?.role === 'vet') {
               variant="contained"
               size="small"
               sx={{ bgcolor: "black", color: "white", px: 2, py: 1, borderRadius:2,"&:hover": { bgcolor: "#636363ff" } }}
-              onClick={goVet}
+              onClick={() => goSmart("/vet-dashboard", "vet")}
             >
               Είμαι Κτηνίατρος
             </Button>
