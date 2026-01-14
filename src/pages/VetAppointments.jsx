@@ -189,20 +189,14 @@ const VetAppointments = () => {
   const pendingAppsList = appointments.filter(a => a.status === 'pending');
   
   const confirmedAppsList = appointments.filter(a => {
-      // Υπολογισμός αν το ραντεβού είναι στο παρελθόν
       const appDateTime = new Date(`${a.date}T${a.time}`);
       const now = new Date();
       const isPast = appDateTime < now;
-
-      // Ένα ραντεβού θεωρείται "ολοκληρωμένο" αν έχει status 'completed' 
-      // Ή αν είναι 'confirmed' αλλά η ημερομηνία έχει περάσει
       const isEffectivelyCompleted = a.status === 'completed' || (a.status === 'confirmed' && isPast);
 
       if (showCompleted) {
-          // Αν θέλουμε να δούμε τα ολοκληρωμένα, τα δείχνουμε όλα
           return a.status === 'confirmed' || a.status === 'completed';
       } else {
-          // Αν ΔΕΝ θέλουμε τα ολοκληρωμένα, δείχνουμε ΜΟΝΟ τα confirmed που είναι στο ΜΕΛΛΟΝ
           return a.status === 'confirmed' && !isEffectivelyCompleted;
       }
   });
@@ -305,27 +299,34 @@ const VetAppointments = () => {
                                             <TableRow>
                                                 <TableCell><strong>Ιδιοκτήτης</strong></TableCell>
                                                 <TableCell><strong>Κατοικίδιο</strong></TableCell>
+                                                {/* ΔΥΟ ΣΤΗΛΕΣ ΕΔΩ: Λόγος και Λεπτομέρειες */}
+                                                <TableCell><strong>Λόγος</strong></TableCell>
                                                 <TableCell><strong>Λεπτομέρειες</strong></TableCell>
+                                                
                                                 <TableCell><strong>Ημ/νία & Ώρα</strong></TableCell>
                                                 <TableCell align="center"><strong>Ενέργειες</strong></TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
                                             {pendingAppsTable.length === 0 ? (
-                                                <TableRow><TableCell colSpan={5} align="center" sx={{ py: 4, color: 'text.secondary' }}>Δεν υπάρχουν εκκρεμή ραντεβού για αυτή την ημέρα.</TableCell></TableRow>
+                                                <TableRow><TableCell colSpan={6} align="center" sx={{ py: 4, color: 'text.secondary' }}>Δεν υπάρχουν εκκρεμή ραντεβού για αυτή την ημέρα.</TableCell></TableRow>
                                             ) : pendingAppsTable.map(app => {
                                                 const statusInfo = getStatusInfo(app);
                                                 return (
                                                     <TableRow key={app.id} hover>
                                                         <TableCell>{app.ownerName}</TableCell>
                                                         <TableCell><Typography variant="body2" fontWeight="bold">{app.petName}</Typography><Typography variant="caption">{app.microchip}</Typography></TableCell>
-                                                        <TableCell>{app.details || app.reason}</TableCell>
+                                                        
+                                                        {/* ΔΕΔΟΜΕΝΑ ΓΙΑ ΤΙΣ 2 ΣΤΗΛΕΣ */}
+                                                        <TableCell>{app.reason}</TableCell>
+                                                        <TableCell>{app.details}</TableCell>
+
                                                         <TableCell><Typography variant="body2" fontWeight="bold">{app.date}</Typography><Typography variant="caption">{app.time}</Typography></TableCell>
                                                         <TableCell align="center">
                                                             {statusInfo.label === 'Έληξε' ? <Chip label="Έληξε" color="error" variant="outlined" size="small" /> : (
                                                                 <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1 }}>
-                                                                    <Tooltip title="Αποδοχή"><IconButton onClick={() => setDialog({ open: true, id: app.id, type: 'confirmed' })} color="success" sx={{ bgcolor: '#e8f5e9' }}><CheckCircleIcon /></IconButton></Tooltip>
-                                                                    <Tooltip title="Απόρριψη"><IconButton onClick={() => setDialog({ open: true, id: app.id, type: 'cancelled' })} color="error" sx={{ bgcolor: '#ffebee' }}><CancelIcon /></IconButton></Tooltip>
+                                                                        <Tooltip title="Αποδοχή"><IconButton onClick={() => setDialog({ open: true, id: app.id, type: 'confirmed' })} color="success" sx={{ bgcolor: '#e8f5e9' }}><CheckCircleIcon /></IconButton></Tooltip>
+                                                                        <Tooltip title="Απόρριψη"><IconButton onClick={() => setDialog({ open: true, id: app.id, type: 'cancelled' })} color="error" sx={{ bgcolor: '#ffebee' }}><CancelIcon /></IconButton></Tooltip>
                                                                 </Box>
                                                             )}
                                                         </TableCell>
@@ -343,17 +344,21 @@ const VetAppointments = () => {
                                 const statusInfo = getStatusInfo(app);
                                 return (
                                     <Paper key={app.id} elevation={2} sx={{ mb: 2, p: 2, borderLeft: `6px solid ${statusInfo.label === 'Έληξε' ? 'red' : '#ed6c02'}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                        <Box>
-                                            <Typography fontWeight="bold" variant="h6" onClick={() => { setPendingFilterDate(app.date); setShowPendingTable(true); }} sx={{ cursor: 'pointer', '&:hover': { color: '#ed6c02', textDecoration: 'underline' }, width: 'fit-content' }}>{app.date} - {app.time}</Typography>
-                                            <Typography fontWeight="500">{app.petName} ({app.ownerName})</Typography>
-                                            <Typography variant="body2">{app.details}</Typography>
-                                            <Chip label={statusInfo.label} size="small" color={statusInfo.color} sx={{ mt: 1 }} />
-                                        </Box>
-                                        <Box sx={{ display: 'flex', gap: 1 }}>
-                                            {statusInfo.label !== 'Έληξε' && (
-                                                <><Button variant="contained" color="success" onClick={() => setDialog({ open: true, id: app.id, type: 'confirmed' })}>ΑΠΟΔΟΧΗ</Button><Button variant="outlined" color="error" onClick={() => setDialog({ open: true, id: app.id, type: 'cancelled' })}>ΑΠΟΡΡΙΨΗ</Button></>
-                                            )}
-                                        </Box>
+                                            <Box>
+                                                <Typography fontWeight="bold" variant="h6" onClick={() => { setPendingFilterDate(app.date); setShowPendingTable(true); }} sx={{ cursor: 'pointer', '&:hover': { color: '#ed6c02', textDecoration: 'underline' }, width: 'fit-content' }}>{app.date} - {app.time}</Typography>
+                                                <Typography fontWeight="500">{app.petName} ({app.ownerName})</Typography>
+                                                
+                                                {/* Εμφάνιση και στη λίστα */}
+                                                <Typography variant="body2"><strong>Λόγος:</strong> {app.reason}</Typography>
+                                                <Typography variant="body2"><strong>Λεπτομέρειες:</strong> {app.details}</Typography>
+                                                
+                                                <Chip label={statusInfo.label} size="small" color={statusInfo.color} sx={{ mt: 1 }} />
+                                            </Box>
+                                            <Box sx={{ display: 'flex', gap: 1 }}>
+                                                {statusInfo.label !== 'Έληξε' && (
+                                                    <><Button variant="contained" color="success" onClick={() => setDialog({ open: true, id: app.id, type: 'confirmed' })}>ΑΠΟΔΟΧΗ</Button><Button variant="outlined" color="error" onClick={() => setDialog({ open: true, id: app.id, type: 'cancelled' })}>ΑΠΟΡΡΙΨΗ</Button></>
+                                                )}
+                                            </Box>
                                     </Paper>
                                 );
                             })}
@@ -416,7 +421,10 @@ const VetAppointments = () => {
                                             <TableRow>
                                                 <TableCell><strong>Ιδιοκτήτης</strong></TableCell>
                                                 <TableCell><strong>Κατοικίδιο</strong></TableCell>
+                                                {/* ΔΥΟ ΣΤΗΛΕΣ ΕΔΩ: Λόγος και Λεπτομέρειες */}
+                                                <TableCell><strong>Λόγος</strong></TableCell>
                                                 <TableCell><strong>Λεπτομέρειες</strong></TableCell>
+
                                                 <TableCell><strong>Ημ/νία & Ώρα</strong></TableCell>
                                                 <TableCell align="center"><strong>Κατάσταση</strong></TableCell>
                                                 <TableCell align="center"><strong>Ενέργειες</strong></TableCell>
@@ -424,14 +432,18 @@ const VetAppointments = () => {
                                         </TableHead>
                                         <TableBody>
                                             {confirmedAppsTable.length === 0 ? (
-                                                <TableRow><TableCell colSpan={6} align="center" sx={{ py: 4, color: 'text.secondary' }}>Κανένα ραντεβού για αυτή την ημέρα.</TableCell></TableRow>
+                                                <TableRow><TableCell colSpan={7} align="center" sx={{ py: 4, color: 'text.secondary' }}>Κανένα ραντεβού για αυτή την ημέρα.</TableCell></TableRow>
                                             ) : confirmedAppsTable.map(app => {
                                                 const statusInfo = getStatusInfo(app);
                                                 return (
                                                     <TableRow key={app.id} hover>
                                                         <TableCell>{app.ownerName}</TableCell>
                                                         <TableCell><Typography variant="body2" fontWeight="bold">{app.petName}</Typography><Typography variant="caption">{app.microchip}</Typography></TableCell>
+                                                        
+                                                        {/* ΔΕΔΟΜΕΝΑ ΓΙΑ ΤΙΣ 2 ΣΤΗΛΕΣ */}
+                                                        <TableCell>{app.reason}</TableCell>
                                                         <TableCell>{app.details}</TableCell>
+
                                                         <TableCell><Typography variant="body2" fontWeight="bold">{app.date}</Typography><Typography variant="caption">{app.time}</Typography></TableCell>
                                                         <TableCell align="center" sx={{ color: statusInfo.textColor, fontWeight: statusInfo.fontWeight }}>{statusInfo.label}</TableCell>
                                                         <TableCell align="center">
@@ -451,15 +463,19 @@ const VetAppointments = () => {
                                 const statusInfo = getStatusInfo(app);
                                 return (
                                     <Paper key={app.id} elevation={2} sx={{ mb: 2, p: 2, borderLeft: `6px solid ${statusInfo.label === 'Ολοκληρώθηκε' ? 'grey' : 'green'}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                        <Box>
-                                            <Typography fontWeight="bold" variant="h6" onClick={() => { setConfirmedDate(app.date); setShowConfirmedTable(true); }} sx={{ cursor: 'pointer', '&:hover': { color: 'green', textDecoration: 'underline' } }}>{app.date} - {app.time}</Typography>
-                                            <Typography fontWeight="500">{app.petName} ({app.ownerName})</Typography>
-                                            <Typography variant="body2">{app.details}</Typography>
-                                            <Chip label={statusInfo.label} size="small" sx={{ mt: 1, bgcolor: statusInfo.label === 'Ολοκληρώθηκε' ? '#e0e0e0' : '#e8f5e9', color: statusInfo.label === 'Ολοκληρώθηκε' ? 'text.secondary' : 'green', fontWeight: 'bold' }} />
-                                        </Box>
-                                        <Tooltip title="Διαγραφή">
-                                            <IconButton onClick={() => setDialog({ open: true, id: app.id, type: 'cancelled' })} sx={{ bgcolor: '#333', color: '#fff', '&:hover': { bgcolor: 'black' }, borderRadius: 1 }}><DeleteIcon /></IconButton>
-                                        </Tooltip>
+                                            <Box>
+                                                <Typography fontWeight="bold" variant="h6" onClick={() => { setConfirmedDate(app.date); setShowConfirmedTable(true); }} sx={{ cursor: 'pointer', '&:hover': { color: 'green', textDecoration: 'underline' } }}>{app.date} - {app.time}</Typography>
+                                                <Typography fontWeight="500">{app.petName} ({app.ownerName})</Typography>
+                                                
+                                                {/* Εμφάνιση και στη λίστα */}
+                                                <Typography variant="body2"><strong>Λόγος:</strong> {app.reason}</Typography>
+                                                <Typography variant="body2"><strong>Λεπτομέρειες:</strong> {app.details}</Typography>
+
+                                                <Chip label={statusInfo.label} size="small" sx={{ mt: 1, bgcolor: statusInfo.label === 'Ολοκληρώθηκε' ? '#e0e0e0' : '#e8f5e9', color: statusInfo.label === 'Ολοκληρώθηκε' ? 'text.secondary' : 'green', fontWeight: 'bold' }} />
+                                            </Box>
+                                            <Tooltip title="Διαγραφή">
+                                                <IconButton onClick={() => setDialog({ open: true, id: app.id, type: 'cancelled' })} sx={{ bgcolor: '#333', color: '#fff', '&:hover': { bgcolor: 'black' }, borderRadius: 1 }}><DeleteIcon /></IconButton>
+                                            </Tooltip>
                                     </Paper>
                                 );
                             })}
