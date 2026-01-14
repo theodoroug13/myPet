@@ -22,6 +22,16 @@ import VetHours from './pages/VetHours'
 import VetDrafts from './pages/VetDrafts';
 import VetUpdatePetList from './pages/VetUpdatePetList';
 import FaqPage from './pages/FaqPage';
+import AnimalServices from './pages/VetAnimalServices';
+import VetAnimalHistory from './pages/VetAnimalHistory';
+import VetAnimalFound from './pages/VetAnimalFound';
+import VetMedicalAction from './pages/VetMedicalAction';
+import VetAnimalLost from './pages/VetAnimalLost';
+import VetAnimalTransfer from './pages/VetAnimalTransfer';
+import VetAnimalFoster from './pages/VetAnimalFoster';
+import VetAnimalAdoption from './pages/VetAnimalAdoption';
+import VetAnimalServiceDrafts from './pages/VetAnimalServiceDrafts';
+
 function App() {
   return (
     
@@ -58,6 +68,16 @@ function App() {
           <Route path="/vet/new-pet" element={<VetNewPet />} />
           <Route path="/vet/drafts" element={<VetDrafts />} />
           <Route path="/vet/update-pets" element={<VetUpdatePetList />} />
+          <Route path="/vet/animal-services/:microchip" element={<AnimalServices />} />
+          <Route path="/vet/animal-services/history/:microchip" element={<VetAnimalHistory />} />
+          <Route path="/vet/animal-services/found/:microchip" element={<VetAnimalFound />} />
+          <Route path="/vet/animal-services/medical-action/:microchip" element={<VetMedicalAction />} />
+          <Route path="/vet/animal-services/lost/:microchip" element={<VetAnimalLost />} />
+          <Route path="/vet/animal-services/update-transfer/:microchip" element={<VetAnimalTransfer />} />
+          <Route path="/vet/animal-services/update-foster/:microchip" element={<VetAnimalFoster />} />
+          <Route path="/vet/animal-services/adoption/:microchip" element={<VetAnimalAdoption />} />
+          <Route path="/vet/animal-services/drafts/:microchip" element={<VetAnimalServiceDrafts />} />
+
           <Route path="*" element={<Home />} />
         </Routes>
       </Box>

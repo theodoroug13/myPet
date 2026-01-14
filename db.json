@@ -25,21 +25,96 @@
       "photo": "",
       "hours": "• Δευτέρα έως Κυριακή, 09:00 – 17:00\n• Για ραντεβού καλέστε στο 210 9876543.",
       "availability": {
-        "2026-01-13": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-14": { "isOpen": false, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-15": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-16": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-17": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-18": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-19": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-20": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-21": { "isOpen": false, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-22": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-23": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-24": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-25": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-26": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
-        "2026-01-27": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] }
+        "2026-01-13": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-14": {
+          "isOpen": false,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-15": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-16": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-17": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-18": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-19": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-20": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-21": {
+          "isOpen": false,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-22": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-23": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-24": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-25": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-26": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        },
+        "2026-01-27": {
+          "isOpen": true,
+          "start": "09:00",
+          "end": "17:00",
+          "breaks": []
+        }
       },
       "ratingAvg": 4.7,
       "ratingCount": 3
@@ -69,21 +144,96 @@
       "photo": "",
       "hours": "• Δευτέρα έως Παρασκευή, 10:00 – 18:00\n• Σαββατοκύριακα κλειστά.",
       "availability": {
-        "2026-01-13": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-14": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-15": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-16": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-17": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-18": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-19": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-20": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-21": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-22": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-23": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-24": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-25": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-26": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
-        "2026-01-27": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] }
+        "2026-01-13": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-14": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-15": {
+          "isOpen": false,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-16": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-17": {
+          "isOpen": false,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-18": {
+          "isOpen": false,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-19": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-20": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-21": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-22": {
+          "isOpen": false,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-23": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-24": {
+          "isOpen": false,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-25": {
+          "isOpen": false,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-26": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        },
+        "2026-01-27": {
+          "isOpen": true,
+          "start": "10:00",
+          "end": "18:00",
+          "breaks": []
+        }
       },
       "ratingAvg": 4.8,
       "ratingCount": 4
@@ -106,21 +256,96 @@
       "photo": "",
       "hours": "• Δευτέρα έως Σάββατο, 11:00 – 19:00\n• Εξυπηρέτηση κατόπιν ραντεβού.",
       "availability": {
-        "2026-01-13": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-14": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-15": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-16": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-17": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-18": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-19": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-20": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-21": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-22": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-23": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-24": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-25": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-26": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
-        "2026-01-27": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] }
+        "2026-01-13": {
+          "isOpen": false,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-14": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-15": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-16": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-17": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-18": {
+          "isOpen": false,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-19": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-20": {
+          "isOpen": false,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-21": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-22": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-23": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-24": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-25": {
+          "isOpen": false,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-26": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        },
+        "2026-01-27": {
+          "isOpen": true,
+          "start": "11:00",
+          "end": "19:00",
+          "breaks": []
+        }
       }
     },
     {
@@ -152,7 +377,9 @@
       "status": "submitted",
       "birthDate": "2020-01-01",
       "registeredVetId": "2",
-      "linkedVetIds": ["2"]
+      "linkedVetIds": [
+        "2"
+      ]
     },
     {
       "id": "p2",
@@ -163,7 +390,9 @@
       "status": "approved",
       "birthDate": "2019-05-15",
       "registeredVetId": "2",
-      "linkedVetIds": ["2"]
+      "linkedVetIds": [
+        "2"
+      ]
     },
     {
       "id": "p3",
@@ -174,7 +403,9 @@
       "status": "approved",
       "birthDate": "2018-11-20",
       "registeredVetId": "2",
-      "linkedVetIds": ["2"]
+      "linkedVetIds": [
+        "2"
+      ]
     },
     {
       "id": "p4",
@@ -185,7 +416,9 @@
       "status": "approved",
       "birthDate": "2021-03-10",
       "registeredVetId": "2",
-      "linkedVetIds": ["2"]
+      "linkedVetIds": [
+        "2"
+      ]
     },
     {
       "id": "p5",
@@ -196,7 +429,9 @@
       "status": "approved",
       "birthDate": "2022-06-01",
       "registeredVetId": "2576",
-      "linkedVetIds": ["2576"]
+      "linkedVetIds": [
+        "2576"
+      ]
     },
     {
       "id": "p6",
@@ -207,7 +442,9 @@
       "status": "approved",
       "birthDate": "2017-08-20",
       "registeredVetId": "2",
-      "linkedVetIds": ["2"]
+      "linkedVetIds": [
+        "2"
+      ]
     },
     {
       "id": "p7",
@@ -218,7 +455,9 @@
       "status": "approved",
       "birthDate": "2023-01-10",
       "registeredVetId": "4",
-      "linkedVetIds": ["4"]
+      "linkedVetIds": [
+        "4"
+      ]
     },
     {
       "id": "p8",
@@ -229,7 +468,9 @@
       "status": "approved",
       "birthDate": "2021-12-05",
       "registeredVetId": "2576",
-      "linkedVetIds": ["2576"]
+      "linkedVetIds": [
+        "2576"
+      ]
     },
     {
       "id": "p9",
@@ -240,303 +481,2916 @@
       "status": "approved",
       "birthDate": "2020-04-15",
       "registeredVetId": "4",
-      "linkedVetIds": ["4"]
+      "linkedVetIds": [
+        "4"
+      ]
     }
   ],
   "appointments": [
-    { "id": "a100", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Εμβόλιο", "date": "2026-01-13", "time": "09:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a101", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Εξέταση αυτιών", "date": "2026-01-13", "time": "09:30", "status": "confirmed", "reason": "Φαγούρα" },
-    { "id": "a102", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Γενική εξέταση", "date": "2026-01-13", "time": "10:00", "status": "confirmed", "reason": "Check-up" },
-    { "id": "a103", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Κόψιμο νυχιών", "date": "2026-01-13", "time": "10:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "a104", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Στείρωση", "date": "2026-01-13", "time": "11:00", "status": "confirmed", "reason": "Χειρουργείο" },
-    { "id": "a105", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Εμβόλιο", "date": "2026-01-13", "time": "12:30", "status": "confirmed", "reason": "Τριπλό" },
-    { "id": "a106", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Υπέρηχος", "date": "2026-01-13", "time": "13:00", "status": "confirmed", "reason": "Έλεγχος" },
-    { "id": "a107", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Καθαρισμός δοντιών", "date": "2026-01-13", "time": "14:00", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "a108", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Συζήτηση διατροφής", "date": "2026-01-13", "time": "15:30", "status": "confirmed", "reason": "Βάρος" },
-    
-    { "id": "b100", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Εμβόλιο", "date": "2026-01-13", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "b101", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Έλεγχος ματιών", "date": "2026-01-13", "time": "10:30", "status": "confirmed", "reason": "Δάκρυα" },
-    { "id": "b102", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Αποπαρασίτωση", "date": "2026-01-13", "time": "11:00", "status": "confirmed", "reason": "Χάπι" },
-    { "id": "b103", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Επανεξέταση", "date": "2026-01-13", "time": "11:30", "status": "confirmed", "reason": "Τραύμα" },
-    { "id": "b104", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Εξέταση αίματος", "date": "2026-01-13", "time": "12:00", "status": "confirmed", "reason": "Προληπτικό" },
-    { "id": "b105", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Κόψιμο νυχιών", "date": "2026-01-13", "time": "12:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "b106", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Υπέρηχος", "date": "2026-01-13", "time": "13:00", "status": "confirmed", "reason": "Κοιλιά" },
-    { "id": "b107", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Συζήτηση", "date": "2026-01-13", "time": "13:30", "status": "confirmed", "reason": "Συμπεριφορά" },
-    { "id": "b108", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Εμβόλιο Λύσσας", "date": "2026-01-13", "time": "14:00", "status": "confirmed", "reason": "Ταξίδι" },
-    { "id": "b109", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Εξέταση δέρματος", "date": "2026-01-13", "time": "14:30", "status": "confirmed", "reason": "Αλλεργία" },
-    { "id": "b110", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Καθαρισμός αυτιών", "date": "2026-01-13", "time": "15:00", "status": "confirmed", "reason": "Ωτίτιδα" },
-    { "id": "b111", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Έλεγχος δοντιών", "date": "2026-01-13", "time": "15:30", "status": "confirmed", "reason": "Οσμή" },
-    { "id": "b112", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Μικροτσίπ", "date": "2026-01-13", "time": "16:00", "status": "confirmed", "reason": "Εγγραφή" },
-
-    { "id": "c100", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Κόψιμο φτερών", "date": "2026-01-14", "time": "11:00", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c101", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Εξέταση ράμφους", "date": "2026-01-14", "time": "11:30", "status": "confirmed", "reason": "Δυσμορφία" },
-    { "id": "c102", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Γενική εξέταση", "date": "2026-01-14", "time": "12:00", "status": "confirmed", "reason": "Αδιαθεσία" },
-    { "id": "c103", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αποπαρασίτωση", "date": "2026-01-14", "time": "12:30", "status": "confirmed", "reason": "Πρόληψη" },
-    { "id": "c104", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Συζήτηση διατροφής", "date": "2026-01-14", "time": "13:00", "status": "confirmed", "reason": "Αλλαγή τροφής" },
-    { "id": "c105", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Εξέταση κοπράνων", "date": "2026-01-14", "time": "13:30", "status": "confirmed", "reason": "Διάρροια" },
-    { "id": "c106", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Έλεγχος ποδιών", "date": "2026-01-14", "time": "16:00", "status": "confirmed", "reason": "Τραυματισμός" },
-    { "id": "c107", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Συμπεριφορά", "date": "2026-01-14", "time": "16:30", "status": "confirmed", "reason": "Φωνάζει" },
-
-    { "id": "a110", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Ακτινογραφία", "date": "2026-01-15", "time": "09:00", "status": "confirmed", "reason": "Πόνος" },
-    { "id": "a111", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Επανεξέταση", "date": "2026-01-15", "time": "09:30", "status": "confirmed", "reason": "Αυτιά" },
-    { "id": "a112", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Εμβόλιο Λύσσας", "date": "2026-01-15", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a113", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Εξέταση αίματος", "date": "2026-01-15", "time": "10:30", "status": "confirmed", "reason": "Προληπτικό" },
-    { "id": "a114", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Έλεγχος βάρους", "date": "2026-01-15", "time": "11:00", "status": "confirmed", "reason": "Δίαιτα" },
-    { "id": "a115", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Καθαρισμός αυτιών", "date": "2026-01-15", "time": "11:30", "status": "confirmed", "reason": "Κερί" },
-    { "id": "a116", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Εξέταση δέρματος", "date": "2026-01-15", "time": "12:00", "status": "confirmed", "reason": "Ξύσιμο" },
-    { "id": "a117", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Κόψιμο νυχιών", "date": "2026-01-15", "time": "12:30", "status": "confirmed", "reason": "Περιποίηση" },
-
-    { "id": "c110", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εγχείρηση", "date": "2026-01-15", "time": "11:00", "status": "confirmed", "reason": "Όγκος" },
-    { "id": "c111", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Επανεξέταση", "date": "2026-01-15", "time": "12:30", "status": "confirmed", "reason": "Ράμφος" },
-    { "id": "c112", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Φαρμακευτική αγωγή", "date": "2026-01-15", "time": "13:00", "status": "confirmed", "reason": "Λοίμωξη" },
-    { "id": "c113", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Βιταμίνες", "date": "2026-01-15", "time": "13:30", "status": "confirmed", "reason": "Ενίσχυση" },
-    { "id": "c114", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Έλεγχος φτερών", "date": "2026-01-15", "time": "14:00", "status": "confirmed", "reason": "Πτώση" },
-    { "id": "c115", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Γενική εξέταση", "date": "2026-01-15", "time": "14:30", "status": "confirmed", "reason": "Check-up" },
-    { "id": "c116", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Συμβουλή κλουβιού", "date": "2026-01-15", "time": "15:00", "status": "confirmed", "reason": "Χώρος" },
-    { "id": "c117", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Εμβόλιο", "date": "2026-01-15", "time": "15:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "c118", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Καθαρισμός", "date": "2026-01-15", "time": "16:00", "status": "confirmed", "reason": "Υγιεινή" },
-    { "id": "c119", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Ακτινογραφία", "date": "2026-01-15", "time": "16:30", "status": "confirmed", "reason": "Πόνος" },
-
-    { "id": "a120", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Χειρουργείο", "date": "2026-01-16", "time": "09:00", "status": "confirmed", "reason": "Αφαίρεση μάζας" },
-    { "id": "a121", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Επανεξέταση", "date": "2026-01-16", "time": "10:30", "status": "confirmed", "reason": "Μετεγχειρητικό" },
-    { "id": "a122", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Εμβόλιο", "date": "2026-01-16", "time": "11:00", "status": "confirmed", "reason": "Leishmania" },
-    { "id": "a123", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Αιματολογικές", "date": "2026-01-16", "time": "11:30", "status": "confirmed", "reason": "Έλεγχος" },
-    { "id": "a124", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Υπέρηχος", "date": "2026-01-16", "time": "12:00", "status": "confirmed", "reason": "Κοιλιακό άλγος" },
-    { "id": "a125", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Καθαρισμός", "date": "2026-01-16", "time": "12:30", "status": "confirmed", "reason": "Δόντια" },
-    { "id": "a126", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Εξέταση", "date": "2026-01-16", "time": "13:00", "status": "confirmed", "reason": "Βήχας" },
-    { "id": "a127", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Ορθοπεδικό", "date": "2026-01-16", "time": "14:00", "status": "confirmed", "reason": "Κουτσαίνει" },
-    { "id": "a128", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Εμβόλιο", "date": "2026-01-16", "time": "14:30", "status": "confirmed", "reason": "Kennel cough" },
-    { "id": "a129", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Συμβουλή", "date": "2026-01-16", "time": "15:00", "status": "confirmed", "reason": "Συμπεριφορά" },
-    { "id": "a130", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Επανεξέταση", "date": "2026-01-16", "time": "15:30", "status": "confirmed", "reason": "Χειρουργείο" },
-    { "id": "a131", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Φάρμακα", "date": "2026-01-16", "time": "16:00", "status": "confirmed", "reason": "Συνταγή" },
-
-    { "id": "b115", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Check up", "date": "2026-01-16", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "b116", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Εμβόλιο", "date": "2026-01-16", "time": "10:30", "status": "confirmed", "reason": "Τριπλό" },
-    { "id": "b117", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Νύχια", "date": "2026-01-16", "time": "11:00", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "b118", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Εξέταση", "date": "2026-01-16", "time": "11:30", "status": "confirmed", "reason": "Αυτιά" },
-    { "id": "b119", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Αποπαρασίτωση", "date": "2026-01-16", "time": "12:00", "status": "confirmed", "reason": "Χάπι" },
-    { "id": "b120", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Δόντια", "date": "2026-01-16", "time": "12:30", "status": "confirmed", "reason": "Καθαρισμός" },
-    { "id": "b121", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Υπέρηχος", "date": "2026-01-16", "time": "13:00", "status": "confirmed", "reason": "Νεφρά" },
-    { "id": "b122", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Συζήτηση", "date": "2026-01-16", "time": "13:30", "status": "confirmed", "reason": "Διατροφή" },
-
-    { "id": "c120", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εξέταση", "date": "2026-01-16", "time": "11:00", "status": "confirmed", "reason": "Ρουτίνα" },
-    { "id": "c121", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Εμβόλιο", "date": "2026-01-16", "time": "11:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "c122", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Νύχια", "date": "2026-01-16", "time": "12:00", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c123", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Ράμφος", "date": "2026-01-16", "time": "12:30", "status": "confirmed", "reason": "Λείανση" },
-    { "id": "c124", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Προληπτικός", "date": "2026-01-16", "time": "13:00", "status": "confirmed", "reason": "Check up" },
-    { "id": "c125", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Διατροφή", "date": "2026-01-16", "time": "13:30", "status": "confirmed", "reason": "Συμβουλή" },
-    { "id": "c126", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Ακτινογραφία", "date": "2026-01-16", "time": "16:00", "status": "confirmed", "reason": "Φτερό" },
-    { "id": "c127", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αποπαρασίτωση", "date": "2026-01-16", "time": "16:30", "status": "confirmed", "reason": "Σπρέι" },
-
-    { "id": "a135", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Αλλαγή επιδέσμου", "date": "2026-01-17", "time": "09:30", "status": "confirmed", "reason": "Τραύμα" },
-    { "id": "a136", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Εμβόλιο", "date": "2026-01-17", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a137", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Check up", "date": "2026-01-17", "time": "10:30", "status": "confirmed", "reason": "Ρουτίνα" },
-    { "id": "a138", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Αυτιά", "date": "2026-01-17", "time": "11:00", "status": "confirmed", "reason": "Καθαρισμός" },
-    { "id": "a139", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Νύχια", "date": "2026-01-17", "time": "11:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "a140", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Δόντια", "date": "2026-01-17", "time": "12:00", "status": "confirmed", "reason": "Έλεγχος" },
-    { "id": "a141", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Εξέταση", "date": "2026-01-17", "time": "12:30", "status": "confirmed", "reason": "Μάτια" },
-    { "id": "a142", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Αποπαρασίτωση", "date": "2026-01-17", "time": "13:00", "status": "confirmed", "reason": "Χάπι" },
-
-    { "id": "c130", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Νύχια", "date": "2026-01-17", "time": "11:00", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c131", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Φτερά", "date": "2026-01-17", "time": "11:30", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c132", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Check up", "date": "2026-01-17", "time": "12:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "c133", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Εξέταση", "date": "2026-01-17", "time": "12:30", "status": "confirmed", "reason": "Μάτια" },
-    { "id": "c134", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Ράμφος", "date": "2026-01-17", "time": "13:00", "status": "confirmed", "reason": "Λείανση" },
-    { "id": "c135", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Βάρος", "date": "2026-01-17", "time": "13:30", "status": "confirmed", "reason": "Ζύγισμα" },
-    { "id": "c136", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Συμβουλή", "date": "2026-01-17", "time": "16:00", "status": "confirmed", "reason": "Συμπεριφορά" },
-    { "id": "c137", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αποπαρασίτωση", "date": "2026-01-17", "time": "16:30", "status": "confirmed", "reason": "Εξωτερική" },
-
-    { "id": "a145", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Επείγον", "date": "2026-01-18", "time": "10:00", "status": "confirmed", "reason": "Εμετός" },
-    { "id": "a146", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Εξέταση", "date": "2026-01-18", "time": "10:30", "status": "confirmed", "reason": "Διάρροια" },
-    { "id": "a147", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Τραύμα", "date": "2026-01-18", "time": "11:00", "status": "confirmed", "reason": "Πόδι" },
-    { "id": "a148", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Αλλεργία", "date": "2026-01-18", "time": "11:30", "status": "confirmed", "reason": "Φαγούρα" },
-    { "id": "a149", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Πυρετός", "date": "2026-01-18", "time": "12:00", "status": "confirmed", "reason": "Αδιαθεσία" },
-    { "id": "a150", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Ξένο σώμα", "date": "2026-01-18", "time": "12:30", "status": "confirmed", "reason": "Αγκάθι" },
-    { "id": "a151", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Εξέταση", "date": "2026-01-18", "time": "13:00", "status": "confirmed", "reason": "Αυτί" },
-    { "id": "a152", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Φάρμακα", "date": "2026-01-18", "time": "13:30", "status": "confirmed", "reason": "Αγωγή" },
-
-    { "id": "a155", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Εξέταση", "date": "2026-01-19", "time": "09:00", "status": "confirmed", "reason": "Καρδιά" },
-    { "id": "a156", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Εμβόλιο", "date": "2026-01-19", "time": "09:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a157", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Νύχια", "date": "2026-01-19", "time": "10:00", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "a158", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Check up", "date": "2026-01-19", "time": "10:30", "status": "confirmed", "reason": "Γενικό" },
-    { "id": "a159", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Δόντια", "date": "2026-01-19", "time": "11:00", "status": "confirmed", "reason": "Καθαρισμός" },
-    { "id": "a160", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Επανεξέταση", "date": "2026-01-19", "time": "12:30", "status": "confirmed", "reason": "Αυτιά" },
-    { "id": "a161", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Υπέρηχος", "date": "2026-01-19", "time": "13:00", "status": "confirmed", "reason": "Εγκυμοσύνη" },
-    { "id": "a162", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Αποπαρασίτωση", "date": "2026-01-19", "time": "14:00", "status": "confirmed", "reason": "Εσωτερική" },
-    
-    { "id": "b125", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Εμβόλιο", "date": "2026-01-19", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "b126", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Check up", "date": "2026-01-19", "time": "10:30", "status": "confirmed", "reason": "Γενικό" },
-    { "id": "b127", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Εξέταση", "date": "2026-01-19", "time": "11:00", "status": "confirmed", "reason": "Δέρμα" },
-    { "id": "b128", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Νύχια", "date": "2026-01-19", "time": "11:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "b129", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Δόντια", "date": "2026-01-19", "time": "12:00", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "b130", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Αποπαρασίτωση", "date": "2026-01-19", "time": "12:30", "status": "confirmed", "reason": "Αμπούλα" },
-    { "id": "b131", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Συζήτηση", "date": "2026-01-19", "time": "13:00", "status": "confirmed", "reason": "Συμπεριφορά" },
-    { "id": "b132", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Επανεξέταση", "date": "2026-01-19", "time": "13:30", "status": "confirmed", "reason": "Μάτια" },
-
-    { "id": "c140", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εξέταση", "date": "2026-01-19", "time": "11:00", "status": "confirmed", "reason": "Αναπνευστικό" },
-    { "id": "c141", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Νύχια", "date": "2026-01-19", "time": "11:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c142", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Φτερά", "date": "2026-01-19", "time": "12:00", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c143", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Ράμφος", "date": "2026-01-19", "time": "12:30", "status": "confirmed", "reason": "Διόρθωση" },
-    { "id": "c144", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εμβόλιο", "date": "2026-01-19", "time": "13:00", "status": "confirmed", "reason": "Πρόληψη" },
-    { "id": "c145", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αποπαρασίτωση", "date": "2026-01-19", "time": "13:30", "status": "confirmed", "reason": "Ψείρες" },
-    { "id": "c146", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Βιταμίνες", "date": "2026-01-19", "time": "16:00", "status": "confirmed", "reason": "Ενίσχυση" },
-    { "id": "c147", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Check up", "date": "2026-01-19", "time": "16:30", "status": "confirmed", "reason": "Ετήσιο" },
-
-    { "id": "b135", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Στείρωση", "date": "2026-01-20", "time": "10:00", "status": "confirmed", "reason": "Χειρουργείο" },
-    { "id": "b136", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Εμβόλιο", "date": "2026-01-20", "time": "10:30", "status": "confirmed", "reason": "Λύσσα" },
-    { "id": "b137", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Εξέταση", "date": "2026-01-20", "time": "11:00", "status": "confirmed", "reason": "Κοιλιά" },
-    { "id": "b138", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Δόντια", "date": "2026-01-20", "time": "11:30", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "b139", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Νύχια", "date": "2026-01-20", "time": "12:00", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "b140", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Αιματολογικές", "date": "2026-01-20", "time": "12:30", "status": "confirmed", "reason": "Έλεγχος" },
-    { "id": "b141", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Υπέρηχος", "date": "2026-01-20", "time": "13:00", "status": "confirmed", "reason": "Έλεγχος" },
-    { "id": "b142", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Εμβόλιο", "date": "2026-01-20", "time": "13:30", "status": "confirmed", "reason": "Λευχαιμία" },
-    { "id": "b143", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Καθαρισμός", "date": "2026-01-20", "time": "14:00", "status": "confirmed", "reason": "Αυτιά" },
-    { "id": "b144", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Δέρμα", "date": "2026-01-20", "time": "14:30", "status": "confirmed", "reason": "Αλλεργία" },
-    { "id": "b145", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Μάτια", "date": "2026-01-20", "time": "15:00", "status": "confirmed", "reason": "Δάκρυα" },
-    { "id": "b146", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Συζήτηση", "date": "2026-01-20", "time": "15:30", "status": "confirmed", "reason": "Βάρος" },
-
-    { "id": "c150", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εξέταση", "date": "2026-01-21", "time": "11:00", "status": "confirmed", "reason": "Πόδι" },
-    { "id": "c151", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Εμβόλιο", "date": "2026-01-21", "time": "11:30", "status": "confirmed", "reason": "Ιός" },
-    { "id": "c152", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Νύχια", "date": "2026-01-21", "time": "12:00", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c153", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Ράμφος", "date": "2026-01-21", "time": "12:30", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c154", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Διατροφή", "date": "2026-01-21", "time": "13:00", "status": "confirmed", "reason": "Αλλαγή" },
-    { "id": "c155", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Φτερά", "date": "2026-01-21", "time": "13:30", "status": "confirmed", "reason": "Πτήση" },
-    { "id": "c156", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Αποπαρασίτωση", "date": "2026-01-21", "time": "16:00", "status": "confirmed", "reason": "Σπρέι" },
-    { "id": "c157", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Check up", "date": "2026-01-21", "time": "16:30", "status": "confirmed", "reason": "Γενικό" },
-
-    { "id": "a165", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Χειρουργείο", "date": "2026-01-22", "time": "09:00", "status": "confirmed", "reason": "Ορθοπεδικό" },
-    { "id": "a166", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Check up", "date": "2026-01-22", "time": "10:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a167", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Εμβόλιο", "date": "2026-01-22", "time": "11:00", "status": "confirmed", "reason": "Τριπλό" },
-    { "id": "a168", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Δόντια", "date": "2026-01-22", "time": "11:30", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "a169", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Εξέταση", "date": "2026-01-22", "time": "12:00", "status": "confirmed", "reason": "Αυτιά" },
-    { "id": "a170", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Νύχια", "date": "2026-01-22", "time": "12:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "a171", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Αποπαρασίτωση", "date": "2026-01-22", "time": "13:00", "status": "confirmed", "reason": "Χάπι" },
-    { "id": "a172", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Συζήτηση", "date": "2026-01-22", "time": "14:00", "status": "confirmed", "reason": "Συμπεριφορά" },
-
-    { "id": "c160", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Επέμβαση", "date": "2026-01-22", "time": "11:00", "status": "confirmed", "reason": "Αφαίρεση κύστης" },
-    { "id": "c161", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Νάρκωση", "date": "2026-01-22", "time": "11:30", "status": "confirmed", "reason": "Εξέταση" },
-    { "id": "c162", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Επανεξέταση", "date": "2026-01-22", "time": "12:00", "status": "confirmed", "reason": "Τραύμα" },
-    { "id": "c163", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αιματολογικές", "date": "2026-01-22", "time": "12:30", "status": "confirmed", "reason": "Έλεγχος" },
-    { "id": "c164", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Ράμφος", "date": "2026-01-22", "time": "13:00", "status": "confirmed", "reason": "Διόρθωση" },
-    { "id": "c165", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Νύχια", "date": "2026-01-22", "time": "13:30", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c166", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Φτερά", "date": "2026-01-22", "time": "14:00", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c167", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Εμβόλιο", "date": "2026-01-22", "time": "14:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "c168", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Συζήτηση", "date": "2026-01-22", "time": "16:00", "status": "confirmed", "reason": "Διατροφή" },
-    { "id": "c169", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Βιταμίνες", "date": "2026-01-22", "time": "16:30", "status": "confirmed", "reason": "Αδυναμία" },
-    { "id": "c170", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Check up", "date": "2026-01-22", "time": "17:00", "status": "confirmed", "reason": "Γενικό" },
-    { "id": "c171", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Καθαρισμός", "date": "2026-01-22", "time": "17:30", "status": "confirmed", "reason": "Κλουβί" },
-
-    { "id": "a175", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Επανεξέταση", "date": "2026-01-23", "time": "09:00", "status": "confirmed", "reason": "Χειρουργείο" },
-    { "id": "a176", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Εμβόλιο", "date": "2026-01-23", "time": "09:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a177", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Εξέταση", "date": "2026-01-23", "time": "10:00", "status": "confirmed", "reason": "Πόδι" },
-    { "id": "a178", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Νύχια", "date": "2026-01-23", "time": "10:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "a179", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Αποπαρασίτωση", "date": "2026-01-23", "time": "11:00", "status": "confirmed", "reason": "Χάπι" },
-    { "id": "a180", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Check up", "date": "2026-01-23", "time": "11:30", "status": "confirmed", "reason": "Ρουτίνα" },
-    { "id": "a181", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Υπέρηχος", "date": "2026-01-23", "time": "12:00", "status": "confirmed", "reason": "Έλεγχος" },
-    { "id": "a182", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Δόντια", "date": "2026-01-23", "time": "12:30", "status": "confirmed", "reason": "Καθαρισμός" },
-    { "id": "a183", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Αυτιά", "date": "2026-01-23", "time": "13:00", "status": "confirmed", "reason": "Καθαρισμός" },
-    { "id": "a184", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Συζήτηση", "date": "2026-01-23", "time": "14:00", "status": "confirmed", "reason": "Βάρος" },
-    { "id": "a185", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Δέρμα", "date": "2026-01-23", "time": "14:30", "status": "confirmed", "reason": "Φαγούρα" },
-    { "id": "a186", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Μάτια", "date": "2026-01-23", "time": "15:00", "status": "confirmed", "reason": "Δάκρυα" },
-
-    { "id": "b150", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Εμβόλιο", "date": "2026-01-23", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "b151", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Νύχια", "date": "2026-01-23", "time": "10:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "b152", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Εξέταση", "date": "2026-01-23", "time": "11:00", "status": "confirmed", "reason": "Αυτιά" },
-    { "id": "b153", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Αποπαρασίτωση", "date": "2026-01-23", "time": "11:30", "status": "confirmed", "reason": "Χάπι" },
-    { "id": "b154", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Δόντια", "date": "2026-01-23", "time": "12:00", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "b155", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Check up", "date": "2026-01-23", "time": "12:30", "status": "confirmed", "reason": "Γενικό" },
-    { "id": "b156", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Συζήτηση", "date": "2026-01-23", "time": "13:00", "status": "confirmed", "reason": "Διατροφή" },
-    { "id": "b157", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Βάρος", "date": "2026-01-23", "time": "13:30", "status": "confirmed", "reason": "Ζύγισμα" },
-
-    { "id": "c175", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εξέταση", "date": "2026-01-23", "time": "11:00", "status": "confirmed", "reason": "Αναπνοή" },
-    { "id": "c176", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Νύχια", "date": "2026-01-23", "time": "11:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c177", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εμβόλιο", "date": "2026-01-23", "time": "12:00", "status": "confirmed", "reason": "Πρόληψη" },
-    { "id": "c178", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Φτερά", "date": "2026-01-23", "time": "12:30", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c179", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Ράμφος", "date": "2026-01-23", "time": "13:00", "status": "confirmed", "reason": "Λείανση" },
-    { "id": "c180", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Check up", "date": "2026-01-23", "time": "13:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "c181", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Βιταμίνες", "date": "2026-01-23", "time": "16:00", "status": "confirmed", "reason": "Ενίσχυση" },
-    { "id": "c182", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αποπαρασίτωση", "date": "2026-01-23", "time": "16:30", "status": "confirmed", "reason": "Σπρέι" },
-
-    { "id": "a190", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Εξέταση", "date": "2026-01-24", "time": "09:30", "status": "confirmed", "reason": "Αυτί" },
-    { "id": "a191", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Εμβόλιο", "date": "2026-01-24", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a192", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Νύχια", "date": "2026-01-24", "time": "10:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "a193", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Αποπαρασίτωση", "date": "2026-01-24", "time": "11:00", "status": "confirmed", "reason": "Χάπι" },
-    { "id": "a194", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Check up", "date": "2026-01-24", "time": "11:30", "status": "confirmed", "reason": "Ρουτίνα" },
-    { "id": "a195", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Μάτια", "date": "2026-01-24", "time": "12:00", "status": "confirmed", "reason": "Δάκρυα" },
-    { "id": "a196", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Δέρμα", "date": "2026-01-24", "time": "12:30", "status": "confirmed", "reason": "Φαγούρα" },
-    { "id": "a197", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Δόντια", "date": "2026-01-24", "time": "13:00", "status": "confirmed", "reason": "Πέτρα" },
-
-    { "id": "c185", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εξέταση", "date": "2026-01-24", "time": "11:00", "status": "confirmed", "reason": "Πόδι" },
-    { "id": "c186", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Νύχια", "date": "2026-01-24", "time": "11:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c187", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εμβόλιο", "date": "2026-01-24", "time": "12:00", "status": "confirmed", "reason": "Πρόληψη" },
-    { "id": "c188", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Φτερά", "date": "2026-01-24", "time": "12:30", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c189", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Ράμφος", "date": "2026-01-24", "time": "13:00", "status": "confirmed", "reason": "Λείανση" },
-    { "id": "c190", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Check up", "date": "2026-01-24", "time": "13:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "c191", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Συμβουλή", "date": "2026-01-24", "time": "16:00", "status": "confirmed", "reason": "Συμπεριφορά" },
-    { "id": "c192", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αποπαρασίτωση", "date": "2026-01-24", "time": "16:30", "status": "confirmed", "reason": "Σπρέι" },
-
-    { "id": "a200", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Επείγον", "date": "2026-01-25", "time": "10:00", "status": "confirmed", "reason": "Κοιλιά" },
-    { "id": "a201", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Έλεγχος", "date": "2026-01-25", "time": "10:30", "status": "confirmed", "reason": "Πόνος" },
-    { "id": "a202", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Τραύμα", "date": "2026-01-25", "time": "11:00", "status": "confirmed", "reason": "Δάγκωμα" },
-    { "id": "a203", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Πυρετός", "date": "2026-01-25", "time": "11:30", "status": "confirmed", "reason": "Αδιαθεσία" },
-    { "id": "a204", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Εμετός", "date": "2026-01-25", "time": "12:00", "status": "confirmed", "reason": "Δηλητηρίαση" },
-    { "id": "a205", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Μάτι", "date": "2026-01-25", "time": "12:30", "status": "confirmed", "reason": "Τραυματισμός" },
-    { "id": "a206", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Αυτί", "date": "2026-01-25", "time": "13:00", "status": "confirmed", "reason": "Ξένο σώμα" },
-    { "id": "a207", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Φάρμακα", "date": "2026-01-25", "time": "13:30", "status": "confirmed", "reason": "Ένεση" },
-
-    { "id": "a210", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Χειρουργείο", "date": "2026-01-26", "time": "09:00", "status": "confirmed", "reason": "Βουβωνοκήλη" },
-    { "id": "a211", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Επανεξέταση", "date": "2026-01-26", "time": "10:30", "status": "confirmed", "reason": "Μετεγχειρητικό" },
-    { "id": "a212", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Εμβόλιο", "date": "2026-01-26", "time": "11:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a213", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Check up", "date": "2026-01-26", "time": "11:30", "status": "confirmed", "reason": "Γενικό" },
-    { "id": "a214", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Δόντια", "date": "2026-01-26", "time": "12:00", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "a215", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Νύχια", "date": "2026-01-26", "time": "12:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "a216", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Αποπαρασίτωση", "date": "2026-01-26", "time": "13:00", "status": "confirmed", "reason": "Χάπι" },
-    { "id": "a217", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Υπέρηχος", "date": "2026-01-26", "time": "14:00", "status": "confirmed", "reason": "Έλεγχος" },
-
-    { "id": "b160", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Εμβόλιο", "date": "2026-01-26", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "b161", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Αυτιά", "date": "2026-01-26", "time": "10:30", "status": "confirmed", "reason": "Καθαρισμός" },
-    { "id": "b162", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Εξέταση", "date": "2026-01-26", "time": "11:00", "status": "confirmed", "reason": "Δέρμα" },
-    { "id": "b163", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Νύχια", "date": "2026-01-26", "time": "11:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "b164", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Check up", "date": "2026-01-26", "time": "12:00", "status": "confirmed", "reason": "Γενικό" },
-    { "id": "b165", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Δόντια", "date": "2026-01-26", "time": "12:30", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "b166", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Συζήτηση", "date": "2026-01-26", "time": "13:00", "status": "confirmed", "reason": "Βάρος" },
-    { "id": "b167", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Αποπαρασίτωση", "date": "2026-01-26", "time": "13:30", "status": "confirmed", "reason": "Χάπι" },
-
-    { "id": "c195", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εξέταση", "date": "2026-01-26", "time": "11:00", "status": "confirmed", "reason": "Πόδι" },
-    { "id": "c196", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Νύχια", "date": "2026-01-26", "time": "11:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c197", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Φτερά", "date": "2026-01-26", "time": "12:00", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c198", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Ράμφος", "date": "2026-01-26", "time": "12:30", "status": "confirmed", "reason": "Λείανση" },
-    { "id": "c199", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εμβόλιο", "date": "2026-01-26", "time": "13:00", "status": "confirmed", "reason": "Πρόληψη" },
-    { "id": "c200", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Check up", "date": "2026-01-26", "time": "13:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "c201", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Βιταμίνες", "date": "2026-01-26", "time": "16:00", "status": "confirmed", "reason": "Ενίσχυση" },
-    { "id": "c202", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αποπαρασίτωση", "date": "2026-01-26", "time": "16:30", "status": "confirmed", "reason": "Σπρέι" },
-
-    { "id": "a220", "vetId": "2", "ownerId": "1", "petName": "Ρεξ", "details": "Εξέταση", "date": "2026-01-27", "time": "09:30", "status": "confirmed", "reason": "Αυτί" },
-    { "id": "a221", "vetId": "2", "ownerId": "3", "petName": "Μάξ", "details": "Εμβόλιο", "date": "2026-01-27", "time": "10:00", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "a222", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Νύχια", "date": "2026-01-27", "time": "10:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "a223", "vetId": "2", "ownerId": "1", "petName": "Bruno", "details": "Δόντια", "date": "2026-01-27", "time": "11:00", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "a224", "vetId": "2", "ownerId": "6", "petName": "Σίμπα", "details": "Check up", "date": "2026-01-27", "time": "11:30", "status": "confirmed", "reason": "Ρουτίνα" },
-    { "id": "a225", "vetId": "2", "ownerId": "3", "petName": "Μπέλα", "details": "Αποπαρασίτωση", "date": "2026-01-27", "time": "12:00", "status": "confirmed", "reason": "Χάπι" },
-    { "id": "a226", "vetId": "2", "ownerId": "1", "petName": "Λούνα", "details": "Μάτια", "date": "2026-01-27", "time": "12:30", "status": "confirmed", "reason": "Δάκρυα" },
-    { "id": "a227", "vetId": "2", "ownerId": "5", "petName": "Άρης", "details": "Συζήτηση", "date": "2026-01-27", "time": "13:00", "status": "confirmed", "reason": "Δίαιτα" },
-
-    { "id": "b170", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Στείρωση", "date": "2026-01-27", "time": "10:00", "status": "confirmed", "reason": "Χειρουργείο" },
-    { "id": "b171", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Εμβόλιο", "date": "2026-01-27", "time": "10:30", "status": "confirmed", "reason": "Τριπλό" },
-    { "id": "b172", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Νύχια", "date": "2026-01-27", "time": "11:00", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "b173", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Αυτιά", "date": "2026-01-27", "time": "11:30", "status": "confirmed", "reason": "Καθαρισμός" },
-    { "id": "b174", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Εξέταση", "date": "2026-01-27", "time": "12:00", "status": "confirmed", "reason": "Μετεγχειρητικό" },
-    { "id": "b175", "vetId": "4", "ownerId": "3", "petName": "Μπέλα", "details": "Δόντια", "date": "2026-01-27", "time": "12:30", "status": "confirmed", "reason": "Πέτρα" },
-    { "id": "b176", "vetId": "4", "ownerId": "6", "petName": "Σίμπα", "details": "Υπέρηχος", "date": "2026-01-27", "time": "13:00", "status": "confirmed", "reason": "Έλεγχος" },
-    { "id": "b177", "vetId": "4", "ownerId": "1", "petName": "Λούνα", "details": "Συζήτηση", "date": "2026-01-27", "time": "13:30", "status": "confirmed", "reason": "Φροντίδα" },
-
-    { "id": "c205", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εξέταση", "date": "2026-01-27", "time": "11:00", "status": "confirmed", "reason": "Πόδι" },
-    { "id": "c206", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Νύχια", "date": "2026-01-27", "time": "11:30", "status": "confirmed", "reason": "Περιποίηση" },
-    { "id": "c207", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Φτερά", "date": "2026-01-27", "time": "12:00", "status": "confirmed", "reason": "Κόψιμο" },
-    { "id": "c208", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Ράμφος", "date": "2026-01-27", "time": "12:30", "status": "confirmed", "reason": "Λείανση" },
-    { "id": "c209", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Εμβόλιο", "date": "2026-01-27", "time": "13:00", "status": "confirmed", "reason": "Πρόληψη" },
-    { "id": "c210", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Check up", "date": "2026-01-27", "time": "13:30", "status": "confirmed", "reason": "Ετήσιο" },
-    { "id": "c211", "vetId": "2576", "ownerId": "5", "petName": "Κόκο", "details": "Συμβουλή", "date": "2026-01-27", "time": "16:00", "status": "confirmed", "reason": "Διατροφή" },
-    { "id": "c212", "vetId": "2576", "ownerId": "6", "petName": "Πόλυ", "details": "Αποπαρασίτωση", "date": "2026-01-27", "time": "16:30", "status": "confirmed", "reason": "Σπρέι" }
+    {
+      "id": "a100",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-13",
+      "time": "09:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a101",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Εξέταση αυτιών",
+      "date": "2026-01-13",
+      "time": "09:30",
+      "status": "confirmed",
+      "reason": "Φαγούρα"
+    },
+    {
+      "id": "a102",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Γενική εξέταση",
+      "date": "2026-01-13",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Check-up"
+    },
+    {
+      "id": "a103",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Κόψιμο νυχιών",
+      "date": "2026-01-13",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "a104",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Στείρωση",
+      "date": "2026-01-13",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Χειρουργείο"
+    },
+    {
+      "id": "a105",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-13",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Τριπλό"
+    },
+    {
+      "id": "a106",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Υπέρηχος",
+      "date": "2026-01-13",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "a107",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Καθαρισμός δοντιών",
+      "date": "2026-01-13",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "a108",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Συζήτηση διατροφής",
+      "date": "2026-01-13",
+      "time": "15:30",
+      "status": "confirmed",
+      "reason": "Βάρος"
+    },
+    {
+      "id": "b100",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-13",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "b101",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Έλεγχος ματιών",
+      "date": "2026-01-13",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Δάκρυα"
+    },
+    {
+      "id": "b102",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-13",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "b103",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Επανεξέταση",
+      "date": "2026-01-13",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Τραύμα"
+    },
+    {
+      "id": "b104",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εξέταση αίματος",
+      "date": "2026-01-13",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Προληπτικό"
+    },
+    {
+      "id": "b105",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Κόψιμο νυχιών",
+      "date": "2026-01-13",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "b106",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Υπέρηχος",
+      "date": "2026-01-13",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Κοιλιά"
+    },
+    {
+      "id": "b107",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Συζήτηση",
+      "date": "2026-01-13",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Συμπεριφορά"
+    },
+    {
+      "id": "b108",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Εμβόλιο Λύσσας",
+      "date": "2026-01-13",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Ταξίδι"
+    },
+    {
+      "id": "b109",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Εξέταση δέρματος",
+      "date": "2026-01-13",
+      "time": "14:30",
+      "status": "confirmed",
+      "reason": "Αλλεργία"
+    },
+    {
+      "id": "b110",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Καθαρισμός αυτιών",
+      "date": "2026-01-13",
+      "time": "15:00",
+      "status": "confirmed",
+      "reason": "Ωτίτιδα"
+    },
+    {
+      "id": "b111",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Έλεγχος δοντιών",
+      "date": "2026-01-13",
+      "time": "15:30",
+      "status": "confirmed",
+      "reason": "Οσμή"
+    },
+    {
+      "id": "b112",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Μικροτσίπ",
+      "date": "2026-01-13",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Εγγραφή"
+    },
+    {
+      "id": "c100",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Κόψιμο φτερών",
+      "date": "2026-01-14",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c101",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Εξέταση ράμφους",
+      "date": "2026-01-14",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Δυσμορφία"
+    },
+    {
+      "id": "c102",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Γενική εξέταση",
+      "date": "2026-01-14",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Αδιαθεσία"
+    },
+    {
+      "id": "c103",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-14",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Πρόληψη"
+    },
+    {
+      "id": "c104",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Συζήτηση διατροφής",
+      "date": "2026-01-14",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Αλλαγή τροφής"
+    },
+    {
+      "id": "c105",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Εξέταση κοπράνων",
+      "date": "2026-01-14",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Διάρροια"
+    },
+    {
+      "id": "c106",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Έλεγχος ποδιών",
+      "date": "2026-01-14",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Τραυματισμός"
+    },
+    {
+      "id": "c107",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Συμπεριφορά",
+      "date": "2026-01-14",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Φωνάζει"
+    },
+    {
+      "id": "a110",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Ακτινογραφία",
+      "date": "2026-01-15",
+      "time": "09:00",
+      "status": "confirmed",
+      "reason": "Πόνος"
+    },
+    {
+      "id": "a111",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Επανεξέταση",
+      "date": "2026-01-15",
+      "time": "09:30",
+      "status": "confirmed",
+      "reason": "Αυτιά"
+    },
+    {
+      "id": "a112",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Εμβόλιο Λύσσας",
+      "date": "2026-01-15",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a113",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Εξέταση αίματος",
+      "date": "2026-01-15",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Προληπτικό"
+    },
+    {
+      "id": "a114",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Έλεγχος βάρους",
+      "date": "2026-01-15",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Δίαιτα"
+    },
+    {
+      "id": "a115",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Καθαρισμός αυτιών",
+      "date": "2026-01-15",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Κερί"
+    },
+    {
+      "id": "a116",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εξέταση δέρματος",
+      "date": "2026-01-15",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Ξύσιμο"
+    },
+    {
+      "id": "a117",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Κόψιμο νυχιών",
+      "date": "2026-01-15",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c110",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εγχείρηση",
+      "date": "2026-01-15",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Όγκος"
+    },
+    {
+      "id": "c111",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Επανεξέταση",
+      "date": "2026-01-15",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Ράμφος"
+    },
+    {
+      "id": "c112",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Φαρμακευτική αγωγή",
+      "date": "2026-01-15",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Λοίμωξη"
+    },
+    {
+      "id": "c113",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Βιταμίνες",
+      "date": "2026-01-15",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ενίσχυση"
+    },
+    {
+      "id": "c114",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Έλεγχος φτερών",
+      "date": "2026-01-15",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Πτώση"
+    },
+    {
+      "id": "c115",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Γενική εξέταση",
+      "date": "2026-01-15",
+      "time": "14:30",
+      "status": "confirmed",
+      "reason": "Check-up"
+    },
+    {
+      "id": "c116",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Συμβουλή κλουβιού",
+      "date": "2026-01-15",
+      "time": "15:00",
+      "status": "confirmed",
+      "reason": "Χώρος"
+    },
+    {
+      "id": "c117",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-15",
+      "time": "15:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "c118",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Καθαρισμός",
+      "date": "2026-01-15",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Υγιεινή"
+    },
+    {
+      "id": "c119",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Ακτινογραφία",
+      "date": "2026-01-15",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Πόνος"
+    },
+    {
+      "id": "a120",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Χειρουργείο",
+      "date": "2026-01-16",
+      "time": "09:00",
+      "status": "confirmed",
+      "reason": "Αφαίρεση μάζας"
+    },
+    {
+      "id": "a121",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Επανεξέταση",
+      "date": "2026-01-16",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Μετεγχειρητικό"
+    },
+    {
+      "id": "a122",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Εμβόλιο",
+      "date": "2026-01-16",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Leishmania"
+    },
+    {
+      "id": "a123",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Αιματολογικές",
+      "date": "2026-01-16",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "a124",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Υπέρηχος",
+      "date": "2026-01-16",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Κοιλιακό άλγος"
+    },
+    {
+      "id": "a125",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Καθαρισμός",
+      "date": "2026-01-16",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Δόντια"
+    },
+    {
+      "id": "a126",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εξέταση",
+      "date": "2026-01-16",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Βήχας"
+    },
+    {
+      "id": "a127",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Ορθοπεδικό",
+      "date": "2026-01-16",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Κουτσαίνει"
+    },
+    {
+      "id": "a128",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-16",
+      "time": "14:30",
+      "status": "confirmed",
+      "reason": "Kennel cough"
+    },
+    {
+      "id": "a129",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Συμβουλή",
+      "date": "2026-01-16",
+      "time": "15:00",
+      "status": "confirmed",
+      "reason": "Συμπεριφορά"
+    },
+    {
+      "id": "a130",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Επανεξέταση",
+      "date": "2026-01-16",
+      "time": "15:30",
+      "status": "confirmed",
+      "reason": "Χειρουργείο"
+    },
+    {
+      "id": "a131",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Φάρμακα",
+      "date": "2026-01-16",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Συνταγή"
+    },
+    {
+      "id": "b115",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Check up",
+      "date": "2026-01-16",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "b116",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-16",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Τριπλό"
+    },
+    {
+      "id": "b117",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Νύχια",
+      "date": "2026-01-16",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "b118",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Εξέταση",
+      "date": "2026-01-16",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Αυτιά"
+    },
+    {
+      "id": "b119",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-16",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "b120",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Δόντια",
+      "date": "2026-01-16",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Καθαρισμός"
+    },
+    {
+      "id": "b121",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Υπέρηχος",
+      "date": "2026-01-16",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Νεφρά"
+    },
+    {
+      "id": "b122",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Συζήτηση",
+      "date": "2026-01-16",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Διατροφή"
+    },
+    {
+      "id": "c120",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εξέταση",
+      "date": "2026-01-16",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Ρουτίνα"
+    },
+    {
+      "id": "c121",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-16",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "c122",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Νύχια",
+      "date": "2026-01-16",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c123",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Ράμφος",
+      "date": "2026-01-16",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Λείανση"
+    },
+    {
+      "id": "c124",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Προληπτικός",
+      "date": "2026-01-16",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Check up"
+    },
+    {
+      "id": "c125",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Διατροφή",
+      "date": "2026-01-16",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Συμβουλή"
+    },
+    {
+      "id": "c126",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Ακτινογραφία",
+      "date": "2026-01-16",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Φτερό"
+    },
+    {
+      "id": "c127",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-16",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Σπρέι"
+    },
+    {
+      "id": "a135",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Αλλαγή επιδέσμου",
+      "date": "2026-01-17",
+      "time": "09:30",
+      "status": "confirmed",
+      "reason": "Τραύμα"
+    },
+    {
+      "id": "a136",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-17",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a137",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Check up",
+      "date": "2026-01-17",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Ρουτίνα"
+    },
+    {
+      "id": "a138",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Αυτιά",
+      "date": "2026-01-17",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Καθαρισμός"
+    },
+    {
+      "id": "a139",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Νύχια",
+      "date": "2026-01-17",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "a140",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Δόντια",
+      "date": "2026-01-17",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "a141",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εξέταση",
+      "date": "2026-01-17",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Μάτια"
+    },
+    {
+      "id": "a142",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-17",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "c130",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Νύχια",
+      "date": "2026-01-17",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c131",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Φτερά",
+      "date": "2026-01-17",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c132",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Check up",
+      "date": "2026-01-17",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "c133",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Εξέταση",
+      "date": "2026-01-17",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Μάτια"
+    },
+    {
+      "id": "c134",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Ράμφος",
+      "date": "2026-01-17",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Λείανση"
+    },
+    {
+      "id": "c135",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Βάρος",
+      "date": "2026-01-17",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ζύγισμα"
+    },
+    {
+      "id": "c136",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Συμβουλή",
+      "date": "2026-01-17",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Συμπεριφορά"
+    },
+    {
+      "id": "c137",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-17",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Εξωτερική"
+    },
+    {
+      "id": "a145",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Επείγον",
+      "date": "2026-01-18",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Εμετός"
+    },
+    {
+      "id": "a146",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Εξέταση",
+      "date": "2026-01-18",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Διάρροια"
+    },
+    {
+      "id": "a147",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Τραύμα",
+      "date": "2026-01-18",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Πόδι"
+    },
+    {
+      "id": "a148",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Αλλεργία",
+      "date": "2026-01-18",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Φαγούρα"
+    },
+    {
+      "id": "a149",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Πυρετός",
+      "date": "2026-01-18",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Αδιαθεσία"
+    },
+    {
+      "id": "a150",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Ξένο σώμα",
+      "date": "2026-01-18",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Αγκάθι"
+    },
+    {
+      "id": "a151",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εξέταση",
+      "date": "2026-01-18",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Αυτί"
+    },
+    {
+      "id": "a152",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Φάρμακα",
+      "date": "2026-01-18",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Αγωγή"
+    },
+    {
+      "id": "a155",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Εξέταση",
+      "date": "2026-01-19",
+      "time": "09:00",
+      "status": "confirmed",
+      "reason": "Καρδιά"
+    },
+    {
+      "id": "a156",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-19",
+      "time": "09:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a157",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Νύχια",
+      "date": "2026-01-19",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "a158",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Check up",
+      "date": "2026-01-19",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Γενικό"
+    },
+    {
+      "id": "a159",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Δόντια",
+      "date": "2026-01-19",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Καθαρισμός"
+    },
+    {
+      "id": "a160",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Επανεξέταση",
+      "date": "2026-01-19",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Αυτιά"
+    },
+    {
+      "id": "a161",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Υπέρηχος",
+      "date": "2026-01-19",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Εγκυμοσύνη"
+    },
+    {
+      "id": "a162",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-19",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Εσωτερική"
+    },
+    {
+      "id": "b125",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-19",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "b126",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Check up",
+      "date": "2026-01-19",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Γενικό"
+    },
+    {
+      "id": "b127",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Εξέταση",
+      "date": "2026-01-19",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Δέρμα"
+    },
+    {
+      "id": "b128",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Νύχια",
+      "date": "2026-01-19",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "b129",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Δόντια",
+      "date": "2026-01-19",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "b130",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-19",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Αμπούλα"
+    },
+    {
+      "id": "b131",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Συζήτηση",
+      "date": "2026-01-19",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Συμπεριφορά"
+    },
+    {
+      "id": "b132",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Επανεξέταση",
+      "date": "2026-01-19",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Μάτια"
+    },
+    {
+      "id": "c140",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εξέταση",
+      "date": "2026-01-19",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Αναπνευστικό"
+    },
+    {
+      "id": "c141",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Νύχια",
+      "date": "2026-01-19",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c142",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Φτερά",
+      "date": "2026-01-19",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c143",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Ράμφος",
+      "date": "2026-01-19",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Διόρθωση"
+    },
+    {
+      "id": "c144",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εμβόλιο",
+      "date": "2026-01-19",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Πρόληψη"
+    },
+    {
+      "id": "c145",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-19",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ψείρες"
+    },
+    {
+      "id": "c146",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Βιταμίνες",
+      "date": "2026-01-19",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Ενίσχυση"
+    },
+    {
+      "id": "c147",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Check up",
+      "date": "2026-01-19",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "b135",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Στείρωση",
+      "date": "2026-01-20",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Χειρουργείο"
+    },
+    {
+      "id": "b136",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-20",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Λύσσα"
+    },
+    {
+      "id": "b137",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Εξέταση",
+      "date": "2026-01-20",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Κοιλιά"
+    },
+    {
+      "id": "b138",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Δόντια",
+      "date": "2026-01-20",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "b139",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Νύχια",
+      "date": "2026-01-20",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "b140",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Αιματολογικές",
+      "date": "2026-01-20",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "b141",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Υπέρηχος",
+      "date": "2026-01-20",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "b142",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-20",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Λευχαιμία"
+    },
+    {
+      "id": "b143",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Καθαρισμός",
+      "date": "2026-01-20",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Αυτιά"
+    },
+    {
+      "id": "b144",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Δέρμα",
+      "date": "2026-01-20",
+      "time": "14:30",
+      "status": "confirmed",
+      "reason": "Αλλεργία"
+    },
+    {
+      "id": "b145",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Μάτια",
+      "date": "2026-01-20",
+      "time": "15:00",
+      "status": "confirmed",
+      "reason": "Δάκρυα"
+    },
+    {
+      "id": "b146",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Συζήτηση",
+      "date": "2026-01-20",
+      "time": "15:30",
+      "status": "confirmed",
+      "reason": "Βάρος"
+    },
+    {
+      "id": "c150",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εξέταση",
+      "date": "2026-01-21",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Πόδι"
+    },
+    {
+      "id": "c151",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-21",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Ιός"
+    },
+    {
+      "id": "c152",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Νύχια",
+      "date": "2026-01-21",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c153",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Ράμφος",
+      "date": "2026-01-21",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c154",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Διατροφή",
+      "date": "2026-01-21",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Αλλαγή"
+    },
+    {
+      "id": "c155",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Φτερά",
+      "date": "2026-01-21",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Πτήση"
+    },
+    {
+      "id": "c156",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-21",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Σπρέι"
+    },
+    {
+      "id": "c157",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Check up",
+      "date": "2026-01-21",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Γενικό"
+    },
+    {
+      "id": "a165",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Χειρουργείο",
+      "date": "2026-01-22",
+      "time": "09:00",
+      "status": "confirmed",
+      "reason": "Ορθοπεδικό"
+    },
+    {
+      "id": "a166",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Check up",
+      "date": "2026-01-22",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a167",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Εμβόλιο",
+      "date": "2026-01-22",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Τριπλό"
+    },
+    {
+      "id": "a168",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Δόντια",
+      "date": "2026-01-22",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "a169",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Εξέταση",
+      "date": "2026-01-22",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Αυτιά"
+    },
+    {
+      "id": "a170",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Νύχια",
+      "date": "2026-01-22",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "a171",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-22",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "a172",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Συζήτηση",
+      "date": "2026-01-22",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Συμπεριφορά"
+    },
+    {
+      "id": "c160",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Επέμβαση",
+      "date": "2026-01-22",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Αφαίρεση κύστης"
+    },
+    {
+      "id": "c161",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Νάρκωση",
+      "date": "2026-01-22",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Εξέταση"
+    },
+    {
+      "id": "c162",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Επανεξέταση",
+      "date": "2026-01-22",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Τραύμα"
+    },
+    {
+      "id": "c163",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αιματολογικές",
+      "date": "2026-01-22",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "c164",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Ράμφος",
+      "date": "2026-01-22",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Διόρθωση"
+    },
+    {
+      "id": "c165",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Νύχια",
+      "date": "2026-01-22",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c166",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Φτερά",
+      "date": "2026-01-22",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c167",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-22",
+      "time": "14:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "c168",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Συζήτηση",
+      "date": "2026-01-22",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Διατροφή"
+    },
+    {
+      "id": "c169",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Βιταμίνες",
+      "date": "2026-01-22",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Αδυναμία"
+    },
+    {
+      "id": "c170",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Check up",
+      "date": "2026-01-22",
+      "time": "17:00",
+      "status": "confirmed",
+      "reason": "Γενικό"
+    },
+    {
+      "id": "c171",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Καθαρισμός",
+      "date": "2026-01-22",
+      "time": "17:30",
+      "status": "confirmed",
+      "reason": "Κλουβί"
+    },
+    {
+      "id": "a175",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Επανεξέταση",
+      "date": "2026-01-23",
+      "time": "09:00",
+      "status": "confirmed",
+      "reason": "Χειρουργείο"
+    },
+    {
+      "id": "a176",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-23",
+      "time": "09:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a177",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Εξέταση",
+      "date": "2026-01-23",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Πόδι"
+    },
+    {
+      "id": "a178",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Νύχια",
+      "date": "2026-01-23",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "a179",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-23",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "a180",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Check up",
+      "date": "2026-01-23",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Ρουτίνα"
+    },
+    {
+      "id": "a181",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Υπέρηχος",
+      "date": "2026-01-23",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "a182",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Δόντια",
+      "date": "2026-01-23",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Καθαρισμός"
+    },
+    {
+      "id": "a183",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Αυτιά",
+      "date": "2026-01-23",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Καθαρισμός"
+    },
+    {
+      "id": "a184",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Συζήτηση",
+      "date": "2026-01-23",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Βάρος"
+    },
+    {
+      "id": "a185",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Δέρμα",
+      "date": "2026-01-23",
+      "time": "14:30",
+      "status": "confirmed",
+      "reason": "Φαγούρα"
+    },
+    {
+      "id": "a186",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Μάτια",
+      "date": "2026-01-23",
+      "time": "15:00",
+      "status": "confirmed",
+      "reason": "Δάκρυα"
+    },
+    {
+      "id": "b150",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-23",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "b151",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Νύχια",
+      "date": "2026-01-23",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "b152",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Εξέταση",
+      "date": "2026-01-23",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Αυτιά"
+    },
+    {
+      "id": "b153",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-23",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "b154",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Δόντια",
+      "date": "2026-01-23",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "b155",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Check up",
+      "date": "2026-01-23",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Γενικό"
+    },
+    {
+      "id": "b156",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Συζήτηση",
+      "date": "2026-01-23",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Διατροφή"
+    },
+    {
+      "id": "b157",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Βάρος",
+      "date": "2026-01-23",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ζύγισμα"
+    },
+    {
+      "id": "c175",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εξέταση",
+      "date": "2026-01-23",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Αναπνοή"
+    },
+    {
+      "id": "c176",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Νύχια",
+      "date": "2026-01-23",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c177",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εμβόλιο",
+      "date": "2026-01-23",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Πρόληψη"
+    },
+    {
+      "id": "c178",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Φτερά",
+      "date": "2026-01-23",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c179",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Ράμφος",
+      "date": "2026-01-23",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Λείανση"
+    },
+    {
+      "id": "c180",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Check up",
+      "date": "2026-01-23",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "c181",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Βιταμίνες",
+      "date": "2026-01-23",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Ενίσχυση"
+    },
+    {
+      "id": "c182",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-23",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Σπρέι"
+    },
+    {
+      "id": "a190",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Εξέταση",
+      "date": "2026-01-24",
+      "time": "09:30",
+      "status": "confirmed",
+      "reason": "Αυτί"
+    },
+    {
+      "id": "a191",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-24",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a192",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Νύχια",
+      "date": "2026-01-24",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "a193",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-24",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "a194",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Check up",
+      "date": "2026-01-24",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Ρουτίνα"
+    },
+    {
+      "id": "a195",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Μάτια",
+      "date": "2026-01-24",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Δάκρυα"
+    },
+    {
+      "id": "a196",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Δέρμα",
+      "date": "2026-01-24",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Φαγούρα"
+    },
+    {
+      "id": "a197",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Δόντια",
+      "date": "2026-01-24",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "c185",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εξέταση",
+      "date": "2026-01-24",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Πόδι"
+    },
+    {
+      "id": "c186",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Νύχια",
+      "date": "2026-01-24",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c187",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εμβόλιο",
+      "date": "2026-01-24",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Πρόληψη"
+    },
+    {
+      "id": "c188",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Φτερά",
+      "date": "2026-01-24",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c189",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Ράμφος",
+      "date": "2026-01-24",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Λείανση"
+    },
+    {
+      "id": "c190",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Check up",
+      "date": "2026-01-24",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "c191",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Συμβουλή",
+      "date": "2026-01-24",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Συμπεριφορά"
+    },
+    {
+      "id": "c192",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-24",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Σπρέι"
+    },
+    {
+      "id": "a200",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Επείγον",
+      "date": "2026-01-25",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Κοιλιά"
+    },
+    {
+      "id": "a201",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Έλεγχος",
+      "date": "2026-01-25",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Πόνος"
+    },
+    {
+      "id": "a202",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Τραύμα",
+      "date": "2026-01-25",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Δάγκωμα"
+    },
+    {
+      "id": "a203",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Πυρετός",
+      "date": "2026-01-25",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Αδιαθεσία"
+    },
+    {
+      "id": "a204",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Εμετός",
+      "date": "2026-01-25",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Δηλητηρίαση"
+    },
+    {
+      "id": "a205",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Μάτι",
+      "date": "2026-01-25",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Τραυματισμός"
+    },
+    {
+      "id": "a206",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Αυτί",
+      "date": "2026-01-25",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Ξένο σώμα"
+    },
+    {
+      "id": "a207",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Φάρμακα",
+      "date": "2026-01-25",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ένεση"
+    },
+    {
+      "id": "a210",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Χειρουργείο",
+      "date": "2026-01-26",
+      "time": "09:00",
+      "status": "confirmed",
+      "reason": "Βουβωνοκήλη"
+    },
+    {
+      "id": "a211",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Επανεξέταση",
+      "date": "2026-01-26",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Μετεγχειρητικό"
+    },
+    {
+      "id": "a212",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Εμβόλιο",
+      "date": "2026-01-26",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a213",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Check up",
+      "date": "2026-01-26",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Γενικό"
+    },
+    {
+      "id": "a214",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Δόντια",
+      "date": "2026-01-26",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "a215",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Νύχια",
+      "date": "2026-01-26",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "a216",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-26",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "a217",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Υπέρηχος",
+      "date": "2026-01-26",
+      "time": "14:00",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "b160",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-26",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "b161",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Αυτιά",
+      "date": "2026-01-26",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Καθαρισμός"
+    },
+    {
+      "id": "b162",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Εξέταση",
+      "date": "2026-01-26",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Δέρμα"
+    },
+    {
+      "id": "b163",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Νύχια",
+      "date": "2026-01-26",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "b164",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Check up",
+      "date": "2026-01-26",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Γενικό"
+    },
+    {
+      "id": "b165",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Δόντια",
+      "date": "2026-01-26",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "b166",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Συζήτηση",
+      "date": "2026-01-26",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Βάρος"
+    },
+    {
+      "id": "b167",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-26",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "c195",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εξέταση",
+      "date": "2026-01-26",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Πόδι"
+    },
+    {
+      "id": "c196",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Νύχια",
+      "date": "2026-01-26",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c197",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Φτερά",
+      "date": "2026-01-26",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c198",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Ράμφος",
+      "date": "2026-01-26",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Λείανση"
+    },
+    {
+      "id": "c199",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εμβόλιο",
+      "date": "2026-01-26",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Πρόληψη"
+    },
+    {
+      "id": "c200",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Check up",
+      "date": "2026-01-26",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "c201",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Βιταμίνες",
+      "date": "2026-01-26",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Ενίσχυση"
+    },
+    {
+      "id": "c202",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-26",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Σπρέι"
+    },
+    {
+      "id": "a220",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Ρεξ",
+      "details": "Εξέταση",
+      "date": "2026-01-27",
+      "time": "09:30",
+      "status": "confirmed",
+      "reason": "Αυτί"
+    },
+    {
+      "id": "a221",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μάξ",
+      "details": "Εμβόλιο",
+      "date": "2026-01-27",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "a222",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Νύχια",
+      "date": "2026-01-27",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "a223",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Bruno",
+      "details": "Δόντια",
+      "date": "2026-01-27",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "a224",
+      "vetId": "2",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Check up",
+      "date": "2026-01-27",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Ρουτίνα"
+    },
+    {
+      "id": "a225",
+      "vetId": "2",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-27",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Χάπι"
+    },
+    {
+      "id": "a226",
+      "vetId": "2",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Μάτια",
+      "date": "2026-01-27",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Δάκρυα"
+    },
+    {
+      "id": "a227",
+      "vetId": "2",
+      "ownerId": "5",
+      "petName": "Άρης",
+      "details": "Συζήτηση",
+      "date": "2026-01-27",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Δίαιτα"
+    },
+    {
+      "id": "b170",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Στείρωση",
+      "date": "2026-01-27",
+      "time": "10:00",
+      "status": "confirmed",
+      "reason": "Χειρουργείο"
+    },
+    {
+      "id": "b171",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Εμβόλιο",
+      "date": "2026-01-27",
+      "time": "10:30",
+      "status": "confirmed",
+      "reason": "Τριπλό"
+    },
+    {
+      "id": "b172",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Νύχια",
+      "date": "2026-01-27",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "b173",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Αυτιά",
+      "date": "2026-01-27",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Καθαρισμός"
+    },
+    {
+      "id": "b174",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Εξέταση",
+      "date": "2026-01-27",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Μετεγχειρητικό"
+    },
+    {
+      "id": "b175",
+      "vetId": "4",
+      "ownerId": "3",
+      "petName": "Μπέλα",
+      "details": "Δόντια",
+      "date": "2026-01-27",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Πέτρα"
+    },
+    {
+      "id": "b176",
+      "vetId": "4",
+      "ownerId": "6",
+      "petName": "Σίμπα",
+      "details": "Υπέρηχος",
+      "date": "2026-01-27",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Έλεγχος"
+    },
+    {
+      "id": "b177",
+      "vetId": "4",
+      "ownerId": "1",
+      "petName": "Λούνα",
+      "details": "Συζήτηση",
+      "date": "2026-01-27",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Φροντίδα"
+    },
+    {
+      "id": "c205",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εξέταση",
+      "date": "2026-01-27",
+      "time": "11:00",
+      "status": "confirmed",
+      "reason": "Πόδι"
+    },
+    {
+      "id": "c206",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Νύχια",
+      "date": "2026-01-27",
+      "time": "11:30",
+      "status": "confirmed",
+      "reason": "Περιποίηση"
+    },
+    {
+      "id": "c207",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Φτερά",
+      "date": "2026-01-27",
+      "time": "12:00",
+      "status": "confirmed",
+      "reason": "Κόψιμο"
+    },
+    {
+      "id": "c208",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Ράμφος",
+      "date": "2026-01-27",
+      "time": "12:30",
+      "status": "confirmed",
+      "reason": "Λείανση"
+    },
+    {
+      "id": "c209",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Εμβόλιο",
+      "date": "2026-01-27",
+      "time": "13:00",
+      "status": "confirmed",
+      "reason": "Πρόληψη"
+    },
+    {
+      "id": "c210",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Check up",
+      "date": "2026-01-27",
+      "time": "13:30",
+      "status": "confirmed",
+      "reason": "Ετήσιο"
+    },
+    {
+      "id": "c211",
+      "vetId": "2576",
+      "ownerId": "5",
+      "petName": "Κόκο",
+      "details": "Συμβουλή",
+      "date": "2026-01-27",
+      "time": "16:00",
+      "status": "confirmed",
+      "reason": "Διατροφή"
+    },
+    {
+      "id": "c212",
+      "vetId": "2576",
+      "ownerId": "6",
+      "petName": "Πόλυ",
+      "details": "Αποπαρασίτωση",
+      "date": "2026-01-27",
+      "time": "16:30",
+      "status": "confirmed",
+      "reason": "Σπρέι"
+    }
   ],
   "reviews": [
     {
@@ -623,7 +3477,14 @@
   ],
   "lostPets": [],
   "vetOwnerLinks": [
-    { "id": "vol1", "vetId": "2", "ownerId": "1", "ownerAddress": "Κυψέλη, Αθήνα", "notes": "Πρώτη επίσκεψη 2025-12-10", "createdAt": "2025-12-10" }
+    {
+      "id": "vol1",
+      "vetId": "2",
+      "ownerId": "1",
+      "ownerAddress": "Κυψέλη, Αθήνα",
+      "notes": "Πρώτη επίσκεψη 2025-12-10",
+      "createdAt": "2025-12-10"
+    }
   ],
   "petDrafts": [
     {
@@ -645,8 +3506,26 @@
     }
   ],
   "vaccinations": [
-    { "id": "vx1", "microchip": "OA02184280", "petId": "p2", "vetId": "2", "vaccine": "Λύσσα", "date": "2025-12-12", "nextDue": "2026-12-12", "notes": "Ετήσιο" },
-    { "id": "vx2", "microchip": "OA02184280", "petId": "p2", "vetId": "2", "vaccine": "Τριπλό γάτας", "date": "2025-05-10", "nextDue": "2026-05-10", "notes": "" }
+    {
+      "id": "vx1",
+      "microchip": "OA02184280",
+      "petId": "p2",
+      "vetId": "2",
+      "vaccine": "Λύσσα",
+      "date": "2025-12-12",
+      "nextDue": "2026-12-12",
+      "notes": "Ετήσιο"
+    },
+    {
+      "id": "vx2",
+      "microchip": "OA02184280",
+      "petId": "p2",
+      "vetId": "2",
+      "vaccine": "Τριπλό γάτας",
+      "date": "2025-05-10",
+      "nextDue": "2026-05-10",
+      "notes": ""
+    }
   ],
   "declarations": [
     {
@@ -710,6 +3589,27 @@
       "newOwnerPhone": "",
       "newOwnerEmail": "",
       "resolvedAt": "2026-01-13T10:14:01.543Z"
+    },
+    {
+      "id": "ff41",
+      "petType": "Σκύλος",
+      "ownerId": "1",
+      "petId": "p1",
+      "petName": "Bruno",
+      "microchip": "1234567890",
+      "type": "lost",
+      "status": "resolved",
+      "date": "2026-01-13T17:02:30.822Z",
+      "contactPhone": "694512369",
+      "notes": "",
+      "lastSeenDate": "2024-10-02",
+      "lastSeenLocation": "Πάφος",
+      "foundDate": "",
+      "foundLocation": "",
+      "newOwnerName": "",
+      "newOwnerPhone": "",
+      "newOwnerEmail": "",
+      "resolvedAt": "2026-01-13T17:04:14.136Z"
     }
   ],
   "foundReports": [

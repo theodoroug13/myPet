@@ -45,9 +45,9 @@ export default function VetUpdatePetList() {
     setPage(0);
   }, [pets, searchMicrochip]);
 
-  const handleEdit = (petId) => {
-    navigate(`/vet/edit-pet/${petId}`);
-  };
+  const handleEdit = (microchip) => {
+  navigate(`/vet/animal-services/${microchip}`);
+};
 
   if (!user || user.role !== "vet") {
     return (
@@ -118,7 +118,7 @@ export default function VetUpdatePetList() {
                           <TableCell>{pet.ownerName || '-'}</TableCell>
                           <TableCell sx={{ textAlign: "center" }}>
                             <IconButton
-                              onClick={() => handleEdit(pet.id)}
+                              onClick={() => handleEdit(pet.microchip)}
                               size="small"
                               sx={{ color: "primary.main" }}
                             >
