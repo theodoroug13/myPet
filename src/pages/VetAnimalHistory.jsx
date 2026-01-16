@@ -13,26 +13,41 @@ const VetAnimalHistory = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [animalRes, historyRes] = await Promise.all([
-          fetch(`http://localhost:8000/pets?microchip=${microchip}`),
-          fetch(`http://localhost:8000/animal-services?microchip=${microchip}`)
-        ]);
-        
-        const animalData = await animalRes.json();
-        const historyData = await historyRes.json();
-        
-        if (Array.isArray(animalData) && animalData.length > 0) {
-          setAnimal(animalData[0]);
+      const fetchAnimal = async () => {
+        try {
+          const res = await fetch(`http://localhost:8000/pets?microchip=${microchip}`);
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
+            setAnimal(data[0]);
+          }
+        } catch (e) {
+          console.error('Error fetching animal:', e);
         }
-        setHistory(Array.isArray(historyData) ? historyData : []);
+        setLoading(false);
+      };
+      fetchAnimal();
+  }, [microchip]);
+
+  // Fetch medical history entries saved via the website (animal-services collection)
+  useEffect(() => {
+    const fetchHistory = async () => {
+      try {
+        const res = await fetch(`http://localhost:8000/animal-services?microchip=${microchip}`);
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          // sort newest first by timestamp or actionDate
+          const sorted = data.slice().sort((a, b) => {
+            const ad = new Date(b.timestamp || b.actionDate || 0).getTime();
+            const bd = new Date(a.timestamp || a.actionDate || 0).getTime();
+            return ad - bd;
+          });
+          setHistory(sorted);
+        }
       } catch (e) {
-        console.error('Error fetching data:', e);
+        console.error('Error fetching history:', e);
       }
-      setLoading(false);
     };
-    fetchData();
+    fetchHistory();
   }, [microchip]);
 
   const handlePrint = () => {
@@ -60,8 +75,19 @@ const VetAnimalHistory = () => {
   }
 
   // Separate history by type
-  const vaccines = history.filter(h => h.type === 'Εμβόλιο' || h.actionType === 'vaccine');
-  const interventions = history.filter(h => h.type === 'Επέμβαση' || h.actionType === 'intervention');
+  const vaccines = history.filter(h => 
+    h.type === 'Εμβόλιο' || 
+    h.type === 'vaccine' || 
+    h.actionType === 'vaccine' ||
+    h.actionType === 'Εμβόλιο'
+  );
+  
+  const interventions = history.filter(h => 
+    h.type === 'Επέμβαση' || 
+    h.type === 'intervention' || 
+    h.actionType === 'intervention' ||
+    h.actionType === 'Επέμβαση'
+  );
 
   return (
     <VetLayout>
@@ -78,7 +104,7 @@ const VetAnimalHistory = () => {
             Πληροφορίες κατικοιδίου:
           </Typography>
           
-          <Grid container spacing={3}>
+          <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <Box sx={{ mb: 2 }}>
                 <Typography variant="body2" sx={{ fontWeight: 600, mb: 0.5 }}>
@@ -87,6 +113,7 @@ const VetAnimalHistory = () => {
                 <Box sx={{ 
                   border: '1px solid #ddd', 
                   borderRadius: 1, 
+                  width: 525,
                   p: 1.5, 
                   bgcolor: '#fafafa' 
                 }}>
@@ -94,7 +121,7 @@ const VetAnimalHistory = () => {
                 </Box>
               </Box>
 
-              <Box>
+              <Box >
                 <Typography variant="body2" sx={{ fontWeight: 600, mb: 0.5 }}>
                   Ημερομηνία Γέννησης:
                 </Typography>
@@ -105,7 +132,9 @@ const VetAnimalHistory = () => {
                   bgcolor: '#fafafa' 
                 }}>
                   <Typography>
-                    {animal.birthDate ? new Date(animal.birthDate).toLocaleDateString('el-GR') : '-'}
+                    {animal.birthDate 
+                      ? new Date(animal.birthDate).toLocaleDateString('el-GR') 
+                      : '-'}
                   </Typography>
                 </Box>
               </Box>
@@ -120,6 +149,7 @@ const VetAnimalHistory = () => {
                   border: '1px solid #ddd', 
                   borderRadius: 1, 
                   p: 1.5, 
+                  width:525,
                   bgcolor: '#fafafa' 
                 }}>
                   <Typography>{microchip}</Typography>
@@ -175,8 +205,10 @@ const VetAnimalHistory = () => {
                   <Typography variant="body2">
                     {vaccine.description || vaccine.notes || 'DHPP (Distemper, Hepatitis, Parvovirus, Parainfluenza)'}
                   </Typography>
-                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
-                    {new Date(vaccine.timestamp || vaccine.actionDate).toLocaleDateString('el-GR')}
+                  <Typography variant="body2" sx={{ fontWeight: 600, minWidth: '100px', textAlign: 'right' }}>
+                    {vaccine.timestamp || vaccine.actionDate
+                      ? new Date(vaccine.timestamp || vaccine.actionDate).toLocaleDateString('el-GR')
+                      : '-'}
                   </Typography>
                 </Box>
               ))
@@ -184,7 +216,7 @@ const VetAnimalHistory = () => {
           </Box>
 
           {/* Interventions */}
-          <Box>
+          <Box sx={{ pb: 6 }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
               Επεμβάσεις
             </Typography>
@@ -209,8 +241,10 @@ const VetAnimalHistory = () => {
                   <Typography variant="body2">
                     {intervention.description || intervention.notes || '-'}
                   </Typography>
-                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
-                    {new Date(intervention.timestamp || intervention.actionDate).toLocaleDateString('el-GR')}
+                  <Typography variant="body2" sx={{ fontWeight: 600, minWidth: '100px', textAlign: 'right' }}>
+                    {intervention.timestamp || intervention.actionDate
+                      ? new Date(intervention.timestamp || intervention.actionDate).toLocaleDateString('el-GR')
+                      : '-'}
                   </Typography>
                 </Box>
               ))

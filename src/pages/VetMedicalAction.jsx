@@ -63,40 +63,39 @@ const VetMedicalAction = () => {
     'Άλλο'
   ];
 
-  const handleSubmit = async () => {
-    if (!formData.actionDate || !formData.actionType) {
-      alert('Παρακαλώ συμπληρώστε τα υποχρεωτικά πεδία');
-      return;
-    }
+const handleSubmit = async () => {
+  if (!formData.actionDate || !formData.actionType) {
+    alert('Παρακαλώ συμπληρώστε τα υποχρεωτικά πεδία');
+    return;
+  }
 
-    const record = {
-      microchip,
-      petId: animal.id,
-      type: 'medical_action',
-      ...formData,
-      vetId: user?.id,
-      vetName: user?.name,
-      timestamp: new Date().toISOString()
-    };
-    
-    try {
-      const res = await fetch('http://localhost:8000/animal-services', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(record)
-      });
-      
-      if (res.ok) {
-        alert('Η ιατρική πράξη καταχωρήθηκε επιτυχώς!');
-        navigate(-1);
-      } else {
-        alert('Σφάλμα κατά την αποθήκευση');
-      }
-    } catch (e) {
-      console.error('Error saving:', e);
-      alert('Σφάλμα σύνδεσης με τον server');
-    }
+  const record = {
+    microchip,
+    type: 'medical_action',
+    ...formData,
+    vetId: user?.id,
+    vetName: user?.name,
+    timestamp: new Date().toISOString()
   };
+  
+  try {
+    const res = await fetch('http://localhost:8000/animal-services', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(record)
+    });
+    
+    if (res.ok) {
+      alert('Η ιατρική πράξη καταχωρήθηκε επιτυχώς!');
+      navigate(-1);
+    } else {
+      alert('Σφάλμα κατά την αποθήκευση');
+    }
+  } catch (e) {
+    console.error('Error saving:', e);
+    alert('Σφάλμα σύνδεσης με τον server');
+  }
+};
 
   const handleSaveDraft = () => {
     const draft = {
