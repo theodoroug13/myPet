@@ -75,19 +75,19 @@ const VetAnimalHistory = () => {
   }
 
   // Separate history by type
-  const vaccines = history.filter(h => 
-    h.type === 'Εμβόλιο' || 
-    h.type === 'vaccine' || 
-    h.actionType === 'vaccine' ||
-    h.actionType === 'Εμβόλιο'
-  );
-  
-  const interventions = history.filter(h => 
-    h.type === 'Επέμβαση' || 
-    h.type === 'intervention' || 
-    h.actionType === 'intervention' ||
-    h.actionType === 'Επέμβαση'
-  );
+// Πιο γενικά sections - δείξε ΟΛΑ τα medical + άλλα χρήσιμα
+const medicalActions = history.filter(h => 
+  h.type === 'medical_action' || 
+  ['Εμβόλιο', 'Εμβολιασμός', 'Εξέταση', 'Check up'].includes(h.actionType)
+);
+
+const otherHistory = history.filter(h => 
+  ['found', 'lost'].includes(h.type) || 
+  h.actionType?.includes('Επέμβαση')
+);
+
+// Στο JSX: Άλλαξε headers σε "Ιατρικές Πράξεις" + "Άλλες Καταγραφές"
+
 
   return (
     <VetLayout>
@@ -179,17 +179,17 @@ const VetAnimalHistory = () => {
             Ιατρικές πράξεις
           </Typography>
 
-          {/* Vaccines */}
+          {/* medicalAction */}
           <Box sx={{ mb: 3 }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
-              Εμβόλιο:
+              Ιατρικές Πράξεις:
             </Typography>
-            {vaccines.length === 0 ? (
+            {medicalActions.length === 0 ? (
               <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic' }}>
-                Δεν υπάρχουν καταγεγραμμένα εμβόλια
+                Δεν υπάρχουν καταγεγραμμένες ιατρικές πράξεις
               </Typography>
             ) : (
-              vaccines.map((vaccine, idx) => (
+              medicalActions.map((vaccine, idx) => (
                 <Box 
                   key={vaccine.id || idx} 
                   sx={{ 
@@ -215,17 +215,17 @@ const VetAnimalHistory = () => {
             )}
           </Box>
 
-          {/* Interventions */}
+          {/* otherHistory */}
           <Box sx={{ pb: 6 }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
-              Επεμβάσεις
+              Άλλες Καταγραφές:
             </Typography>
-            {interventions.length === 0 ? (
+            {otherHistory.length === 0 ? (
               <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic' }}>
-                Δεν υπάρχουν καταγεγραμμένες επεμβάσεις
+                Δεν υπάρχουν άλλες καταγεγραμμένες ενέργειες
               </Typography>
             ) : (
-              interventions.map((intervention, idx) => (
+              otherHistory.map((intervention, idx) => (
                 <Box 
                   key={intervention.id || idx}
                   sx={{ 
