@@ -469,11 +469,11 @@ export default function MyVet() {
               </Grid>
               <Grid item xs={12} md={4}>
                 <TextField
-                  label="Τοποθεσία (π.χ. Κυψέλη)"
+                  label="Τοποθεσία (π.χ. Γουδή)"
                   value={qLocation}
                   onChange={(e) => setQLocation(e.target.value)}
                   fullWidth
-                  helperText="Χωρίς API: ψάχνει στο πεδίο address."
+          
                 />
               </Grid>
               <Grid item xs={12} md={4}>
