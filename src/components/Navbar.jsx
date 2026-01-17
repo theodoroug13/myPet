@@ -17,6 +17,7 @@ import { useAuth } from '../context/AuthContext';
 
 
 
+
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -64,35 +65,33 @@ if (user?.role === 'vet') {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  const goOwner = () => {
-    // αν δεν έχεις role-aware login, άστο απλά /login
-    if (!user) return navigate("/login?as=owner");
-    return navigate("/login");
-  };
-
-  const goVet = () => {
-    if (!user) return navigate("/login?as=vet");
-    return navigate("/login");
-  };
 
   const goFound = () => {
     navigate("/lost-pets");
   };
-  const goSmart = (nextPath, roleHint) => {
-    // αν είναι logged-in, πήγαινε κατευθείαν εκεί (ή σε dashboard ανά ρόλο)
-    if (user) {
-      // αν πατάει "ΕΙΜΑΙ ΚΤΗΝΙΑΤΡΟΣ" αλλά είναι owner, προτίμησε το δικό του dashboard
-      if (roleHint === "owner") return navigate("/owner-dashboard");
-      if (roleHint === "vet") return navigate("/vet-dashboard");
-      return navigate(nextPath);
+
+  const handleOwnerClick = () => {
+    if (user?.role === 'owner') {
+      navigate('/owner-dashboard');
+    } else {
+      // Log out first if logged in as different role
+      if (user) {
+        logout();
+      }
+      navigate('/login');
     }
+  };
 
-    // αν ΔΕΝ είναι logged-in, πήγαινε login με next (και προαιρετικά role hint)
-    const qs = new URLSearchParams();
-    qs.set("next", nextPath);
-    if (roleHint) qs.set("as", roleHint);
-
-    navigate(`/login?${qs.toString()}`);
+  const handleVetClick = () => {
+    if (user?.role === 'vet') {
+      navigate('/vet-dashboard');
+    } else {
+      // Log out first if logged in as different role
+      if (user) {
+        logout();
+      }
+      navigate('/login');
+    }
   };
 
 
@@ -179,7 +178,6 @@ if (user?.role === 'vet') {
             myPet
           </Typography>
 
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {navItems.map((item) => (
               <Button
@@ -190,14 +188,14 @@ if (user?.role === 'vet') {
                 {item.label}
               </Button>
             ))}
-
           </Box>
+
           <Box sx={{ display: "flex", gap: 2, alignItems: "center", ml: 2 }}>
             <Button
               variant="contained"
               size="small"
-              sx={{ bgcolor: "black", color: "white", px: 2, py: 1,borderRadius:2, "&:hover": { bgcolor: "#636363ff" } }}
-              onClick={() =>  goSmart("/owner-dashboard", "owner")}
+              sx={{ bgcolor: "black", color: "white", px: 2, py: 1, borderRadius: 2, "&:hover": { bgcolor: "#636363ff" } }}
+              onClick={handleOwnerClick}
             >
               Είμαι Ιδιοκτήτης
             </Button>
@@ -205,8 +203,8 @@ if (user?.role === 'vet') {
             <Button
               variant="contained"
               size="small"
-              sx={{ bgcolor: "black", color: "white", px: 2, py: 1, borderRadius:2,"&:hover": { bgcolor: "#636363ff" } }}
-              onClick={() => goSmart("/vet-dashboard", "vet")}
+              sx={{ bgcolor: "black", color: "white", px: 2, py: 1, borderRadius: 2, "&:hover": { bgcolor: "#636363ff" } }}
+              onClick={handleVetClick}
             >
               Είμαι Κτηνίατρος
             </Button>
@@ -214,7 +212,7 @@ if (user?.role === 'vet') {
             <Button
               variant="contained"
               size="small"
-              sx={{ bgcolor: "#3f0a2bff", color: "white", px: 2, py: 1,borderRadius:2, "&:hover": { bgcolor: "#636363ff" } }}
+              sx={{ bgcolor: "#3f0a2bff", color: "white", px: 2, py: 1, borderRadius: 2, "&:hover": { bgcolor: "#636363ff" } }}
               onClick={goFound}
             >
               Βρήκα χαμένο ζώο
