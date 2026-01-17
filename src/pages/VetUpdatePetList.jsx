@@ -17,6 +17,7 @@ export default function VetUpdatePetList() {
   const { user } = useAuth();
   const [pets, setPets] = useState([]);
   const [filteredPets, setFilteredPets] = useState([]);
+  const [owners, setOwners] = useState({});
   const [searchMicrochip, setSearchMicrochip] = useState("");
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(0);
@@ -29,7 +30,25 @@ export default function VetUpdatePetList() {
     try {
       const res = await fetch(`http://localhost:8000/pets?linkedVetIds=${user.id}`);
       const data = await res.json();
-      setPets(Array.isArray(data) ? data : []);
+      const petsArray = Array.isArray(data) ? data : [];
+      setPets(petsArray);
+
+      // Fetch all unique owner IDs
+      const ownerIds = [...new Set(petsArray.map(p => p.ownerId).filter(Boolean))];
+      
+      // Fetch owner details for each unique owner ID
+      const ownerPromises = ownerIds.map(id => 
+        fetch(`http://localhost:8000/users/${id}`).then(r => r.json())
+      );
+      const ownerData = await Promise.all(ownerPromises);
+      
+      // Create a map of ownerId -> fullName
+      const ownerMap = {};
+      ownerData.forEach(owner => {
+        ownerMap[owner.id] = owner.fullName;
+      });
+      setOwners(ownerMap);
+
     } catch (e) {
       console.error(e);
     }
@@ -80,13 +99,12 @@ export default function VetUpdatePetList() {
             }
           }}
         >
-          
+          Πίσω
         </Button>
 
         <Typography variant="h4" sx={{ mb: 3 }}>
           Ενημέρωση υφιστάμενου
         </Typography>
-
 
         {/* Search Bar */}
         <Paper sx={{ p: 3, mb: 4, borderRadius: 3 }}>
@@ -102,7 +120,6 @@ export default function VetUpdatePetList() {
             />
           </Box>
         </Paper>
-
 
         {/* Results Table */}
         {loading ? (
@@ -140,7 +157,7 @@ export default function VetUpdatePetList() {
                           <TableCell>{pet.name}</TableCell>
                           <TableCell>{pet.type}</TableCell>
                           <TableCell>{pet.breed || '-'}</TableCell>
-                          <TableCell>{pet.ownerName || '-'}</TableCell>
+                          <TableCell>{owners[pet.ownerId] || '-'}</TableCell>
                           <TableCell sx={{ textAlign: "center" }}>
                             <IconButton
                               onClick={() => handleEdit(pet.microchip)}
