@@ -1,5 +1,5 @@
 import { Box, Typography, Button, IconButton } from "@mui/material";
-import backpic from "../../pictures/autumndog.jpg";
+import backpic from "../../pictures/vet.jpg";
 import VetLayout from "../components/VetLayout";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";

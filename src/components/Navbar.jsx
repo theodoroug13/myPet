@@ -32,8 +32,7 @@ function Navbar() {
 
   
 if (user?.role === 'owner') {
-  navItems.push({ label: 'Τα Ζώα μου', path: '/owner-pets' });
-  navItems.push({ label: 'Ραντεβού', path: '/owner-appointments' });
+  navItems.push({ label: 'Κέντρο Ιδιοκτήτη', path: '/owner-dashboard' });
 }
 
 if (user?.role === 'vet') {
