@@ -25,7 +25,7 @@ function Navbar() {
 
   
   const navItems = [
-    { label: 'Ποιοί Είμαστε', path: '/about' },
+    { label: 'Αρχική', path: '/' },
     { label: 'FAQ', path: '/faq' },
   ];
 
