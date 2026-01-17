@@ -464,6 +464,17 @@
       "fullName": "Νίκος Σταματίου",
       "email": "nikos@test.com",
       "phone": "6966666666"
+    },
+    {
+      "id": "3c52",
+      "username": "Test",
+      "password": "123",
+      "role": "owner",
+      "fullName": "Owner_test",
+      "email": "test@test.com",
+      "phone": "1234567891",
+      "ratingAvg": 0,
+      "ratingCount": 0
     }
   ],
   "pets": [

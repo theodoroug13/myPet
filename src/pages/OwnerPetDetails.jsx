@@ -41,8 +41,7 @@ const statusChip = (status, date) => {
     return <Chip size="small" color="success" label="Ολοκληρωμένο" />;
   }
   switch (status) {
-    case "pending":
-      return <Chip size="small" color="warning" label="Εκκρεμές" />;
+
     case "confirmed":
       return <Chip size="small" color="success" label="Επιβεβαιωμένο" />;
     case "completed":
