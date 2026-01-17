@@ -422,7 +422,7 @@ export default function MyDiloseis() {
             Δηλώσεις
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Απώλεια, εύρεση, μεταβίβαση — με πρόχειρη αποθήκευση & υποβολή.
+            Δήλωσε την απώλεια του κατοικιδίου σου.
           </Typography>
         </Box>
 
@@ -680,8 +680,8 @@ export default function MyDiloseis() {
               helperText={formErrors.type || " "}
             >
               <MenuItem value="lost">Απώλεια</MenuItem>
-              <MenuItem value="found">Εύρεση</MenuItem>
-              <MenuItem value="transfer">Μεταβίβαση</MenuItem>
+              
+            
             </TextField>
 
             <TextField

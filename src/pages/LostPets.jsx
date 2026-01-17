@@ -413,16 +413,11 @@ const LostPets = () => {
                 />
               </Grid>
 
-              <Grid item xs={12} md={6}>
-                <Typography variant="subtitle2" gutterBottom>Φωτογραφία για ταυτοποίηση</Typography>
-                <Box sx={{ border: '1px solid #ccc', borderRadius: 2, height: 250, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: '#fafafa' }}>
-                  <PhotoCameraBackIcon sx={{ fontSize: 80, color: '#333' }} />
-                </Box>
-              </Grid>
+
 
               <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
                 <Button
-                  variant="contained" size="large"
+                  variant="contained" size="small"
                   sx={{ bgcolor: 'black', color: 'white', py: 1.5, px: 6, fontWeight: 'bold', '&:hover': { bgcolor: '#333' } }}
                   onClick={handleSubmitFound}
                 >

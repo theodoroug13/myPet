@@ -33,7 +33,6 @@ const VetMenu = () => {
     { text: 'Ώρες Εργασίας', icon: <AccessTimeIcon />, path: '/vet-hours' },
     { text: 'Αξιολογήσεις', icon: <StarIcon />, path: '/vet-reviews' },
     { text: 'Κατοικίδια', icon: <PetsIcon />, path: '/vet-pets' },
-    { text: 'Ρυθμίσεις', icon: <SettingsIcon />, path: '/settings' }
   ];
 
    return (

@@ -31,7 +31,7 @@ const OwnerMenu = () => {
     { text: 'Ραντεβού', icon: <CalendarMonthIcon />, path: '/owner-appointments' },
     { text: 'Ο Κτηνίατρός μου', icon: <MedicalServicesOutlinedIcon />, path: '/my-vet' },
     { text: 'Δηλώσεις', icon: <EditNoteIcon />, path: '/my-diloseis' },
-    { text: 'Ρυθμίσεις', icon: <SettingsIcon />, path: '/settings' }
+    
   ];
 
    return (
