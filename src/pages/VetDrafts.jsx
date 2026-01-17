@@ -7,8 +7,10 @@ import {
 import { useNavigate } from "react-router-dom";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import VetLayout from "../components/VetLayout";
 import { useAuth } from "../context/AuthContext";
+
 
 export default function VetDrafts() {
   const navigate = useNavigate();
@@ -16,6 +18,7 @@ export default function VetDrafts() {
   const [drafts, setDrafts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState({});
+
 
   const fetchDrafts = async () => {
     if (!user?.id) return;
@@ -30,14 +33,17 @@ export default function VetDrafts() {
     setLoading(false);
   };
 
+
   useEffect(() => {
     fetchDrafts();
   }, [user?.id]);
 
-const loadDraft = async (draftId) => {
-  localStorage.setItem('targetDraftId', draftId); 
-  navigate("/vet/new-pet");
-};
+
+  const loadDraft = async (draftId) => {
+    localStorage.setItem('targetDraftId', draftId); 
+    navigate("/vet/new-pet");
+  };
+
   const deleteDraft = async (draftId) => {
     if (!confirm("Διέγραψε αυτό το πρόχειρο;")) return;
     setDeleting(prev => ({ ...prev, [draftId]: true }));
@@ -51,13 +57,30 @@ const loadDraft = async (draftId) => {
     setDeleting(prev => ({ ...prev, [draftId]: false }));
   };
 
+
   if (!user || user.role !== "vet") {
     return <VetLayout><Typography>Δεν έχεις πρόσβαση.</Typography></VetLayout>;
   }
 
+
   return (
     <VetLayout>
       <Box sx={{ p: 4, maxWidth: 1200, mx: "auto" }}>
+        <Button
+          startIcon={<ArrowBackIcon />}
+          onClick={() => navigate(-1)}
+          sx={{
+            mb: 3,
+            color: 'black',
+            fontWeight: 600,
+            '&:hover': {
+              bgcolor: 'rgba(0, 0, 0, 0.04)'
+            }
+          }}
+        >
+        
+        </Button>
+
         <Typography variant="h4" sx={{ mb: 3 }}>Πρόχειρες Καταχωρήσεις Κατοικιδίων</Typography>
         
         {loading ? (

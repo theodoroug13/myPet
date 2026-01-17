@@ -6,9 +6,11 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
 import VetLayout from "../components/VetLayout";
 import { useAuth } from "../context/AuthContext";
+
 
 export default function VetUpdatePetList() {
   const navigate = useNavigate();
@@ -19,6 +21,7 @@ export default function VetUpdatePetList() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
+
 
   const fetchPets = async () => {
     if (!user?.id) return;
@@ -33,9 +36,11 @@ export default function VetUpdatePetList() {
     setLoading(false);
   };
 
+
   useEffect(() => {
     fetchPets();
   }, [user?.id]);
+
 
   useEffect(() => {
     const filtered = pets.filter(pet =>
@@ -45,9 +50,11 @@ export default function VetUpdatePetList() {
     setPage(0);
   }, [pets, searchMicrochip]);
 
+
   const handleEdit = (microchip) => {
-  navigate(`/vet/animal-services/${microchip}`);
-};
+    navigate(`/vet/animal-services/${microchip}`);
+  };
+
 
   if (!user || user.role !== "vet") {
     return (
@@ -57,12 +64,29 @@ export default function VetUpdatePetList() {
     );
   }
 
+
   return (
     <VetLayout>
       <Box sx={{ p: 4, maxWidth: 1200, mx: "auto" }}>
+        <Button
+          startIcon={<ArrowBackIcon />}
+          onClick={() => navigate(-1)}
+          sx={{
+            mb: 3,
+            color: 'black',
+            fontWeight: 600,
+            '&:hover': {
+              bgcolor: 'rgba(0, 0, 0, 0.04)'
+            }
+          }}
+        >
+          
+        </Button>
+
         <Typography variant="h4" sx={{ mb: 3 }}>
           Ενημέρωση υφιστάμενου
         </Typography>
+
 
         {/* Search Bar */}
         <Paper sx={{ p: 3, mb: 4, borderRadius: 3 }}>
@@ -78,6 +102,7 @@ export default function VetUpdatePetList() {
             />
           </Box>
         </Paper>
+
 
         {/* Results Table */}
         {loading ? (

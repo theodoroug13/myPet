@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Typography, Button, Grid } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 
 const actionButtonSx = {
   bgcolor: "black",
@@ -23,10 +25,12 @@ const actionButtonSx = {
   },
 };
 
+
 const AnimalServices = () => {
   const { microchip } = useParams();
   const navigate = useNavigate();
   const [animal, setAnimal] = useState(null);
+
 
   useEffect(() => {
     const fetchAnimal = async () => {
@@ -36,7 +40,9 @@ const AnimalServices = () => {
     fetchAnimal();
   }, [microchip]);
 
+
   if (!animal) return <Typography>Φόρτωση...</Typography>;
+
 
   const services = [
     { label: 'Προβολή Ιστορικού', action: () => navigate(`/vet/animal-services/history/${microchip}`) },
@@ -49,8 +55,24 @@ const AnimalServices = () => {
     { label: 'Πρόχειρες ενημερώσεις', action: () => navigate(`/vet/animal-services/drafts/${microchip}`) }
   ];
 
+
   return (
     <Box sx={{ p: 4, maxWidth: 900, mx: 'auto' }}>
+      <Button
+        startIcon={<ArrowBackIcon />}
+        onClick={() => navigate(-1)}
+        sx={{
+          mb: 3,
+          color: 'black',
+          fontWeight: 600,
+          '&:hover': {
+            bgcolor: 'rgba(0, 0, 0, 0.04)'
+          }
+        }}
+      >
+        
+      </Button>
+
       <Typography 
         variant="h5" 
         sx={{ 
@@ -61,6 +83,7 @@ const AnimalServices = () => {
       >
         Επιλογές υπηρεσιών του ζώου:
       </Typography>
+
 
       <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
         <Grid container spacing={3} sx={{ maxWidth: 850, width: '100%' }}>
@@ -74,8 +97,10 @@ const AnimalServices = () => {
         </Grid>
       </Box>
 
+
     </Box>
   );
 };
+
 
 export default AnimalServices;
