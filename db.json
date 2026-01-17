@@ -25,126 +25,26 @@
       "photo": "",
       "hours": "• Δευτέρα έως Κυριακή, 09:00 – 17:00\n• Για ραντεβού καλέστε στο 210 9876543.",
       "availability": {
-        "2026-01-08": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-09": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-10": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-11": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-12": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-13": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-14": {
-          "isOpen": false,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-15": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-16": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-17": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-18": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-19": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-20": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-21": {
-          "isOpen": false,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-22": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-23": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-24": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-25": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-26": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        },
-        "2026-01-27": {
-          "isOpen": true,
-          "start": "09:00",
-          "end": "17:00",
-          "breaks": []
-        }
+        "2026-01-08": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-09": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-10": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-11": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-12": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-13": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-14": { "isOpen": false, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-15": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-16": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-17": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-18": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-19": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-20": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-21": { "isOpen": false, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-22": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-23": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-24": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-25": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-26": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] },
+        "2026-01-27": { "isOpen": true, "start": "09:00", "end": "17:00", "breaks": [] }
       },
       "ratingAvg": 4.7,
       "ratingCount": 3
@@ -174,126 +74,26 @@
       "photo": "",
       "hours": "• Δευτέρα έως Παρασκευή, 10:00 – 18:00\n• Σαββατοκύριακα κλειστά.",
       "availability": {
-        "2026-01-08": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-09": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-10": {
-          "isOpen": false,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-11": {
-          "isOpen": false,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-12": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-13": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-14": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-15": {
-          "isOpen": false,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-16": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-17": {
-          "isOpen": false,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-18": {
-          "isOpen": false,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-19": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-20": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-21": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-22": {
-          "isOpen": false,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-23": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-24": {
-          "isOpen": false,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-25": {
-          "isOpen": false,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-26": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        },
-        "2026-01-27": {
-          "isOpen": true,
-          "start": "10:00",
-          "end": "18:00",
-          "breaks": []
-        }
+        "2026-01-08": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-09": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-10": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-11": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-12": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-13": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-14": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-15": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-16": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-17": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-18": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-19": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-20": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-21": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-22": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-23": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-24": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-25": { "isOpen": false, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-26": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] },
+        "2026-01-27": { "isOpen": true, "start": "10:00", "end": "18:00", "breaks": [] }
       },
       "ratingAvg": 4.8,
       "ratingCount": 4
@@ -316,126 +116,26 @@
       "photo": "",
       "hours": "• Δευτέρα έως Σάββατο, 11:00 – 19:00\n• Εξυπηρέτηση κατόπιν ραντεβού.",
       "availability": {
-        "2026-01-08": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-09": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-10": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-11": {
-          "isOpen": false,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-12": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-13": {
-          "isOpen": false,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-14": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-15": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-16": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-17": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-18": {
-          "isOpen": false,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-19": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-20": {
-          "isOpen": false,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-21": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-22": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-23": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-24": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-25": {
-          "isOpen": false,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-26": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        },
-        "2026-01-27": {
-          "isOpen": true,
-          "start": "11:00",
-          "end": "19:00",
-          "breaks": []
-        }
+        "2026-01-08": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-09": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-10": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-11": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-12": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-13": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-14": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-15": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-16": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-17": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-18": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-19": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-20": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-21": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-22": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-23": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-24": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-25": { "isOpen": false, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-26": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] },
+        "2026-01-27": { "isOpen": true, "start": "11:00", "end": "19:00", "breaks": [] }
       }
     },
     {
@@ -644,6 +344,7 @@
       "vetId": "2",
       "ownerId": "7",
       "petName": "Ρόκυ",
+      "microchip": "OA66666666",
       "details": "Εμβόλιο",
       "date": "2026-01-09",
       "time": "10:00",
@@ -655,6 +356,7 @@
       "vetId": "2",
       "ownerId": "1",
       "petName": "Bruno",
+      "microchip": "1234567890",
       "details": "Check up",
       "date": "2026-01-10",
       "time": "11:00",
@@ -666,10 +368,11 @@
       "vetId": "2",
       "ownerId": "3",
       "petName": "Μάξ",
+      "microchip": "OA99999999",
       "details": "Αποπαρασίτωση",
       "date": "2026-01-12",
       "time": "17:30",
-      "status": "confirmed",
+      "status": "completed",
       "reason": "Χάπι"
     },
     {
@@ -677,6 +380,7 @@
       "vetId": "2576",
       "ownerId": "5",
       "petName": "Κόκο",
+      "microchip": "OA11111111",
       "details": "Κόψιμο φτερών",
       "date": "2026-01-14",
       "time": "12:00",
@@ -688,6 +392,7 @@
       "vetId": "4",
       "ownerId": "1",
       "petName": "Λούνα",
+      "microchip": "OA02184280",
       "details": "Εξέταση δοντιών",
       "date": "2026-01-15",
       "time": "10:30",
@@ -699,6 +404,7 @@
       "vetId": "4",
       "ownerId": "6",
       "petName": "Σίμπα",
+      "microchip": "OA33333333",
       "details": "Εμβόλιο",
       "date": "2026-01-18",
       "time": "11:30",
@@ -710,6 +416,7 @@
       "vetId": "2",
       "ownerId": "1",
       "petName": "Ρεξ",
+      "microchip": "OA07631830",
       "details": "Εξέταση αυτιών",
       "date": "2026-01-20",
       "time": "09:30",
@@ -721,6 +428,7 @@
       "vetId": "4",
       "ownerId": "3",
       "petName": "Μπέλα",
+      "microchip": "OA55555555",
       "details": "Νύχια",
       "date": "2026-01-22",
       "time": "13:00",
@@ -732,6 +440,7 @@
       "vetId": "2",
       "ownerId": "5",
       "petName": "Άρης",
+      "microchip": "OA22222222",
       "details": "Αιματολογικές",
       "date": "2026-01-25",
       "time": "15:00",
@@ -743,6 +452,7 @@
       "vetId": "2576",
       "ownerId": "6",
       "petName": "Πόλυ",
+      "microchip": "OA44444444",
       "details": "Ράμφος",
       "date": "2026-01-26",
       "time": "11:30",
@@ -754,6 +464,7 @@
       "vetId": "2576",
       "ownerId": "7",
       "petName": "Τσάρλι",
+      "microchip": "OA77777777",
       "details": "Check up",
       "date": "2026-01-27",
       "time": "16:30",
