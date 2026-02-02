@@ -71,13 +71,13 @@ Go to the localhost URL provided by Vite (usually http://localhost:5173).
 
 **3. Demo Credentials**
 Use the following accounts to test the different user roles:
-*  Owner
+#  Owner
 
   -  username: owner1
 
   -  password: 123
 
-*  Vet
+#  Vet
 
   -  username: vet1
 
