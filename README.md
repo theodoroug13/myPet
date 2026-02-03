@@ -87,7 +87,7 @@ Use the following accounts to test the different user roles:
 -  Giorgos Theodorou 
 
 
--  Andreas Chatzitofis 
+-  Andreas Hadjitofis 
 
 
 -  Nikolaos Spyrou
