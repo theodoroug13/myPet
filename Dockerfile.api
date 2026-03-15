@@ -1,0 +1,12 @@
+FROM node:20-alpine
+WORKDIR /app
+
+RUN npm i -g json-server
+
+COPY db.json /app/db.json
+COPY public /app/public
+COPY pictures /app/public/pictures
+
+EXPOSE 8000
+CMD ["json-server", "--host", "0.0.0.0", "--watch", "db.json", "--port", "8000", "--static", "public"]
+
